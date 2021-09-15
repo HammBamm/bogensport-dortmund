@@ -3,11 +3,11 @@ import React from 'react';
 import MenuItem from '../menu-item/menu-item.component';
 import { DirectoryMenuContainer } from './directory.styles';    
 
-import img1 from '../../assets/directory/IMG_0060.png';
-import img2 from '../../assets/directory/IMG_0061.png';
-import img3 from '../../assets/directory/IMG_0062.png';
-import img4 from '../../assets/directory/IMG_0063.png';
-import img5 from '../../assets/directory/IMG_0064.png';
+import vereinsheimImg from '../../assets/directory/IMG_0060.png';
+import platzImg from '../../assets/directory/IMG_0061.png';
+import phoneImg from '../../assets/directory/phone.jpg';
+import arrowImg from '../../assets/directory/arrows.jpg';
+import archeryImg from '../../assets/directory/archery.jpg';
 
 class Directory extends React.Component {
     constructor() {
@@ -16,32 +16,32 @@ class Directory extends React.Component {
             sections: [
                 {
                     title: 'Unser Verein',
-                    imageUrl: img1,
+                    imageUrl: vereinsheimImg,
                     id: 1,
                     linkUrl: 'verein'
                 },
                 {
                     title: 'Kontakt',
-                    imageUrl: img2,
+                    imageUrl: phoneImg,
                     id: 2,
                     linkUrl: 'kontakt'
                 },
                 {
-                    title: 'FAQ',
-                    imageUrl: img3,
+                    title: 'Kalender',
+                    imageUrl: arrowImg,
                     id: 3,
                     linkUrl: 'faq'
                 },
                 {
                     title: 'Sportanlage',
-                    imageUrl: img4,
+                    imageUrl: platzImg,
                     size: 'large',
                     id: 4,
                     linkUrl: 'verein/sportanlage'
                 },
                 {
                     title: 'Bogenschießen',
-                    imageUrl: img5,
+                    imageUrl: archeryImg,
                     size: 'large',
                     id: 5,
                     linkUrl: 'bogenschiessen'

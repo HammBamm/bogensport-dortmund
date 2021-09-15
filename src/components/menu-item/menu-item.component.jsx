@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 import {
   MenuItemContainer,
@@ -24,4 +25,4 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
   </MenuItemContainer>
 );
 
-export default MenuItem;
+export default withRouter(MenuItem);

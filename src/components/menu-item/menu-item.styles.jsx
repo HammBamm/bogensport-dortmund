@@ -37,6 +37,7 @@ export const BackgroundImageContainer = styled.div`
   height: 100%;
   background-size: cover;
   background-position: center;
+  filter: sepia(0.2) grayscale(0.4);
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 `;
 
@@ -51,6 +52,10 @@ export const ContentContainer = styled.div`
   background-color: white;
   opacity: 0.7;
   position: absolute;
+
+  @media screen and (max-width: 800px) {
+    padding 0 10px;
+  }
 `;
 
 export const ContentTitle = styled.span`
@@ -58,9 +63,17 @@ export const ContentTitle = styled.span`
   margin-bottom: 6px;
   font-size: 22px;
   color: #4a4a4a;
+
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+  }
 `;
 
 export const ContentSubtitle = styled.span`
   font-weight: lighter;
   font-size: 16px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 10px;
+  }
 `;

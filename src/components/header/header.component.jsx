@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst2.svg';
+import { ReactComponent as FbookLogo } from '../../assets/header/facebook-6.svg';
 
 import { 
   HeaderContainer,
@@ -15,8 +16,11 @@ const Header = () => (
     </LogoContainer>
     <OptionsContainer>
       <OptionLink to='/'>Startseite</OptionLink>
-      <OptionLink to='/verein'>Unser Verein</OptionLink>
+      <OptionLink to='/faq'>FAQ</OptionLink>
       <OptionLink to='/kontakt'>Kontakt</OptionLink>
+      <OptionLink to={{ pathname: "https://de-de.facebook.com/Bogensport-Dortmund-314466415291746/" }} target="_blank">
+        <FbookLogo />
+      </OptionLink>
     </OptionsContainer>
   </HeaderContainer>
 );
