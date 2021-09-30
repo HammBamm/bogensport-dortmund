@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Map, Marker, Overlay } from "pigeon-maps";
+import { Map, Marker } from "pigeon-maps";
 
 import { CityMapsContainer } from "./city-map.styles";
 import CustomButton from "../custom-button/custom-button.component";
@@ -33,6 +33,7 @@ export const CityMap = () => {
             onClick={() => {
               setCenter([51.53999, 7.52707]);
               setZoom(17);
+
               }
             }
           />
@@ -46,9 +47,6 @@ export const CityMap = () => {
               }
             }
           />  
-          <Overlay anchor={[51.54476, 7.53156]} offset={[120, 79]}>
-            <span>Winter</span>
-          </Overlay>
           <CustomButton onClick={() => {
               setCenter(defaultCenter)
               setZoom(16)

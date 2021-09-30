@@ -46,15 +46,13 @@ class SportanlagePage extends React.Component {
             <CityMap />
           </LegendOptionContainer>
           <LegendOptionContainer>
-            <MarkerSommer />
-          </LegendOptionContainer>
-          <LegendOptionContainer>
             {
               this.state.details.map(({ id, ...otherSectionProps }) => (
                   <VisitenKarte key={id} {...otherSectionProps}></VisitenKarte>
               ))
             }
           </LegendOptionContainer>
+          
         </MapContainer>
       </SportanlageContainer>
     );

@@ -8,26 +8,26 @@ const theme = {
 };
 
 export const CardContainer = styled.div`
-  width: calc(${theme.cardsize} * 1.586);
-  height: var(${theme.cardsize});
-  
   border-radius: 0.75rem;
-  box-shadow:  0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
-  
   background: darkgrey;
-  
-  display: grid;
+  min-width: 40%;
+	overflow: hidden;
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+	margin: 0 7.5px 15px;
+	overflow: hidden;
+
   grid-template-columns: 40% auto;
   color: white;
-  
-  align-items: center;
   
   will-change: transform;
   transition: transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
   
   &:hover {
      transform: scale(1.1);
-     box-shadow:  0 32px 80px 14px rgba(0,0,0,0.36), 0 0 0 1px rgba(0, 0, 0, 0.3);
   }
 `;
 
@@ -39,7 +39,7 @@ export const NameContainer = styled.div`
   font-size: 1.25rem;
 `
 
-export const LocationContainer = styled.div`
+export const SeasonContainer = styled.div`
   font-weight: 600;
   color: ${theme.primary};
 `;

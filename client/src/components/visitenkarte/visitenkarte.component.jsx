@@ -7,20 +7,19 @@ import {
   CardContainer,
   CardDetailsContainer,
   LabelContainer,
-  LocationContainer,
+  SeasonContainer,
   NameContainer,
-  SVGContainer,
   ValueContainer } from "./visitenkarte.styles";
 
-const VisitenKarte = ({ id, avatar, name, street, city, duration }) => {
+const VisitenKarte = ({ id, avatar, nameOfPlace, street, city, duration }) => {
   return (
     <CardContainer>
-      <CardAvatarContainer imageUrl={avatar}>
+      <CardAvatarContainer >
+        <avatar></avatar>
       </CardAvatarContainer>
       <CardDetailsContainer>
-        <NameContainer>{name}</NameContainer>
-        <LocationContainer>{id}</LocationContainer>
-      
+        <NameContainer>{nameOfPlace}</NameContainer>
+        <SeasonContainer>{id}</SeasonContainer>
         <CardAboutContainer>
           <CardAboutItemContainer>
             <ValueContainer>{street}</ValueContainer>
@@ -31,7 +30,7 @@ const VisitenKarte = ({ id, avatar, name, street, city, duration }) => {
             <LabelContainer>Stadt</LabelContainer>
           </CardAboutItemContainer>
           <CardAboutItemContainer>
-            <LabelContainer>{duration}</LabelContainer>
+            <ValueContainer>{duration}</ValueContainer>
             <LabelContainer>Zeitraum</LabelContainer>
           </CardAboutItemContainer>
         </CardAboutContainer>
