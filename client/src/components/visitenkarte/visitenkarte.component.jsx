@@ -9,17 +9,19 @@ import {
   LabelContainer,
   SeasonContainer,
   NameContainer,
-  ValueContainer } from "./visitenkarte.styles";
+  ValueContainer, 
+  } from "./visitenkarte.styles";
 
-const VisitenKarte = ({ id, avatar, nameOfPlace, street, city, duration }) => {
+const VisitenKarte = ({ season, avatar, nameOfPlace, street, city, duration, hovered }) => {
   return (
-    <CardContainer>
-      <CardAvatarContainer >
-        <avatar></avatar>
+    <CardContainer $hovered={hovered}>
+      <CardAvatarContainer>
+       {avatar}
       </CardAvatarContainer>
+
       <CardDetailsContainer>
         <NameContainer>{nameOfPlace}</NameContainer>
-        <SeasonContainer>{id}</SeasonContainer>
+        <SeasonContainer>{season}</SeasonContainer>
         <CardAboutContainer>
           <CardAboutItemContainer>
             <ValueContainer>{street}</ValueContainer>

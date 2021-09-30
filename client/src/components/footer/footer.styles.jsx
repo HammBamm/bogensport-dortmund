@@ -39,7 +39,6 @@ export const FooterOptionLinkContainer = styled(Link)`
 `;
 
 export const CopyrightContainer = styled.span`
-  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;

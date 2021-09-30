@@ -5,7 +5,7 @@ import { CityMapsContainer } from "./city-map.styles";
 import CustomButton from "../custom-button/custom-button.component";
 import useMediaQuery from "../media-query/media-query.component";
 
-export const CityMap = () => {
+export const CityMap = (props) => {
   const isMobile = useMediaQuery('(max-width: 800px)');
   const summerColor = `rgb(253,130,26)`;
   const winterColor = `rgb(123, 165, 248)`;
@@ -17,8 +17,8 @@ export const CityMap = () => {
   return (
     <CityMapsContainer>
         <Map      
-          height={isMobile ? 600 : 750} 
-          width={isMobile ? 320 : 1000} 
+          height={isMobile ? 600 : 700} 
+          width={isMobile ? 320 : 900} 
           center={center} 
           zoom={zoom} 
           minZoom={10}
@@ -33,7 +33,6 @@ export const CityMap = () => {
             onClick={() => {
               setCenter([51.53999, 7.52707]);
               setZoom(17);
-
               }
             }
           />
@@ -46,6 +45,9 @@ export const CityMap = () => {
               setZoom(17);
               }
             }
+            onHover={() => {
+              props.setHovered()
+            }}
           />  
           <CustomButton onClick={() => {
               setCenter(defaultCenter)

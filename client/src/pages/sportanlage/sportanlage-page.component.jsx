@@ -14,41 +14,53 @@ import VisitenKarte from '../../components/visitenkarte/visitenkarte.component';
 
 
 class SportanlagePage extends React.Component {
-  constructor() {
-      super();
-      this.state = {
-          details: [
-            {
-              id: "winter",
-              avatar: MarkerWinter,
-              nameOfPlace: "Siegfried-Drupp-Schule",
-              street: "Siegfried-Drupp-Straße 5",
-              city: "44328 Dortmund",
-              duration: "Oktober - März"
-            },
-            {
-              id: "sommer",
-              avatar: MarkerSommer,
-              nameOfPlace: "TuS Scharnhorst Bogensport & Mehrzweckplatz",
-              street: "Am Holzgraben 1A",
-              city: "44328 Dortmund",
-              duration: "April - September"
-            }
-          ]
-      }
+  constructor(props) {
+    super(props);
+
+    this.setHovered = this.setHovered.bind(this);
+    this.state = {
+      details: [
+        {
+          id: 1,
+          season: "Winter",
+          avatar: <MarkerWinter />,
+          nameOfPlace: "Siegfried-Drupp-Schule",
+          street: "Siegfried-Drupp-Straße 5",
+          city: "44328 Dortmund",
+          duration: "Oktober - März",
+          hovered: false
+        },
+        {
+          id: 2,
+          season: "Sommer",
+          avatar: <MarkerSommer />,
+          nameOfPlace: "TuS Scharnhorst Bogensport & Mehrzweckplatz",
+          street: "Am Holzgraben 1A",
+          city: "44328 Dortmund",
+          duration: "April - September",
+          hovered: false
+        }
+      ]
+    };
+
   }
+  
+  setHovered() {
+    this.setState({ hovered: true })
+  };
+
 
   render() {
     return (
       <SportanlageContainer>
         <MapContainer>
           <LegendOptionContainer>
-            <CityMap />
+            <CityMap setHovered={this.setHovered}/>
           </LegendOptionContainer>
           <LegendOptionContainer>
             {
               this.state.details.map(({ id, ...otherSectionProps }) => (
-                  <VisitenKarte key={id} {...otherSectionProps}></VisitenKarte>
+                  <VisitenKarte key={id} { ...otherSectionProps } ></VisitenKarte>
               ))
             }
           </LegendOptionContainer>

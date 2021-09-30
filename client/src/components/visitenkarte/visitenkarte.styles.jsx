@@ -2,15 +2,15 @@ import styled  from 'styled-components';
 
 const theme = {
   background: "white",
-  primary: "#ff1ead",
+  primary: "#008000",
   secondary: "#1effc3",
-  cardsize: "300px"
+  cardsize: "350px"
 };
 
 export const CardContainer = styled.div`
   border-radius: 0.75rem;
-  background: darkgrey;
-  min-width: 40%;
+  border-color: ${ theme.primary };
+  width: ${ theme.cardsize };
 	overflow: hidden;
 	flex: 1 1 auto;
 	display: flex;
@@ -21,18 +21,21 @@ export const CardContainer = styled.div`
 	overflow: hidden;
 
   grid-template-columns: 40% auto;
-  color: white;
+  color: black;
   
   will-change: transform;
-  transition: transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
   
   &:hover {
      transform: scale(1.1);
   }
+
+  transform: ${props =>
+    props.$hovered ? 'scale(1.1)' : null};
 `;
 
 export const CardDetailsContainer = styled.div`
-  padding: 1rem;
+
 `;
 
 export const NameContainer = styled.div`
@@ -40,7 +43,7 @@ export const NameContainer = styled.div`
 `
 
 export const SeasonContainer = styled.div`
-  font-weight: 600;
+font-weight: 600;
   color: ${theme.primary};
 `;
 
@@ -50,7 +53,7 @@ export const CardAvatarContainer = styled.div`
 `;
 
 export const CardAboutContainer = styled.div`
-  margin-top: 1rem;
+  margin-top: 5px;
   display: grid;
   grid-auto-flow: column;
 `;
@@ -58,19 +61,20 @@ export const CardAboutContainer = styled.div`
 export const CardAboutItemContainer = styled.div` 
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.5rem;
+  padding: 5px 5px 5px 0;
 `;
 
 export const ValueContainer = styled.span`
   font-size: 1rem;
+  padding-bottom: 10px;
 `
   
 export const LabelContainer = styled.span`
-     margin-top: 0.15rem;
-     font-size: 0.75rem;
-     font-weight: 600;
-     color: ${theme.primary};
-     background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  position: absolute;
+  bottom: 5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: ${theme.primary};
 `
 
 export const SVGContainer = styled.div`

@@ -10,7 +10,7 @@ export const SportanlageContainer = styled.div`
 
 export const MapContainer = styled.div`
   display: flex;
-  width: 70%;
+  width: 60%;
   padding: 10px;
 
   @media screen and (max-width: 800px) {
