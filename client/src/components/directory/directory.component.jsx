@@ -30,7 +30,7 @@ class Directory extends React.Component {
                     title: 'Kalender',
                     imageUrl: arrowImg,
                     id: 3,
-                    linkUrl: 'faq'
+                    linkUrl: 'kalender'
                 },
                 {
                     title: 'Sportanlage',

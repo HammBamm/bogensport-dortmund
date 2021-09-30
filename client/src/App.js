@@ -11,6 +11,7 @@ import BogenschiessenPage from './pages/bogenschiessen/bogenschiessen-page.compo
 import FAQPage from './pages/faq/faq-page.component';
 import SportanlagePage from './pages/sportanlage/sportanlage-page.component';
 import AnmeldungRegistrierungPage from './pages/anmeldung-registrierung/anmeldung-registrierung.component';
+import KalenderPage from './pages/kalender/kalender.component';
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route exact path='/faq' component={FAQPage}></Route>
         <Route exact path='/verein/sportanlage' component={SportanlagePage}></Route>
         <Route exact path='/anmelden' component={AnmeldungRegistrierungPage}></Route>
+        <Route exact path='/kalender' component={KalenderPage}></Route>
       </Switch>
       <Footer></Footer>
     </div>

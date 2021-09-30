@@ -26,7 +26,7 @@ const ContactForm = () => {
       message: message.value,
     };
 
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("http://localhost:5000/kontakt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -36,7 +36,6 @@ const ContactForm = () => {
     setStatus("Senden");
     let result = await response.json();
     alert(result.status);
-    //emailSignInStart(email, password);
   };
 
   const handleChange = event => {
@@ -66,13 +65,13 @@ const ContactForm = () => {
         />
         <FormTextarea
           name='message'
-          handleChange={handleChange}
+          onChange={(event) => {handleChange(event)}}
           form='contactFormId'
           placeholder='Nachricht'
+          rows="10"
+          value={message}
           required
-        >
-          {message}
-        </FormTextarea>
+        ></FormTextarea>
         <CustomButton inverted type="submit">{status}</CustomButton>
       </form>
     </ContactFormContainer>

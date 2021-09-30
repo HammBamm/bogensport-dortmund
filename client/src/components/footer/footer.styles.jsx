@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.div` 
+  position: absolute;
+  bottom: 0;
   height: 40px;
   width: 100%;
   display: flex;
@@ -37,13 +39,10 @@ export const FooterOptionLinkContainer = styled(Link)`
 `;
 
 export const CopyrightContainer = styled.span`
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 10px;
-
-  @media screen and (max-width: 800px) {
-    padding: 10px;
-  }
 `;
