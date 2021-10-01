@@ -29,9 +29,6 @@ export const CardContainer = styled.div`
   &:hover {
      transform: scale(1.1);
   }
-
-  transform: ${props =>
-    props.$hovered ? 'scale(1.1)' : null};
 `;
 
 export const CardDetailsContainer = styled.div`

@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 export const FooterContainer = styled.div` 
   position: absolute;
   bottom: 0;
+  width: 95%;
   height: 40px;
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   margin-top: 25px;
 
   @media screen and (max-width: 800px) {
+      position: relative;
       height: 30px;
       margin-top: 10px;
       font-size: 11px;
@@ -38,10 +38,20 @@ export const FooterOptionLinkContainer = styled(Link)`
 }
 `;
 
-export const CopyrightContainer = styled.span`
+export const CopyrightContainer = styled.div`
+  right: 0px;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media screen and (max-width: 800px) {
+    padding: 10px;
+    width: 60%
+}
+`;
+
+export const Copyright = styled.span`
   padding: 10px;
 `;
+

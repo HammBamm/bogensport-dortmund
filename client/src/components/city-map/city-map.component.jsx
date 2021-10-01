@@ -45,7 +45,7 @@ export const CityMap = (props) => {
               setZoom(17);
               }
             }
-            onHover={() => {
+            onMouseOver={() => {
               props.setHovered()
             }}
           />  

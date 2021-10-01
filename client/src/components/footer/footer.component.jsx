@@ -4,7 +4,8 @@ import {
   FooterContainer,
   FooterOptionContainer,
   FooterOptionLinkContainer,
-  CopyrightContainer
+  CopyrightContainer,
+  Copyright
  } from './footer.styles';
 
 const Footer = () => (
@@ -13,7 +14,9 @@ const Footer = () => (
       <FooterOptionLinkContainer to='/impressum'>Impressum</FooterOptionLinkContainer>
       <FooterOptionLinkContainer to='/anmelden'>Anmelden</FooterOptionLinkContainer>
     </FooterOptionContainer>
-    <CopyrightContainer>&#169; {'2021 Bogensport Dortmund'.toUpperCase()}</CopyrightContainer>
+    <CopyrightContainer>
+      <Copyright>&#169; {'2021 Bogensport Dortmund'.toUpperCase()}</Copyright>
+    </CopyrightContainer>
   </FooterContainer>
 );
 

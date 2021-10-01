@@ -46,8 +46,13 @@ class SportanlagePage extends React.Component {
   }
   
   setHovered() {
-    this.setState({ hovered: true })
-  };
+    let key = 1;
+    this.setState( prevState => ({ 
+      details: prevState.details.map(
+        el => el.id === key ? { ...el, hovered: true } : el
+      )}
+    ));
+  }
 
 
   render() {
@@ -64,7 +69,6 @@ class SportanlagePage extends React.Component {
               ))
             }
           </LegendOptionContainer>
-          
         </MapContainer>
       </SportanlageContainer>
     );
