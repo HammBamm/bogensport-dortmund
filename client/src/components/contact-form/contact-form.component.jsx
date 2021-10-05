@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CustomButton from "../custom-button/custom-button.component";
-import FormInput from "../form-input/form-input.component";
-import { FormTextarea } from "../form-input/form-input.styles";
-import { ContactFormContainer } from "./contact-form.styles";
+import { FormInput } from "../form-input/form-input.component";
+import { FormInputLabel, FormTextarea } from "../form-input/form-input.styles";
+import { ContactFormContainer, TextareaLabelContainer } from "./contact-form.styles";
 
 const ContactForm = () => {
 
@@ -63,10 +63,12 @@ const ContactForm = () => {
           label='E-Mail'
           required
         />
+        <TextareaLabelContainer for="msgbox">Nachricht</TextareaLabelContainer>
         <FormTextarea
           name='message'
           onChange={(event) => {handleChange(event)}}
           form='contactFormId'
+          id= "msgbox"
           placeholder='Nachricht'
           rows="10"
           value={message}
