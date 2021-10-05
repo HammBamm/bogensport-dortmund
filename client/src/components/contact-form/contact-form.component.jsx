@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CustomButton from "../custom-button/custom-button.component";
 import { FormInput } from "../form-input/form-input.component";
 import { FormTextarea } from "../form-input/form-input.styles";
@@ -12,6 +12,10 @@ const ContactForm = () => {
     email: '',
     message: ''
   });
+  const [disabled, setDisabled] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => { setDisabled(false) }, 3000);  },[]);
 
   const { name, email, message } = formVals;
 
@@ -61,9 +65,10 @@ const ContactForm = () => {
           handleChange={handleChange}
           value={email}
           label='E-Mail'
+          maxlength="256"
           required
         />
-        <TextareaLabelContainer>Nachricht</TextareaLabelContainer>
+        <TextareaLabelContainer className={message.length ? 'shrink' : ''}>Nachricht</TextareaLabelContainer>
         <FormTextarea
           name='message'
           onChange={(event) => {handleChange(event)}}
@@ -74,7 +79,7 @@ const ContactForm = () => {
           value={message}
           required
         ></FormTextarea>
-        <CustomButton inverted type="submit">{status}</CustomButton>
+        <CustomButton id="submitButton" inverted type="submit" onClick={() => setDisabled(true) } disabled={disabled}>{status}</CustomButton>
       </form>
     </ContactFormContainer>
   );

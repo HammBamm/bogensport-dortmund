@@ -61,8 +61,8 @@ export const FormTextarea = styled.textarea`
   width: 100%;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid ${subColor};
-  margin: 25px 0;
+  border: 1px solid ${subColor};
+  margin: 15px 0;
   &:focus {
     outline: none;
   }

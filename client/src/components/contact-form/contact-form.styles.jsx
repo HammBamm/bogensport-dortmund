@@ -1,6 +1,13 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
+const subColor = 'grey';
 const mainColor = 'black';
+
+const shrinkLabelStyles = css`
+  top: -14px;
+  font-size: 12px;
+  color: ${mainColor};
+`;
 
 export const ContactFormContainer = styled.div`
   width: 850px;
@@ -19,10 +26,13 @@ export const ContactFormContainer = styled.div`
 `;
 
 export const TextareaLabelContainer = styled.label`
-  font-size: 12px;
-  color: ${mainColor};
+  color: ${subColor};
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
   font-weight: normal;
   pointer-events: none;
-  margin-left: 5px;
-  margin-top: 5px;
+  transition: 300ms ease all;
+  &.shrink {
+    ${shrinkLabelStyles}
+  }
 `;
