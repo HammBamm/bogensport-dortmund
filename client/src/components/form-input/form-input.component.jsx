@@ -16,16 +16,3 @@ export const FormInput = ({ handleChange, label, ...props }) => (
     ) : null}
   </GroupContainer>
 );
-
-export const FormTextareaInput = ({ handleChange, label, formId, ...props }) => (
-  <GroupContainer>
-    <FormTextareaInput onChange={handleChange} {...props} />
-    {label ? (
-      <FormInputLabel className={props.value.length ? 'shrink' : ''}>
-        {label}
-      </FormInputLabel>
-    ) : null}
-  </GroupContainer>
-)
-
-export default FormInput;

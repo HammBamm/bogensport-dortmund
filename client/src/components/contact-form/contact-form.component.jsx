@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CustomButton from "../custom-button/custom-button.component";
-import FormInput from "../form-input/form-input.component";
+import { FormInput } from "../form-input/form-input.component";
 import { FormTextarea } from "../form-input/form-input.styles";
-import { ContactFormContainer } from "./contact-form.styles";
+import { ContactFormContainer, TextareaLabelContainer } from "./contact-form.styles";
 
 const ContactForm = () => {
 
@@ -29,11 +29,11 @@ const ContactForm = () => {
     let response = await fetch("http://localhost:5000/kontakt", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json;charset=utf-8",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(details),
     });
-    setStatus("Senden");
+    setStatus("Gesendet");
     let result = await response.json();
     alert(result.status);
   };
@@ -63,11 +63,13 @@ const ContactForm = () => {
           label='E-Mail'
           required
         />
+        <TextareaLabelContainer>Nachricht</TextareaLabelContainer>
         <FormTextarea
           name='message'
           onChange={(event) => {handleChange(event)}}
           form='contactFormId'
-          placeholder='Nachricht'
+          id= "msgbox"
+          placeholder=''
           rows="10"
           value={message}
           required
