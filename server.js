@@ -3,8 +3,7 @@ const cors = require('cors');
 const path = require('path');
 const router = express.Router();
 const compression = require('compression');
-const enforce = require('express-sslify');
-
+//const enforce = require('express-sslify');
 const nodemailer = require("nodemailer");
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
@@ -13,63 +12,79 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(express.json());
+app.use(cors());
+
 app.use(express.urlencoded({
   extended: true
 }));
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+//app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use("/", router);
-app.use(cors());
 
 if (process.env.NODE_ENV === 'production') {
   app.use(compression());
-  app.use(enforce.HTTPS({ trustProtoHeader: true }));
+  //app.use(enforce.HTTPS({ trustProtoHeader: true }));
   app.use(express.static(path.join(__dirname, 'client/build')));
   app.get('*', function(req,res) {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
   })
 }
+
 app.listen(port, error => {
   if(error) throw error;
   console.log('Server running on port ' + port);
-})
+});
 
-app.get('/service-worker.js', (req,res) => {
+app.post('*', function(req,res,next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+/* app.get('/service-worker.js', (req,res,next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
   res.sendFile(path.resolve(__dirname, '..', 'build','service-worker.js'));
-})
+}); */
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: "ke.massmann@gmail.com",
-    pass: "C0nv3xHull"
+    user: process.env.EMAIL,
+    pass: process.env.PASS
   },
 });
 
-contactEmail.verify((error) => {
+contactEmail.verify((error, success) => {
   if (error) {
     console.log(error);
   } else {
-    console.log("Ready to Send");
+    console.log(`Ready to Send: ${success}`);
   }
 });
 
-router.post("/kontakt", (req, res) => {
+app.post("/kontakt", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const message = req.body.message; 
   const mail = {
     from: name,
-    to: "ke.massmann@gmail.com",
-    subject: "Contact Form Submission",
+    to: process.env.EMAIL,
+    subject: `[Bogensport Dortmund] Anwärter: ${name}`,
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
            <p>Message: ${message}</p>`,
   };
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res.json({ status: "ERROR" });
+  contactEmail.sendMail(mail, function (err, data) {
+    if (err) {
+      res.json({
+        status: "fail",
+      });
     } else {
-      res.json({ status: "Message Sent" });
+      console.log("== Message Sent ==");
+      res.json({
+        status: "success",
+      });
     }
   });
 });
