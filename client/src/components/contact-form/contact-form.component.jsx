@@ -74,7 +74,7 @@ const ContactForm = () => {
           onChange={(event) => {handleChange(event)}}
           form='contactFormId'
           id= "msgbox"
-          placeholder=''
+          placeholder='Hallo, ich will Bogenschießen.'
           rows="10"
           value={message}
           required

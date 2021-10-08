@@ -2,9 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.div` 
-  position: absolute;
-  bottom: 0;
-  width: 95%;
+  width: 100%;
   height: 40px;
   display: flex;
   margin-top: 25px;
@@ -39,12 +37,12 @@ export const FooterOptionLinkContainer = styled(Link)`
 `;
 
 export const CopyrightContainer = styled.div`
-  right: 0px;
-  width: 50%;
   height: 100%;
+  width: 50%;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+  
+
   @media screen and (max-width: 800px) {
     padding: 10px;
     width: 60%
@@ -53,5 +51,9 @@ export const CopyrightContainer = styled.div`
 
 export const Copyright = styled.span`
   padding: 10px;
+
+  @media screen and (max-width: 800px) {
+    padding: 0;
+}
 `;
 

@@ -81,7 +81,6 @@ app.post("/kontakt", (req, res) => {
         status: "fail",
       });
     } else {
-      console.log("== Message Sent ==");
       res.json({
         status: "success",
       });

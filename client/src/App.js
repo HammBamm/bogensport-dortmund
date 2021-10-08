@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import { Switch, Route } from 'react-router';
 
 import { GlobalStyle } from './global.styles';
@@ -12,7 +12,8 @@ import FAQPage from './pages/faq/faq-page.component';
 import SportanlagePage from './pages/sportanlage/sportanlage-page.component';
 import AnmeldungRegistrierungPage from './pages/anmeldung-registrierung/anmeldung-registrierung.component';
 import KalenderPage from './pages/kalender/kalender.component';
-
+import Spinner from './components/spinner/spinner.component';
+import ErrorBoundary from './components/error-boundary/error-boundary.component';
 
 const App = () => {
   return (
@@ -20,13 +21,17 @@ const App = () => {
       <GlobalStyle></GlobalStyle>
       <Header></Header>
       <Switch>
-        <Route exact path='/' component={Homepage}></Route>
-        <Route exact path='/kontakt' component={ContactPage}></Route>
-        <Route exact path='/bogenschiessen' component={BogenschiessenPage}></Route>
-        <Route exact path='/faq' component={FAQPage}></Route>
-        <Route exact path='/verein/sportanlage' component={SportanlagePage}></Route>
-        <Route exact path='/anmelden' component={AnmeldungRegistrierungPage}></Route>
-        <Route exact path='/kalender' component={KalenderPage}></Route>
+        <ErrorBoundary>
+          <Suspense fallback={<Spinner></Spinner>}>
+          <Route exact path='/' component={Homepage}></Route>
+          <Route exact path='/kontakt' component={ContactPage}></Route>
+          <Route exact path='/bogenschiessen' component={BogenschiessenPage}></Route>
+          <Route exact path='/faq' component={FAQPage}></Route>
+          <Route exact path='/verein/sportanlage' component={SportanlagePage}></Route>
+          <Route exact path='/anmelden' component={AnmeldungRegistrierungPage}></Route>
+          <Route exact path='/kalender' component={KalenderPage}></Route>
+          </Suspense>
+        </ErrorBoundary>
       </Switch>
       <Footer></Footer>
     </div>
