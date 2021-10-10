@@ -11,7 +11,7 @@ import BogenschiessenPage from './pages/bogenschiessen/bogenschiessen-page.compo
 import FAQPage from './pages/faq/faq-page.component';
 import SportanlagePage from './pages/sportanlage/sportanlage-page.component';
 import AnmeldungRegistrierungPage from './pages/anmeldung-registrierung/anmeldung-registrierung.component';
-import KalenderPage from './pages/kalender/kalender.component';
+import KalenderPage from './pages/kalender/kalender-page.component';
 import Spinner from './components/spinner/spinner.component';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
 

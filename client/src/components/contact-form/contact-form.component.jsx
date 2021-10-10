@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import CustomButton from "../custom-button/custom-button.component";
 import { FormInput } from "../form-input/form-input.component";
 import { FormTextarea } from "../form-input/form-input.styles";
@@ -14,8 +14,9 @@ const ContactForm = () => {
   });
   const [disabled, setDisabled] = useState(false);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => { setDisabled(false) }, 3000);  },[]);
+/*   useEffect(() => {
+    const timeout = setTimeout(() => { setDisabled(false) }, 3000);  
+  },[]); */
 
   const { name, email, message } = formVals;
 
