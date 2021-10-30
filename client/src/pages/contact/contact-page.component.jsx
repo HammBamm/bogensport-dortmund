@@ -1,8 +1,11 @@
 import React from 'react';
 import ContactForm from '../../components/contact-form/contact-form.component';
+import { ContactPageContainer } from './contage-page.styles';
 
 const ContactPage = () => (
-  <ContactForm />
+  <ContactPageContainer>
+    <ContactForm />
+  </ContactPageContainer>
 )
 
 export default ContactPage;

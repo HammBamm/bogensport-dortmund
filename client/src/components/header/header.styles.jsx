@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { globalScheme } from "../../global.styles";
 
 export const HeaderContainer = styled.div`
     height: 70px;
@@ -8,21 +9,23 @@ export const HeaderContainer = styled.div`
     justify-content: space-between;
     margin-bottom: 25px;
     flex-wrap: wrap;
+    //clip-path: polygon(50% 100%, 0 65%, 0% 0%, 100% 0, 100% 65%);
+    border-bottom: 3px solid ${globalScheme.darkgreen};
 
     @media screen and (max-width: 800px) {
-        height: 70px;
-        margin-bottom: 20px;
+        height: 50px;
+        margin-bottom: 10px;
     }
 `;
 
 export const LogosContainer = styled.div`
     width: 15%;
     display: flex;
-    justify-content: space-between;
     margin: 0 7.5px 15px;
 
     @media screen and (max-width: 800px) {
-        width: 15%;
+        width: 35%;
+        margin: auto;
     }
 `;
 
@@ -36,14 +39,8 @@ export const LogoContainer = styled(Link)`
     }
 `;
 export const LogoContainer2 = styled(Link)`
-    height: 70px;
-    width: 135px;
     display: flex;
-    padding-left: 10px;
-
-    @media screen and (max-width: 800px) {
-        width: 70px;
-    }
+    width: 200px;
 `;
 
 export const OptionsContainer = styled.div`

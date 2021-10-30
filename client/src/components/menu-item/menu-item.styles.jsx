@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { globalScheme } from '../../global.styles';
 
 export const MenuItemContainer = styled.div`
 	height: ${({ size }) => (size ? '380px' : '240px')};
@@ -8,7 +9,7 @@ export const MenuItemContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid black;
+	border: 3px solid ${globalScheme.darkgreen};
 	margin: 0 7.5px 15px;
 	overflow: hidden;
 	&:hover {

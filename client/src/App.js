@@ -22,7 +22,7 @@ const App = () => {
       <Header></Header>
       <Switch>
         <ErrorBoundary>
-          <Suspense fallback={<Spinner></Spinner>}>
+          <Suspense fallback={<Spinner />}>
           <Route exact path='/' component={Homepage}></Route>
           <Route exact path='/kontakt' component={ContactPage}></Route>
           <Route exact path='/bogenschiessen' component={BogenschiessenPage}></Route>

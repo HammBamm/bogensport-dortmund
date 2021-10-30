@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst2.svg';
 import { ReactComponent as FbookLogo } from '../../assets/header/facebook-6.svg';
-import BSLogo from '../../assets/header/tuslogo3.jpg';
+import { ReactComponent as BSLogo } from '../../assets/header/BSLogo.svg';
 
 import { 
   HeaderContainer,
@@ -14,12 +14,14 @@ import {
 
 const Header = () => (
   <HeaderContainer>
-    <LogosContainer>
+    {/* <LogosContainer>
       <LogoContainer to={{ pathname: "http://www.tusscharnhorst.de/" }} target="_blank">
         <TUSLogo/>
       </LogoContainer>
+    </LogosContainer> */}
+    <LogosContainer>
       <LogoContainer2 to='/'>
-        <img src={BSLogo} alt="Bogensport Dortmund Logo"/>
+          <BSLogo />
       </LogoContainer2>
     </LogosContainer>
     <OptionsContainer>

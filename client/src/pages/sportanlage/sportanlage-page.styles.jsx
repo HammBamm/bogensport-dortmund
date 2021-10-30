@@ -14,7 +14,12 @@ export const MapContainer = styled.div`
   padding: 10px;
 
   @media screen and (max-width: 800px) {
-    padding: 0;
+    flex-direction: column;
+    width: unset;
+    align-items: center;
+    > *:first-child {
+      margin-bottom: 50px;
+    }
   }
 `;
 
