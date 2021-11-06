@@ -24,4 +24,5 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
   </MenuItemContainer>
 );
 
+
 export default withRouter(MenuItem);

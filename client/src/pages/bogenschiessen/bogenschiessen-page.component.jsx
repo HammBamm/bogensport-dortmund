@@ -1,12 +1,12 @@
 import React from 'react';
 
-import gif from '../../assets/bogenschiessen/recurve2.gif'
 import { BogenPageContainer } from './bogenschiessen-page.styles';
-
+import BogenschiessenDirectory from '../../components/directories/bogenschiessen-directory.component';
 
 const BogenschiessenPage = () => (
   <BogenPageContainer>
-    <img src={gif} alt="loading..." />
+    <BogenschiessenDirectory />
+    {/* <img src={gif} alt="loading..." /> */}
   </BogenPageContainer>
 )
 

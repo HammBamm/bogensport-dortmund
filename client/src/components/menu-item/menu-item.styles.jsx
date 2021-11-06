@@ -38,7 +38,6 @@ export const BackgroundImageContainer = styled.div`
   height: 100%;
   background-size: cover;
   background-position: center;
-  filter: sepia(0.2) grayscale(0.4);
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 `;
 
@@ -78,3 +77,4 @@ export const ContentSubtitle = styled.span`
     font-size: 10px;
   }
 `;
+        

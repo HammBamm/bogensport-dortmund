@@ -1,13 +1,11 @@
 import React from 'react';
 
-import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst2.svg';
 import { ReactComponent as FbookLogo } from '../../assets/header/facebook-6.svg';
 import { ReactComponent as BSLogo } from '../../assets/header/BSLogo.svg';
 
 import { 
   HeaderContainer,
   LogosContainer,
-  LogoContainer,
   LogoContainer2,
   OptionsContainer,
   OptionLink } from './header.styles';

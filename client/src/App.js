@@ -14,6 +14,7 @@ import AnmeldungRegistrierungPage from './pages/anmeldung-registrierung/anmeldun
 import KalenderPage from './pages/kalender/kalender-page.component';
 import Spinner from './components/spinner/spinner.component';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
+import AusrüstungPage from './pages/ausrüstung/ausrüstung.component';
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route exact path='/verein/sportanlage' component={SportanlagePage}></Route>
           <Route exact path='/anmelden' component={AnmeldungRegistrierungPage}></Route>
           <Route exact path='/kalender' component={KalenderPage}></Route>
+          <Route exact path='/bogenschiessen/ausruestung' component={AusrüstungPage}></Route>
           </Suspense>
         </ErrorBoundary>
       </Switch>
