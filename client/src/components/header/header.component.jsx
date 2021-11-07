@@ -1,16 +1,21 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
 import { ReactComponent as FbookLogo } from '../../assets/header/facebook-6.svg';
 import { ReactComponent as BSLogo } from '../../assets/header/BSLogo.svg';
+import { ReactComponent as BackSymbol } from '../../assets/header/backSymbol.svg';
 
 import { 
   HeaderContainer,
   LogosContainer,
   LogoContainer2,
   OptionsContainer,
-  OptionLink } from './header.styles';
+  OptionLink,
+  BackButtonContainer } from './header.styles';
 
-const Header = () => (
+const Header = () => {
+  const history = useHistory();
+  return (
   <HeaderContainer>
     {/* <LogosContainer>
       <LogoContainer to={{ pathname: "http://www.tusscharnhorst.de/" }} target="_blank">
@@ -23,7 +28,9 @@ const Header = () => (
       </LogoContainer2>
     </LogosContainer>
     <OptionsContainer>
-      <OptionLink to='/'>Startseite</OptionLink>
+      <BackButtonContainer>
+        <BackSymbol onClick={() => history.goBack()} />
+      </BackButtonContainer>
       <OptionLink to='/faq'>FAQ</OptionLink>
       <OptionLink to='/kontakt'>Kontakt</OptionLink>
       <OptionLink to={{ pathname: "https://de-de.facebook.com/Bogensport-Dortmund-314466415291746/" }} target="_blank">
@@ -31,6 +38,6 @@ const Header = () => (
       </OptionLink>
     </OptionsContainer>
   </HeaderContainer>
-);
+)};
 
 export default Header;

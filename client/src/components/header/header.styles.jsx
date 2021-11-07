@@ -31,16 +31,20 @@ export const LogosContainer = styled.div`
 
 export const LogoContainer = styled(Link)`
     height: 100%;
-    width: 70px;
+    width: 60px;
 
     @media screen and (max-width: 800px) {
-        width: 57px;
+        width: 50px;
         display: none;
     }
 `;
 export const LogoContainer2 = styled(Link)`
     display: flex;
-    width: 200px;
+    width: 180px;
+
+    @media screen and (max-width: 800px) {
+        width: 100px;
+    }
 `;
 
 export const OptionsContainer = styled.div`
@@ -59,6 +63,17 @@ export const OptionLink = styled(Link)`
     padding: 10px 10px;
     cursor: pointer;
     @media screen and (max-width: 800px) {
+        padding: 0;
+        padding-right: 10px;
+    }
+`;
+
+export const BackButtonContainer = styled.div`
+    padding: 10px 10px;
+    width: 70px;
+    cursor: pointer;
+    @media screen and (max-width: 800px) {
+        width: 55px;
         padding: 0;
         padding-right: 10px;
     }

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { ArticleContainer, ArticleImageContainer, ArticleTextContainer } from './article.styles';
+import { ArticleContainer, ArticleTextContainer, ArticleImageContainerLeft, ArticleImageContainerRight } from './article.styles';
 
-const Article = ({img, title, text}) => (
+export const ArticleLeft = ({img, title, text}) => (
     <ArticleContainer>
-        <ArticleImageContainer src={img} />
+        <ArticleImageContainerLeft src={img} />
         <ArticleTextContainer>
             <h2>{title}</h2>
             <p>{text}</p>
@@ -12,4 +12,12 @@ const Article = ({img, title, text}) => (
     </ArticleContainer>
 );
 
-export default Article;
+export const ArticleRight = ({img, title, text}) => (
+    <ArticleContainer>
+        <ArticleTextContainer>
+            <h2>{title}</h2>
+            <p>{text}</p>
+        </ArticleTextContainer>
+        <ArticleImageContainerRight src={img} />
+    </ArticleContainer>
+);

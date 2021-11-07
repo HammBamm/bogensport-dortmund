@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { globalScheme } from "../../global.styles";
 
 export const FooterContainer = styled.div` 
   width: 100%;
   height: 40px;
   display: flex;
   margin-top: 25px;
+  border-top: 3px solid ${globalScheme.darkgreen};
 
   @media screen and (max-width: 800px) {
       position: relative;
