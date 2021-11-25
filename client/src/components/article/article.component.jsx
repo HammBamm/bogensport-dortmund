@@ -1,10 +1,36 @@
 import React from 'react';
 
-import { ArticleContainer, ArticleTextContainer, ArticleImageContainerLeft, ArticleImageContainerRight } from './article.styles';
+import { ArticleContainer, ArticleTextContainer, ArticleImageContainerLeft, ArticleImageContainerRight, HeadlineContainer } from './article.styles';
+
+export const Headline = ({text}) => (
+    <HeadlineContainer>{text}</HeadlineContainer>
+)
 
 export const ArticleLeft = ({img, title, text}) => (
     <ArticleContainer>
         <ArticleImageContainerLeft src={img} />
+        <ArticleTextContainer>
+            <h2>{title}</h2>
+            <p>{text}</p>
+        </ArticleTextContainer>
+    </ArticleContainer>
+);
+
+export const ArticleEnumeration = ({img, title, textArr}) => (
+    <ArticleContainer>
+        <ArticleTextContainer>
+            <h2>{title}</h2>
+            {
+                textArr.map(({ id, text }) => (
+                    <span key={id} >{text}<br /></span>
+                ))
+            }
+        </ArticleTextContainer>
+    </ArticleContainer>
+)
+
+export const ArticleTextOnly = ({title, text}) => (
+    <ArticleContainer>
         <ArticleTextContainer>
             <h2>{title}</h2>
             <p>{text}</p>
