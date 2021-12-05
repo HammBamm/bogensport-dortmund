@@ -32,6 +32,9 @@ export const FooterOptionLinkContainer = styled(Link)`
   padding: 10px;
   cursor: pointer;
   justify-content: flex-start;
+  &:hover {
+    color: ${globalScheme.darkgreen};
+  }
 
   @media screen and (max-width: 800px) {
     padding: 10px;
@@ -43,6 +46,7 @@ export const CopyrightContainer = styled.div`
   width: 50%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   
 
   @media screen and (max-width: 800px) {
@@ -55,7 +59,7 @@ export const Copyright = styled.span`
   padding: 10px;
 
   @media screen and (max-width: 800px) {
-    padding: 0;
+
 }
 `;
 

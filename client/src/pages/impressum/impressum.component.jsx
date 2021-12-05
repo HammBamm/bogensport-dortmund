@@ -1,20 +1,26 @@
 import React from 'react';
 import { ArticleEnumeration, ArticleTextOnly, Headline } from '../../components/article/article.component';
-import { ImpressumPageContainer } from './impressum.styles';
+import { ImpressumLogoContainer, ImpressumPageContainer, ImpressumPageImgContainer } from './impressum.styles';
+import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst3.svg';
 
 const ImpressumPage = () => (
   <ImpressumPageContainer>
     <Headline text="Impressum"/>
-    <ArticleEnumeration 
-      title="Anbieter"
-      textArr={[
-        {id:1,text:"TuS Scharnhorst 1895/1926 e.V."},
-        {id:2,text:"Bogensportabteilung"},
-        {id:3,text:"Uwe Niehaus"},
-        {id:4,text:"Unnaerstraße 34"},
-        {id:5,text:"59439 Holzwickede"}
-      ]}   
-    />
+    <ImpressumPageImgContainer>
+      <ArticleEnumeration
+        title="Anbieter"
+        textArr={[
+          {id:1,text:"TuS Scharnhorst 1895/1926 e.V."},
+          {id:2,text:"Bogensportabteilung"},
+          {id:3,text:"Uwe Niehaus"},
+          {id:4,text:"Unnaerstraße 34"},
+          {id:5,text:"59439 Holzwickede"}
+        ]}   
+      />
+      <ImpressumLogoContainer to={{ pathname: "http://www.tusscharnhorst.de/" }} target="_blank">
+        <TUSLogo/>
+      </ImpressumLogoContainer>
+    </ImpressumPageImgContainer>
     <ArticleEnumeration 
       title="Vereinsregister"
       textArr={[

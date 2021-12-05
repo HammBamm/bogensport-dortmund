@@ -8,6 +8,7 @@ const theme = {
 };
 
 export const CardContainer = styled.div`
+  width: 100%;
   border-radius: 0.75rem;
   border-color: ${ theme.primary };
   width: ${ theme.cardsize };

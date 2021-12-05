@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const SportanlageContainer = styled.div`
-  flex-direction: column;
+  display: flex;
   align-items: center;
   width: 100%;
-  flex-wrap: wrap;
   justify-content: space-between;
 `;
 

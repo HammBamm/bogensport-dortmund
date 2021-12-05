@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { Headline } from "../article/article.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { FormInput } from "../form-input/form-input.component";
 import { FormTextarea } from "../form-input/form-input.styles";
-import { ContactFormContainer, TextareaLabelContainer } from "./contact-form.styles";
+import { ContactFormContainer, FormWrapperContainer, TextareaLabelContainer } from "./contact-form.styles";
 
 const ContactForm = () => {
 
@@ -51,37 +52,40 @@ const ContactForm = () => {
 
   return (
     <ContactFormContainer>
-      <form id= 'contactFormId' onSubmit={handleSubmit}>
-        <FormInput
-          name='name'
-          type='text'
-          value={name}
-          handleChange={handleChange}
-          label='Vor- und Nachname'
-          required
+      <Headline text="Kontakt"/>
+      <FormWrapperContainer>
+        <form id= 'contactFormId' onSubmit={handleSubmit}>
+          <FormInput
+            name='name'
+            type='text'
+            value={name}
+            handleChange={handleChange}
+            label='Vor- und Nachname'
+            required
+            />
+          <FormInput
+            name='email'
+            type='email'
+            handleChange={handleChange}
+            value={email}
+            label='E-Mail'
+            maxlength="256"
+            required
           />
-        <FormInput
-          name='email'
-          type='email'
-          handleChange={handleChange}
-          value={email}
-          label='E-Mail'
-          maxlength="256"
-          required
-        />
-        <TextareaLabelContainer className={message.length ? 'shrink' : ''}>Nachricht</TextareaLabelContainer>
-        <FormTextarea
-          name='message'
-          onChange={(event) => {handleChange(event)}}
-          form='contactFormId'
-          id= "msgbox"
-          placeholder='Hallo, ich will Bogenschießen.'
-          rows="10"
-          value={message}
-          required
-        ></FormTextarea>
-        <CustomButton id="submitButton" inverted type="submit" onClick={() => setDisabled(true) } disabled={disabled}>{status}</CustomButton>
-      </form>
+          <TextareaLabelContainer className={message.length ? 'shrink' : ''}>Nachricht</TextareaLabelContainer>
+          <FormTextarea
+            name='message'
+            onChange={(event) => {handleChange(event)}}
+            form='contactFormId'
+            id= "msgbox"
+            placeholder='Hallo, ich will Bogenschießen.'
+            rows="10"
+            value={message}
+            required
+          ></FormTextarea>
+          <CustomButton id="submitButton" inverted type="submit" onClick={() => setDisabled(true) } disabled={disabled}>{status}</CustomButton>
+        </form>
+      </FormWrapperContainer>
     </ContactFormContainer>
   );
 };

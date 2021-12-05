@@ -9,7 +9,7 @@ import phoneImg from '../../assets/directory/phone.jpg';
 import arrowImg from '../../assets/directory/arrows.jpg';
 import archeryImg from '../../assets/directory/archery.jpg';
 
-class Directory extends React.Component {
+class HomepageDirectory extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -63,4 +63,4 @@ class Directory extends React.Component {
     }
 }
 
-export default Directory;
+export default HomepageDirectory;

@@ -17,25 +17,25 @@ class BogenschiessenDirectory extends React.Component {
                     title: 'Ausrüstung',
                     imageUrl: vereinsheimImg,
                     id: 1,
-                    size: 'large',
+                    size: '',
                     linkUrl: '/ausruestung'
                 },
                 {
                     title: 'Der richtige Einstieg',
                     imageUrl: phoneImg,
                     id: 2,
-                    size: 'large',
+                    size: '',
                     linkUrl: '/einstieg'
                 },
                 {
                     title: 'Kosten',
                     imageUrl: arrowImg,
-                    size: 'large',
+                    size: '',
                     id: 3,
                     linkUrl: '/kosten'
                 },
                 {
-                    title: 'Turniere',
+                    title: 'Voraussetzungen',
                     imageUrl: platzImg,
                     size: 'large',
                     id: 4,

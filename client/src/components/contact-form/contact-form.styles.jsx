@@ -10,10 +10,7 @@ const shrinkLabelStyles = css`
 `;
 
 export const ContactFormContainer = styled.div`
-  width: 850px;
-  display: flex;
-  justify-content: space-between;
-  margin: 30px auto;
+  margin: auto auto;
   
   @media screen and (max-width: 800px) {
     flex-direction: column;
@@ -23,6 +20,12 @@ export const ContactFormContainer = styled.div`
       margin-bottom: 50px;
     }
   }
+`;
+
+export const FormWrapperContainer = styled.div`
+  width: 80%;
+  margin: auto auto;
+  padding-bottom: 40px;
 `;
 
 export const TextareaLabelContainer = styled.label`

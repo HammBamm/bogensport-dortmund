@@ -16,6 +16,7 @@ import Spinner from './components/spinner/spinner.component';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
 import AusrüstungPage from './pages/ausrüstung/ausrüstung.component';
 import ImpressumPage from './pages/impressum/impressum.component';
+import VereinPage from './pages/verein/verein-page.component';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route exact path='/' component={Homepage}></Route>
           <Route exact path='/kontakt' component={ContactPage}></Route>
           <Route exact path='/bogenschiessen' component={BogenschiessenPage}></Route>
+          <Route exact path='/verein' component={VereinPage}></Route>
           <Route exact path='/faq' component={FAQPage}></Route>
           <Route exact path='/verein/sportanlage' component={SportanlagePage}></Route>
           <Route exact path='/anmelden' component={AnmeldungRegistrierungPage}></Route>

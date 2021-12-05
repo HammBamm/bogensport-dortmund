@@ -29,6 +29,20 @@ export const ArticleEnumeration = ({img, title, textArr}) => (
     </ArticleContainer>
 )
 
+export const ArticleEnumerationWithImg = ({img, title, textArr}) => (
+    <ArticleContainer>
+        <ArticleTextContainer>
+            <h2>{title}</h2>
+            {
+                textArr.map(({ id, text }) => (
+                    <span key={id} >{text}<br /></span>
+                ))
+            }
+        </ArticleTextContainer>
+        <ArticleImageContainerRight src={img} />
+    </ArticleContainer>
+)
+
 export const ArticleTextOnly = ({title, text}) => (
     <ArticleContainer>
         <ArticleTextContainer>

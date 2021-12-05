@@ -12,7 +12,7 @@ export const globalScheme = {
 export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Roboto', sans-serif;
-    padding: 20px 40px;
+    padding: 15px 40px;
     min-height: 100vh;
     background-color: #eae7dc;
     

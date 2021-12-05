@@ -11,7 +11,8 @@ import {
   LogoContainer2,
   OptionsContainer,
   OptionLink,
-  BackButtonContainer } from './header.styles';
+  BackButtonContainer, 
+  HeadlineContainer} from './header.styles';
 
 const Header = () => {
   const history = useHistory();
@@ -27,6 +28,9 @@ const Header = () => {
           <BSLogo />
       </LogoContainer2>
     </LogosContainer>
+    <HeadlineContainer>
+      Bogensport Dortmund
+    </HeadlineContainer>
     <OptionsContainer>
       <BackButtonContainer>
         <BackSymbol onClick={() => history.goBack()} />

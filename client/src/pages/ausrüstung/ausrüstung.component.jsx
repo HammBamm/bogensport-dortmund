@@ -2,7 +2,7 @@ import React from 'react';
 import {ArticleLeft, ArticleRight, Headline} from '../../components/article/article.component';
 
 import longbowImg from '../../assets/Kevin Webseite/sabine/Langbogen.jpg';
-import compoundbowImg from '../../assets/Kevin Webseite/sabine/compound.jpg';
+import compoundbowImg from '../../assets/bogenschiessen/Compound_Bow_full.png';
 import recurvebowImg from '../../assets/Kevin Webseite/Bogenreihe.jpeg';
 import arrowImg from '../../assets/Kevin Webseite/arrows.jpg';
 import armSchutzImg from '../../assets/Kevin Webseite/Armschutz.jpeg';
