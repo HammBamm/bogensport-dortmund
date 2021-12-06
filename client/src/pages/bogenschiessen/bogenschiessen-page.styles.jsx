@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const BogenPageContainer = styled.div`
   display: flex;
-  height: 80vh;
+  height: 78vh;
   flex-direction: column;
   align-items: center;
 
   @media screen and (max-width: 800px) {
-      height: auto;
+    height: 82vh;
   }
 `;

@@ -10,7 +10,7 @@ margin: 30px auto;
   width: unset;
   align-items: center;
   > *:first-child {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 }
 `;

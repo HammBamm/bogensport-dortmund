@@ -4,8 +4,8 @@ const subColor = 'grey';
 const mainColor = 'black';
 
 const shrinkLabelStyles = css`
-  top: -14px;
-  font-size: 12px;
+  top: -20px;
+  font-size: 14px;
   color: ${mainColor};
 `;
 
@@ -13,19 +13,18 @@ export const ContactFormContainer = styled.div`
   margin: auto auto;
   
   @media screen and (max-width: 800px) {
+    margin: unset;
     flex-direction: column;
     width: unset;
     align-items: center;
-    > *:first-child {
-      margin-bottom: 50px;
-    }
+    
   }
 `;
 
 export const FormWrapperContainer = styled.div`
   width: 80%;
   margin: auto auto;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 `;
 
 export const TextareaLabelContainer = styled.label`

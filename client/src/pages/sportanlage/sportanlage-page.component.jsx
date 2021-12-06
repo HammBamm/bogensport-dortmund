@@ -60,7 +60,7 @@ class SportanlagePage extends React.Component {
       <SportanlageContainer>
         <MapContainer>
           <LegendOptionContainer>
-            <CityMap setHovered={this.setHovered}/>
+            <CityMap/>
           </LegendOptionContainer>
           <LegendOptionContainer>
             {

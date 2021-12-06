@@ -79,21 +79,3 @@ export const SVGContainer = styled.div`
   fill: white;
   width: 65%;
 `;
-
-/* .skills {
-  display: flex;
-  flex-direction: column;
-  margin-top: 0.75rem;
-  
-  .label {
-     font-size: 1rem;
-     font-weight: 600;
-     color: var(--primary);
-  }
-  
-  .value {
-     margin-top: 0.15rem;
-     font-size: 0.75rem;
-     line-height: 1.25rem;
-  }
-} */

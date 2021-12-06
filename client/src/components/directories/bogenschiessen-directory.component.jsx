@@ -21,7 +21,7 @@ class BogenschiessenDirectory extends React.Component {
                     linkUrl: '/ausruestung'
                 },
                 {
-                    title: 'Der richtige Einstieg',
+                    title: 'Der Einstieg',
                     imageUrl: phoneImg,
                     id: 2,
                     size: '',

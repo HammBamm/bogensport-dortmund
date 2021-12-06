@@ -30,7 +30,7 @@ class VereinDirectory extends React.Component {
                 {
                     title: 'Turniere',
                     imageUrl: feeImg,
-                    id: 2,
+                    id: 3,
                     size: 'large',
                     linkUrl: '/beitraege'
                 },

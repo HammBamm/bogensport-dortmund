@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
 export const ContactPageContainer = styled.div`
-  height: 80vh;
+  height: 78vh;
+
+  @media screen and (max-width: 800px) {
+    height: unset;
+  }
 `;

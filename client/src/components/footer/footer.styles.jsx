@@ -51,7 +51,7 @@ export const CopyrightContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     padding: 10px;
-    width: 60%
+    width: 60%;
 }
 `;
 
@@ -59,7 +59,7 @@ export const Copyright = styled.span`
   padding: 10px;
 
   @media screen and (max-width: 800px) {
-
-}
+    padding: 0;
+  }
 `;
 

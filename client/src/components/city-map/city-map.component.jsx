@@ -18,7 +18,7 @@ export const CityMap = (props) => {
     <CityMapsContainer>
         <Map      
           height={isMobile ? 600 : 700} 
-          width={isMobile ? 320 : 900} 
+          width={isMobile ? 320 : 975} 
           center={center} 
           zoom={zoom} 
           minZoom={10}

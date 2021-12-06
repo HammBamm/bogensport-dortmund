@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const FAQPageContainer = styled.div`
-  height: 80vh;
+  height: 78vh;
 
   @media screen and (max-width: 800px) {
-      height: auto;
+      height: unset;
   }
 `;
