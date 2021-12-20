@@ -16,6 +16,15 @@ export const ArticleContainer = styled.div`
     }
 `;
 
+export const ArticleGridContainer = styled.div`
+    padding: 20px 40px 5px;
+    overflow: hidden;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+    }
+`;
+
 export const ArticleImageContainerLeft = styled.img`
     margin: 20px 30px 0 0;
     width: 250px;
@@ -44,7 +53,13 @@ export const ArticleTextContainer = styled.div`
     flex: 1 1 auto;
     text-align: justify;
     justify-content: start;
-
 `;
+
+export const ArticleTextGridContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1.5fr 0.2fr;
+    grid-gap: 4px;
+`;
+
   
   

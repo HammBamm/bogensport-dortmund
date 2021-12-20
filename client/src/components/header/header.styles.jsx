@@ -22,6 +22,10 @@ export const LogosContainer = styled.div`
     width: 22%;
     display: flex;
 
+    &:hover {
+        fill: ${globalScheme.darkgreen};
+    }
+
     @media screen and (max-width: 800px) {
         width: 35%;
         margin: auto;
@@ -32,6 +36,10 @@ export const LogoContainer = styled(Link)`
     height: 100%;
     width: 60px;
 
+    &:hover {
+        fill: ${globalScheme.darkgreen};
+    }
+
     @media screen and (max-width: 800px) {
         width: 50px;
         display: none;
@@ -41,6 +49,10 @@ export const LogoContainer = styled(Link)`
 export const LogoContainer2 = styled(Link)`
     display: flex;
     width: 180px;
+
+    &:hover {
+        fill: ${globalScheme.darkgreen};
+    }
 
     @media screen and (max-width: 800px) {
         width: 100px;
@@ -89,9 +101,10 @@ export const BackButtonContainer = styled.div`
 
 export const HeadlineContainer = styled.div`
     display: flex;
-    margin: 5px;
+    flex-direction: column;
     justify-content: center;
-    font-size: 45px;
+    font-size: 22px;
+    margin-top: -5px;
     color: ${globalScheme.darkgreen};
     text-shadow: 0 2px 1px #79a06d, 
     -1px 3px 1px #82ad75, 
@@ -99,6 +112,9 @@ export const HeadlineContainer = styled.div`
     font-family: 'Rubik Mono One', sans-serif;
     text-align: center;
 
+    #header {
+        font-size: 32px;
+    }
     @media screen and (max-width: 800px) {
         display: none;
     }

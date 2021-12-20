@@ -29,7 +29,8 @@ const Header = () => {
       </LogoContainer2>
     </LogosContainer>
     <HeadlineContainer>
-      Bogensport Dortmund
+      <span id="header">Bogensport Dortmund</span>
+      <span>Eine Abteilung des TUS Scharnhorst</span>
     </HeadlineContainer>
     <OptionsContainer>
       <BackButtonContainer>

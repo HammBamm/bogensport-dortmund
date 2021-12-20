@@ -1,12 +1,12 @@
 import React from 'react';
 
-import MenuItem from '../menu-item/menu-item.component';
+import SmallMenuItem from '../menu-item/small-menu-item.component';
 import { DirectoryMenuContainer } from './directory.styles';    
 
-import vereinsheimImg from '../../assets/directory/IMG_0060.png';
+import bögenImg from '../../assets/directory/Bogenreihe.jpeg';
 import platzImg from '../../assets/directory/IMG_0061.png';
-import phoneImg from '../../assets/directory/phone.jpg';
-import arrowImg from '../../assets/directory/arrows.jpg';
+import moneyImg from '../../assets/directory/fee.jpg';
+import birdGif from '../../assets/directory/bird2.gif';
 
 class BogenschiessenDirectory extends React.Component {
     constructor() {
@@ -15,22 +15,22 @@ class BogenschiessenDirectory extends React.Component {
             sections: [
                 {
                     title: 'Ausrüstung',
-                    imageUrl: vereinsheimImg,
+                    imageUrl: bögenImg,
                     id: 1,
-                    size: '',
+                    size: 'large',
                     linkUrl: '/ausruestung'
                 },
                 {
                     title: 'Der Einstieg',
-                    imageUrl: phoneImg,
+                    imageUrl: birdGif,
                     id: 2,
-                    size: '',
+                    size: 'large',
                     linkUrl: '/einstieg'
                 },
                 {
                     title: 'Kosten',
-                    imageUrl: arrowImg,
-                    size: '',
+                    imageUrl: moneyImg,
+                    size: 'large',
                     id: 3,
                     linkUrl: '/kosten'
                 },
@@ -50,7 +50,7 @@ class BogenschiessenDirectory extends React.Component {
             <DirectoryMenuContainer>
                 {
                     this.state.sections.map(({ id, ...otherSectionProps }) => (
-                        <MenuItem key={id} {...otherSectionProps}></MenuItem>
+                        <SmallMenuItem key={id} {...otherSectionProps}></SmallMenuItem>
                     ))
                 }
             </DirectoryMenuContainer>

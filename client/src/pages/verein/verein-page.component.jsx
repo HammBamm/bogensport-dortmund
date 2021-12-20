@@ -6,7 +6,6 @@ import VereinDirectory from '../../components/directories/verein-directory.compo
 const VereinPage = () => (
   <VereinPageContainer>
     <VereinDirectory />
-    {/* <img src={gif} alt="loading..." /> */}
   </VereinPageContainer>
 )
 

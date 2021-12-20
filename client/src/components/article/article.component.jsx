@@ -1,6 +1,13 @@
 import React from 'react';
 
-import { ArticleContainer, ArticleTextContainer, ArticleImageContainerLeft, ArticleImageContainerRight, HeadlineContainer } from './article.styles';
+import { 
+    ArticleContainer,
+    ArticleTextContainer,
+    ArticleImageContainerLeft,
+    ArticleImageContainerRight,
+    HeadlineContainer,
+    ArticleTextGridContainer,
+    ArticleGridContainer } from './article.styles';
 
 export const Headline = ({text}) => (
     <HeadlineContainer>{text}</HeadlineContainer>
@@ -16,7 +23,7 @@ export const ArticleLeft = ({img, title, text}) => (
     </ArticleContainer>
 );
 
-export const ArticleEnumeration = ({img, title, textArr}) => (
+export const ArticleEnumeration = ({title, textArr}) => (
     <ArticleContainer>
         <ArticleTextContainer>
             <h2>{title}</h2>
@@ -27,6 +34,19 @@ export const ArticleEnumeration = ({img, title, textArr}) => (
             }
         </ArticleTextContainer>
     </ArticleContainer>
+)
+
+export const ArticleGridWrapper = ({ title, textArr }) => (
+    <ArticleGridContainer>
+        <h2>{title}</h2>
+        <ArticleTextGridContainer>
+            {
+                textArr.map(({ id, text }) => (
+                    <div key={id}>{text}</div>
+                ))
+            }
+        </ArticleTextGridContainer>
+    </ArticleGridContainer>
 )
 
 export const ArticleEnumerationWithImg = ({img, title, textArr}) => (

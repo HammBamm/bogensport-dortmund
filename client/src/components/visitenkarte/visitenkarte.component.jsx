@@ -13,8 +13,6 @@ import {
   } from "./visitenkarte.styles";
 
 const VisitenKarte = ({ season, avatar, nameOfPlace, street, city, duration, hovered }) => {
-
-  console.log(hovered);
   return (
     <CardContainer hovered={hovered}>
       <CardAvatarContainer>

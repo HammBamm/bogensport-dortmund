@@ -5,6 +5,7 @@ import { DirectoryItemContainer, DirectoryMenuContainer, ImageContainer } from '
 
 import feeImg from '../../assets/directory/fee.jpg';
 import wieseImg from '../../assets/directory/Wiese.jpg';
+import medaillenImg from '../../assets/directory/medaillen.jpeg';
 import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst3.svg';
 import { Headline } from '../article/article.component';
 
@@ -29,10 +30,10 @@ class VereinDirectory extends React.Component {
                 },
                 {
                     title: 'Turniere',
-                    imageUrl: feeImg,
+                    imageUrl: medaillenImg,
                     id: 3,
                     size: 'large',
-                    linkUrl: '/beitraege'
+                    linkUrl: '/'
                 },
             ]
         };

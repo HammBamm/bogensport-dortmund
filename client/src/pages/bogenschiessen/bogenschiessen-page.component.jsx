@@ -6,7 +6,6 @@ import BogenschiessenDirectory from '../../components/directories/bogenschiessen
 const BogenschiessenPage = () => (
   <BogenPageContainer>
     <BogenschiessenDirectory />
-    {/* <img src={gif} alt="loading..." /> */}
   </BogenPageContainer>
 )
 

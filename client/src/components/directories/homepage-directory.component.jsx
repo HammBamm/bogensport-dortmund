@@ -6,7 +6,7 @@ import { DirectoryMenuContainer } from './directory.styles';
 import vereinsheimImg from '../../assets/directory/IMG_0060.png';
 import platzImg from '../../assets/directory/IMG_0061.png';
 import phoneImg from '../../assets/directory/phone.jpg';
-import arrowImg from '../../assets/directory/arrows.jpg';
+import calendarImg from '../../assets/calendar/calendar.jpg';
 import archeryImg from '../../assets/directory/archery.jpg';
 
 class HomepageDirectory extends React.Component {
@@ -28,7 +28,7 @@ class HomepageDirectory extends React.Component {
                 },
                 {
                     title: 'Kalender',
-                    imageUrl: arrowImg,
+                    imageUrl: calendarImg,
                     id: 3,
                     linkUrl: 'kalender'
                 },
