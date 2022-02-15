@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import { globalScheme } from "../../global.styles";
 
 export const HeaderContainer = styled.div`
-    height: 70px;
+    height: 75px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
+    margin-bottom: 22px;
     //clip-path: polygon(50% 100%, 0 65%, 0% 0%, 100% 0, 100% 65%);
     border-bottom: 3px solid ${globalScheme.darkgreen};
 
@@ -18,37 +17,27 @@ export const HeaderContainer = styled.div`
     }
 `;
 
-export const LogosContainer = styled.div`
-    width: 22%;
-    display: flex;
-
-    &:hover {
-        fill: ${globalScheme.darkgreen};
-    }
+export const LogoWrapper1 = styled.div`
+    width: 180px;
 
     @media screen and (max-width: 800px) {
-        width: 35%;
+        justify-content: flex-start;
         margin: auto;
     }
 `;
 
-export const LogoContainer = styled(Link)`
-    height: 100%;
-    width: 60px;
-
-    &:hover {
-        fill: ${globalScheme.darkgreen};
-    }
+export const LogoWrapper2 = styled.div`
+    width: 250px;
+    margin-top: -25px;
 
     @media screen and (max-width: 800px) {
-        width: 50px;
-        display: none;
+        justify-content: flex-end;
+        margin: auto;
     }
 `;
 
-export const LogoContainer2 = styled(Link)`
+export const LogoContainer1 = styled(Link)`
     display: flex;
-    width: 180px;
 
     &:hover {
         fill: ${globalScheme.darkgreen};
@@ -59,27 +48,36 @@ export const LogoContainer2 = styled(Link)`
     }
 `;
 
-export const OptionsContainer = styled.div`
-    width: 22%;
-    height: 100%;
+export const LogoContainer2 = styled(Link)`
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+
+    &:hover {
+        fill: ${globalScheme.darkgreen};
+    }
 
     @media screen and (max-width: 800px) {
-        width: 60%;
+        display: none;
+    }
+`;
+
+export const OptionsContainer = styled.div`
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 800px) {
     }
 `;
 
 export const OptionLink = styled(Link)`
     padding: 10px 10px;
+    width: 60px;
     cursor: pointer;
     &:hover {
-        color: ${globalScheme.darkgreen};
         fill: ${globalScheme.darkgreen};
     }
     @media screen and (max-width: 800px) {
         padding: 0;
+        width: 50px;
         padding-right: 10px;
     }
 `;
@@ -96,26 +94,5 @@ export const BackButtonContainer = styled.div`
         width: 50px;
         padding: 0;
         padding-right: 10px;
-    }
-`;
-
-export const HeadlineContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 22px;
-    margin-top: -5px;
-    color: ${globalScheme.darkgreen};
-    text-shadow: 0 2px 1px #79a06d, 
-    -1px 3px 1px #82ad75, 
-    -2px 5px 1px #8ebf80;
-    font-family: 'Rubik Mono One', sans-serif;
-    text-align: center;
-
-    #header {
-        font-size: 32px;
-    }
-    @media screen and (max-width: 800px) {
-        display: none;
     }
 `;

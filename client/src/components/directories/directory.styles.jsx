@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { globalScheme } from "../../global.styles";
 
 export const DirectoryMenuContainer = styled.div`
   width: 100%;
@@ -14,6 +15,10 @@ export const DirectoryItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto auto;
+
+  &:hover {
+    color: ${globalScheme.darkgreen};
+  }
 `;
 
 export const ImageContainer = styled(Link)`

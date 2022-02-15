@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const HomePageContainer = styled.div`
     display: flex;
-    height: 78vh;
+    min-height: 78vh;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
+    padding-top: 10px;
 
     @media screen and (max-width: 800px) {
         height: unset;

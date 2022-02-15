@@ -6,7 +6,8 @@ export const FooterContainer = styled.div`
   width: 100%;
   height: 40px;
   display: flex;
-  margin-top: 25px;
+  font-weight: 500;
+  margin-top: 22px;
   border-top: 3px solid ${globalScheme.darkgreen};
 
   @media screen and (max-width: 800px) {

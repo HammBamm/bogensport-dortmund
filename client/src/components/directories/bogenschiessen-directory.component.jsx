@@ -5,7 +5,6 @@ import { DirectoryMenuContainer } from './directory.styles';
 
 import bögenImg from '../../assets/directory/Bogenreihe.jpeg';
 import platzImg from '../../assets/directory/IMG_0061.png';
-import moneyImg from '../../assets/directory/fee.jpg';
 import birdGif from '../../assets/directory/bird2.gif';
 
 class BogenschiessenDirectory extends React.Component {
@@ -26,13 +25,6 @@ class BogenschiessenDirectory extends React.Component {
                     id: 2,
                     size: 'large',
                     linkUrl: '/einstieg'
-                },
-                {
-                    title: 'Kosten',
-                    imageUrl: moneyImg,
-                    size: 'large',
-                    id: 3,
-                    linkUrl: '/kosten'
                 },
                 {
                     title: 'Voraussetzungen',

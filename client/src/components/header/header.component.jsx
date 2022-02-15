@@ -1,45 +1,46 @@
 import React from 'react';
 import { useHistory } from 'react-router';
 
-import { ReactComponent as FbookLogo } from '../../assets/header/facebook-6.svg';
+import { ReactComponent as FAQ } from '../../assets/header/faqs2.svg';
+import { ReactComponent as InstaLogo } from '../../assets/header/icons8-instagram.svg';
 import { ReactComponent as BSLogo } from '../../assets/header/BSLogo.svg';
 import { ReactComponent as BackSymbol } from '../../assets/header/backSymbol.svg';
+import { ReactComponent as BogenSport } from '../../assets/header/BogensportDortmund.svg';
 
 import { 
   HeaderContainer,
-  LogosContainer,
+  LogoContainer1,
   LogoContainer2,
   OptionsContainer,
   OptionLink,
-  BackButtonContainer, 
-  HeadlineContainer} from './header.styles';
+  BackButtonContainer,
+  LogoWrapper1,
+  LogoWrapper2, 
+} from './header.styles';
 
 const Header = () => {
   const history = useHistory();
   return (
   <HeaderContainer>
-    {/* <LogosContainer>
-      <LogoContainer to={{ pathname: "http://www.tusscharnhorst.de/" }} target="_blank">
-        <TUSLogo/>
-      </LogoContainer>
-    </LogosContainer> */}
-    <LogosContainer>
-      <LogoContainer2 to='/'>
+    <LogoWrapper1>
+      <LogoContainer1 to='/'>
           <BSLogo />
+      </LogoContainer1>
+    </LogoWrapper1>
+    <LogoWrapper2>
+      <LogoContainer2 to='/'>
+          <BogenSport />
       </LogoContainer2>
-    </LogosContainer>
-    <HeadlineContainer>
-      <span id="header">Bogensport Dortmund</span>
-      <span>Eine Abteilung des TUS Scharnhorst</span>
-    </HeadlineContainer>
+    </LogoWrapper2>
     <OptionsContainer>
       <BackButtonContainer>
         <BackSymbol onClick={() => history.goBack()} />
       </BackButtonContainer>
-      <OptionLink to='/faq'>FAQ</OptionLink>
-      <OptionLink to='/kontakt'>Kontakt</OptionLink>
+      <OptionLink to='/faq'>
+        <FAQ></FAQ>
+      </OptionLink>
       <OptionLink to={{ pathname: "https://de-de.facebook.com/Bogensport-Dortmund-314466415291746/" }} target="_blank">
-        <FbookLogo />
+        <InstaLogo />
       </OptionLink>
     </OptionsContainer>
   </HeaderContainer>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const VereinPageContainer = styled.div`
   display: flex;
-  height: 78vh;
+  min-height: 78vh;
   flex-direction: column;
   align-items: center;
 

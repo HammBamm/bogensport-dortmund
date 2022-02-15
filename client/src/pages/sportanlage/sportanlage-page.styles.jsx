@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SportanlageContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 78vh;
+  min-height: 78vh;
   margin: auto auto;
 
   @media screen and (max-width: 800px) {

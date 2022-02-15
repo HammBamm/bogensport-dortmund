@@ -15,7 +15,7 @@ const Footer = () => (
       {/* <FooterOptionLinkContainer to='/anmelden'>Anmelden</FooterOptionLinkContainer> */}
     </FooterOptionContainer>
     <CopyrightContainer>
-      <Copyright>&#169; {'2021 Bogensport Dortmund'.toUpperCase()}</Copyright>
+      <Copyright>&#169; {'2022 Bogensport Dortmund'.toUpperCase()}</Copyright>
     </CopyrightContainer>
   </FooterContainer>
 );

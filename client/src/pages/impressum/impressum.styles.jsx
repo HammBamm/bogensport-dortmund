@@ -7,6 +7,7 @@ export const ImpressumPageContainer = styled.div`
   margin-right: auto;
   width: 60%;
   text-align: start;
+  min-height: 78vh;
 
   @media screen and (max-width: 800px) {
     width: 100%;
