@@ -47,13 +47,13 @@ app.post('*', function(req,res,next) {
   res.sendFile(path.resolve(__dirname, '..', 'build','service-worker.js'));
 }); */
 
-const contactEmail = nodemailer.createTransport({
+/* const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASS
   },
-});
+}); */
 
 contactEmail.verify((error, success) => {
   if (error) {

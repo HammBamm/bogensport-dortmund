@@ -23,7 +23,7 @@ const Header = () => {
   return (
   <HeaderContainer>
     <LogoWrapper1>
-      <LogoContainer1 to='/'>
+      <LogoContainer1 to='/menü'>
           <BSLogo />
       </LogoContainer1>
     </LogoWrapper1>

@@ -18,7 +18,7 @@ class HomepageDirectory extends React.Component {
                     title: 'Unser Verein',
                     imageUrl: vereinsheimImg,
                     id: 1,
-                    linkUrl: 'verein'
+                    linkUrl: 'menü/verein'
                 },
                 {
                     title: 'Kontakt',
@@ -30,21 +30,21 @@ class HomepageDirectory extends React.Component {
                     title: 'Kalender',
                     imageUrl: calendarImg,
                     id: 3,
-                    linkUrl: 'kalender'
+                    linkUrl: '/kalender'
                 },
                 {
                     title: 'Sportanlage',
                     imageUrl: platzImg,
                     size: 'large',
                     id: 4,
-                    linkUrl: 'verein/sportanlage'
+                    linkUrl: 'menü/verein/sportanlage'
                 },
                 {
                     title: 'Bogenschießen',
                     imageUrl: archeryImg,
                     size: 'large',
                     id: 5,
-                    linkUrl: 'bogenschiessen'
+                    linkUrl: 'menü/bogenschießen'
                 }
             ]
         };

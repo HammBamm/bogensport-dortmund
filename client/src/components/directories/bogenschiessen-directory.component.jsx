@@ -4,7 +4,6 @@ import SmallMenuItem from '../menu-item/small-menu-item.component';
 import { DirectoryMenuContainer } from './directory.styles';    
 
 import bögenImg from '../../assets/directory/Bogenreihe.jpeg';
-import platzImg from '../../assets/directory/IMG_0061.png';
 import birdGif from '../../assets/directory/bird2.gif';
 
 class BogenschiessenDirectory extends React.Component {
@@ -25,13 +24,6 @@ class BogenschiessenDirectory extends React.Component {
                     id: 2,
                     size: 'large',
                     linkUrl: '/einstieg'
-                },
-                {
-                    title: 'Voraussetzungen',
-                    imageUrl: platzImg,
-                    size: 'large',
-                    id: 4,
-                    linkUrl: '/turniere'
                 }
             ]
         };

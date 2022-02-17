@@ -33,7 +33,7 @@ class VereinDirectory extends React.Component {
                     imageUrl: medaillenImg,
                     id: 3,
                     size: 'large',
-                    linkUrl: '/'
+                    linkUrl: '/turniere'
                 },
             ]
         };
