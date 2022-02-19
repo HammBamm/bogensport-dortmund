@@ -16,7 +16,7 @@ class BogenschiessenDirectory extends React.Component {
                     imageUrl: bögenImg,
                     id: 1,
                     size: 'large',
-                    linkUrl: '/ausruestung'
+                    linkUrl: '/ausrüstung'
                 },
                 {
                     title: 'Der Einstieg',

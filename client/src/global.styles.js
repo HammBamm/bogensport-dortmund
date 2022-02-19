@@ -6,7 +6,8 @@ export const globalScheme = {
   darklimegreen: "#76BA1B",
   maxgreen: "#4C9A2A",
   lightgreen: "#ACDF87",
-  mantisgreen: "#68BB59"
+  mantisgreen: "#68BB59",
+  background: "#eae7dc"
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -14,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     padding: 20px 40px;
     min-height: 100vh;
-    background-color: #eae7dc;
+    background-color: ${globalScheme.background};
     
     
     @media screen and (max-width: 800px) {

@@ -1,23 +1,22 @@
 import React from 'react';
-import { motion } from 'framer-motion/dist/framer-motion'
-import { LandingPageContainer, LogoContainer } from './landing-page.styles';
+import { LandingPageContainer, LogoContainer, ButtonContainer, CustomButtonLandingPageContainer } from './landing-page.styles';
 import { ReactComponent as BogenSport } from '../../assets/header/BogensportDortmund.svg';
+import { ReactComponent as Target } from '../../assets/landing-page/target.svg';
 
 const LandingPage = () => (
-    
     <LandingPageContainer>
-      <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      onTap={{ opacity: 0 }}
-      transition={{ duration: 1 }}
-    >
-      <LogoContainer to='/menü'>
+      
+        <LogoContainer to='/menü'>
           <BogenSport />
-      </LogoContainer>
-      </ motion.div>
+         
+        </LogoContainer>
+        <ButtonContainer>
+          <CustomButtonLandingPageContainer>
+            <Target />
+            Alle ins Gold!
+          </CustomButtonLandingPageContainer>
+        </ButtonContainer>
     </LandingPageContainer>
-    
 );
 
 export default LandingPage;
