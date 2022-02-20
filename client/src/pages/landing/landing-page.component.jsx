@@ -1,19 +1,23 @@
 import React from 'react';
-import { LandingPageContainer, LogoContainer, ButtonContainer, CustomButtonLandingPageContainer } from './landing-page.styles';
+import { LandingPageContainer, LogoContainer, ButtonContainer, CustomButtonLandingPageContainer, LandingPageTextContainer } from './landing-page.styles';
 import { ReactComponent as BogenSport } from '../../assets/header/BogensportDortmund.svg';
 import { ReactComponent as Target } from '../../assets/landing-page/target.svg';
 
 const LandingPage = () => (
     <LandingPageContainer>
-      
-        <LogoContainer to='/menü'>
+        <LandingPageTextContainer>
+          <h1>Willkommen auf Bogensport-Dortmund.de </h1>
+          <h2>Eine Abteilung des TuS Scharnhorst 1895/1926 e.V</h2>
+        </LandingPageTextContainer>
+        <LogoContainer>
           <BogenSport />
-         
         </LogoContainer>
-        <ButtonContainer>
-          <CustomButtonLandingPageContainer>
+        <ButtonContainer to='/menü'>
+          <CustomButtonLandingPageContainer >
             <Target />
-            Alle ins Gold!
+            <LandingPageTextContainer>
+              Alle ins Gold!
+            </LandingPageTextContainer>
           </CustomButtonLandingPageContainer>
         </ButtonContainer>
     </LandingPageContainer>

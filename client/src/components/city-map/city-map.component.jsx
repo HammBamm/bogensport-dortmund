@@ -45,9 +45,6 @@ export const CityMap = (props) => {
               setZoom(17);
               }
             }
-            onMouseOver={() => {
-              props.setHovered()
-            }}
           />  
           <CustomButton onClick={() => {
               setCenter(defaultCenter)

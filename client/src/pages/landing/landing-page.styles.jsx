@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { globalScheme } from "../../global.styles";
-
 export const LandingPageContainer = styled.div`
   display: flex;
-  justify-content: center;
   flex-direction: column;
   height: 78vh;
 
@@ -14,13 +11,12 @@ export const LandingPageContainer = styled.div`
   }
 `;
 
-export const LogoContainer = styled(Link)`
+export const LogoContainer = styled.div`
   display: flex;
-  width: 80%;
-  margin: auto;
+  width: 50%;
+  margin: -20px auto 0;
 
   &:hover {
-      fill: ${globalScheme.darkgreen};
   }
 
   @media screen and (max-width: 800px) {
@@ -29,14 +25,9 @@ export const LogoContainer = styled(Link)`
 
 export const ButtonContainer = styled(Link)`
   display: flex;
-  padding-top: 20px;
-  width: 50%;
+  width: 30%;
   height: 120px;
   margin: auto;
-
-  &:hover {
-      fill: ${globalScheme.darkgreen};
-  }
 
   @media screen and (max-width: 800px) {
   }
@@ -53,7 +44,7 @@ export const CustomButtonLandingPageContainer = styled.button`
     font-weight: bolder;
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
     background-color: white;
     color: black;
@@ -64,4 +55,12 @@ export const CustomButtonLandingPageContainer = styled.button`
         color: #FFD700;
         border: none;
     }
+`;
+
+export const LandingPageTextContainer = styled.div`
+  margin: auto;
+  text-align: center;
+
+  @media screen and (max-width: 800px) {
+  }
 `;

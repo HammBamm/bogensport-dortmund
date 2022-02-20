@@ -2,7 +2,7 @@ import React from 'react';
 import {ArticleLeft, ArticleRight, Headline} from '../../components/article/article.component';
 
 import mouseArcherImg from '../../assets/einstieg/mouseArcher.jpg';
-import recurvebowImg from '../../assets/Kevin Webseite/Bogenreihe.jpeg';
+import recurvebowImg from '../../assets/directory/Bogenreihe.jpeg';
 
 import { EinstiegPageContainer } from './einstieg.styles';
 import useMediaQuery from "../../components/media-query/media-query.component";

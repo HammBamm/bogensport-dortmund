@@ -3,9 +3,8 @@ import React from 'react';
 import MenuItem from '../menu-item/menu-item.component';
 import { DirectoryItemContainer, DirectoryMenuContainer, ImageContainer } from './directory.styles';    
 
-import feeImg from '../../assets/directory/fee.jpg';
-import wieseImg from '../../assets/directory/Wiese.jpg';
-import medaillenImg from '../../assets/directory/medaillen.jpeg';
+import feeImg from '../../assets/verein/fee.jpg';
+import wieseImg from '../../assets/verein/Wiese.jpg';
 import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst3.svg';
 import { Headline } from '../article/article.component';
 
@@ -27,14 +26,7 @@ class VereinDirectory extends React.Component {
                     id: 2,
                     size: 'large',
                     linkUrl: '/verein/beiträge'
-                },
-                {
-                    title: 'Turniere',
-                    imageUrl: medaillenImg,
-                    id: 3,
-                    size: 'large',
-                    linkUrl: '/verein/turniere'
-                },
+                }
             ]
         };
     }

@@ -17,7 +17,6 @@ class SportanlagePage extends React.Component {
   constructor(props) {
     super(props);
 
-    this.setHovered = this.setHovered.bind(this);
     this.state = {
       details: [
         {
@@ -27,8 +26,7 @@ class SportanlagePage extends React.Component {
           nameOfPlace: "Siegfried-Drupp-Schule",
           street: "Siegfried-Drupp-Straße 5",
           city: "44328 Dortmund",
-          duration: "Oktober - März",
-          hovered: false
+          duration: "Oktober - März"
         },
         {
           id: 2,
@@ -37,23 +35,12 @@ class SportanlagePage extends React.Component {
           nameOfPlace: "TuS Scharnhorst Bogensport & Mehrzweckplatz",
           street: "Am Holzgraben 1A",
           city: "44328 Dortmund",
-          duration: "April - September",
-          hovered: false
+          duration: "April - September"
         }
       ]
     };
 
   }
-  
-  setHovered() {
-    let key = 1;
-    this.setState( prevState => ({ 
-      details: prevState.details.map(
-        el => el.id === key ? { ...el, hovered: true } : el
-      )}
-    ));
-  }
-
 
   render() {
     return (

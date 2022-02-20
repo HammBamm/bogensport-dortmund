@@ -1,8 +1,9 @@
 import React from 'react';
 import {ArticleLeft, Headline, ArticleRight} from '../../components/article/article.component';
 
-import recurvebowImg from '../../assets/Kevin Webseite/Bogenreihe.jpeg';
+import recurvebowImg from '../../assets/directory/Bogenreihe.jpeg';
 import grillImg from '../../assets/directory/grill.jpg';
+import medaillenImg from '../../assets/verein/medaillen.jpeg';
 
 import { MentalitätPageContainer } from './mentalität.styles';
 
@@ -18,7 +19,7 @@ const MentalitätPage = () =>
                     Wer in unserem Verein Mitglied wird, bestimmt selbst welche Richtung des Bogenschießens er einschlägt, ob Recurve, Compound, Blank oder Langbogen.' 
                 />
                 <ArticleRight
-                    img={recurvebowImg}
+                    img={medaillenImg}
                     title="Turniere"
                     text="Sportlich orientierte Schützen können mit uns die Meisterschaften des Westfälischen und Deutschen Schützenbundes, sowie freie FITA/WA-, 3D- und Feldtuniere bestreiten."
                 />
