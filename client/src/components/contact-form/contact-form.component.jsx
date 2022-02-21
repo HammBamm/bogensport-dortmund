@@ -43,12 +43,12 @@ const ContactForm = () => {
     })
     .then(response => {
       console.log(response);
-      alert.success("Kontaktinformationen erfolgreich gesendet.");
+      alert.success("Kontaktinformationen wurden erfolgreich gesendet.");
       setStatus("Gesendet");
     })
     .catch(error => {
       console.log(error);
-      alert.error("Kontaktinformationen konnten nicht gesendet werden, bitte später erneut versuchen");
+      alert.error("Kontaktinformationen konnten nicht gesendet werden. Bitte versuche es später erneut.");
       setDisabled(false);
     });
     
