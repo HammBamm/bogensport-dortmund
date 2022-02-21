@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useAlert } from "react-alert";
 import { Headline } from "../article/article.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { FormInput } from "../form-input/form-input.component";
@@ -7,6 +8,7 @@ import { ContactFormContainer, FormWrapperContainer, TextareaLabelContainer } fr
 
 const ContactForm = () => {
 
+  const alert = useAlert();
   const [status, setStatus] = useState("Senden");
   const [formVals, setFormVals] = useState({
     name: '',
@@ -23,7 +25,7 @@ const ContactForm = () => {
 
   const handleSubmit = async event => {
     event.preventDefault();
-
+    alert.info("Kontaktinformationen werden gesendet.")
     setStatus("Sende Nachricht...");
     const { name, email, message } = event.target.elements;
     let details = {
@@ -32,16 +34,24 @@ const ContactForm = () => {
       message: message.value,
     };
 
-    let response = await fetch("http://localhost:5000/kontakt", {
+    await fetch("http://localhost:5000/kontakt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(details),
+    })
+    .then(response => {
+      console.log(response);
+      alert.success("Kontaktinformationen erfolgreich gesendet.");
+      setStatus("Gesendet");
+    })
+    .catch(error => {
+      console.log(error);
+      alert.error("Kontaktinformationen konnten nicht gesendet werden, bitte später erneut versuchen");
+      setDisabled(false);
     });
-    setStatus("Gesendet");
-    let result = await response.json();
-    alert(result.status);
+    
   };
 
   const handleChange = event => {

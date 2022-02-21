@@ -55,6 +55,16 @@ app.post('*', function(req,res,next) {
   },
 }); */
 
+const contactEmail = nodemailer.createTransport({
+  host: "sv09.net-housting.de",
+  port: 465,
+  secure: true, // upgrade later with STARTTLS
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASS
+  },
+});
+
 contactEmail.verify((error, success) => {
   if (error) {
     console.log(error);

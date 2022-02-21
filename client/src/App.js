@@ -2,6 +2,9 @@ import React, {Suspense} from 'react';
 import { Switch, Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 
+import { positions, Provider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+
 import { GlobalStyle } from './global.styles';
 
 import Footer from './components/footer/footer.component';
@@ -23,12 +26,17 @@ import BeiträgePage from './pages/beiträge/beiträge-page.component';
 import LandingPage from './pages/landing/landing-page.component';
 import MentalitätPage from './pages/mentalität/mentalität.component';
 
+const options = {
+  timeout: 8000,
+  position: positions.BOTTOM_CENTER
+};
 
 const App = () => (
   <div>
     <GlobalStyle />
     
     <BrowserRouter>
+    <Provider template={AlertTemplate} {...options}>
     <Header />
       <Switch>
         <ErrorBoundary>
@@ -51,6 +59,7 @@ const App = () => (
         </ErrorBoundary>
       </Switch>
     <Footer />
+    </Provider>
     </BrowserRouter>
   </div>
 )

@@ -30,6 +30,7 @@ export const ButtonContainer = styled(Link)`
   margin: auto;
 
   @media screen and (max-width: 800px) {
+    width: unset;
   }
 `;
 
