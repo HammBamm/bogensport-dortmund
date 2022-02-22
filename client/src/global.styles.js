@@ -17,9 +17,8 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     background-color: ${globalScheme.background};
     
-    
     @media screen and (max-width: 800px) {
-      padding: 10px 20px;
+      padding: 10px 10px;
     }
   }
 

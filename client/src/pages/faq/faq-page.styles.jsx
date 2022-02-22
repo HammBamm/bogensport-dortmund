@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { globalScheme } from "../../global.styles";
 
 export const FAQPageContainer = styled.div`
 margin-left: auto;
 margin-right: auto;
-width: 60%;
+width: 80%;
 text-align: start;
 min-height: 78vh;
 
@@ -20,3 +21,12 @@ flex-direction: column;
   display: block;
 }
 `;
+
+export const LinkTextContainer = styled.span`
+  font-weight: bold;
+  text-decoration: underline;
+
+  &:visited {
+    color: ${globalScheme.darkgreen};
+  }
+`

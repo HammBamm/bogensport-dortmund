@@ -57,8 +57,12 @@ export const ArticleTextContainer = styled.div`
 
 export const ArticleTextGridContainer = styled.div`
     display: grid;
-    grid-template-columns: 1.5fr 0.2fr;
-    grid-gap: 4px;
+    grid-template-columns: ${({ gridSpaceIndex, gridSpace1, gridSpace2 }) => (
+    gridSpaceIndex === 0 ? `${gridSpace1} ${gridSpace2}` :
+    `${gridSpaceIndex} ${gridSpace1} ${gridSpace2}`
+    )};
+    grid-gap: ${({ colGap }) => `${colGap}`};
+    row-gap: ${({ rowGap }) => `${rowGap}`};
 `;
 
   

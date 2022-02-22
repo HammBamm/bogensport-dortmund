@@ -27,8 +27,8 @@ export const LogoWrapper1 = styled.div`
 `;
 
 export const LogoWrapper2 = styled.div`
-    width: 250px;
-    margin-top: -25px;
+    max-width: 250px;
+    margin-top: -26px;
 
     @media screen and (max-width: 800px) {
         justify-content: flex-end;

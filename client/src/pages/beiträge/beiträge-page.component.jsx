@@ -3,16 +3,25 @@ import { ArticleGridWrapper, Headline } from '../../components/article/article.c
 import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst3.svg';
 import { BeiträgeLogoContainer, BeiträgePageContainer, BeiträgePageImgContainer } from './beiträge-page.styles';
 
+const gridLayout = {
+  colGap: "4px",
+  space1: "1.5fr",
+  space2: "0.2fr",
+  rowsGap: "1px",
+  indexSpace: 0
+}
+
 const BeiträgePage = () => (
   <BeiträgePageContainer>
     <Headline text="Beiträge"/>
     <BeiträgePageImgContainer>
-      <ArticleGridWrapper
+      <ArticleGridWrapper space1="1.5fr" space2="0.2fr"
         title="Verwaltungsgebühr des TUS Scharnhorst (einmalig)"
         textArr={[
           {id:1,text:"Verwaltungsgebühr"},
           {id:2,text:"6,00€"},
-        ]}    
+        ]} 
+        gridSpaceIndex={gridLayout.indexSpace} gridSpace1={gridLayout.space1} gridSpace2={gridLayout.space2} gridGap={gridLayout.colGap} rowGap={gridLayout.rowsGap}
       />
       <ArticleGridWrapper
         title="Aufnahmegebühr (einmalig)"
@@ -25,7 +34,8 @@ const BeiträgePage = () => (
           {id:6,text:"25,00€"},
           {id:7,text:"Familien (2 Erwachsene mit Kind/Kindern)"},
           {id:8,text:"75,00€"},
-        ]}    
+        ]}
+        gridSpaceIndex={gridLayout.indexSpace} gridSpace1={gridLayout.space1} gridSpace2={gridLayout.space2} gridGap={gridLayout.colGap} rowGap={gridLayout.rowsGap}
       />
       <ArticleGridWrapper
         title="Jahresbeitrag"
@@ -38,14 +48,16 @@ const BeiträgePage = () => (
           {id:6,text:"60,00€"},
           {id:7,text:"Familienrabatt (ab 2 Personen)"},
           {id:8,text:"20%"},
-        ]}   
+        ]}
+        gridSpaceIndex={gridLayout.indexSpace} gridSpace1={gridLayout.space1} gridSpace2={gridLayout.space2} gridGap={gridLayout.colGap} rowGap={gridLayout.rowsGap}
       />
       <ArticleGridWrapper
         title="Mietbogen"
         textArr={[
           {id:1,text:"Monatliche Miete eines Vereinsbogen inklusive Zubehör"},
           {id:2,text:"10,00€"},
-        ]}   
+        ]}  
+        gridSpaceIndex={gridLayout.indexSpace} gridSpace1={gridLayout.space1} gridSpace2={gridLayout.space2} gridGap={gridLayout.colGap} rowGap={gridLayout.rowsGap}
       />
       <BeiträgeLogoContainer to={{ pathname: "http://www.tusscharnhorst.de/index.php/mitglied-werden" }} target="_blank">
         <TUSLogo/>
