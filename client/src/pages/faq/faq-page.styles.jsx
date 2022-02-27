@@ -7,6 +7,7 @@ margin-right: auto;
 width: 80%;
 text-align: start;
 min-height: 78vh;
+font-size: large;
 
 @media screen and (max-width: 800px) {
   width: 100%;
@@ -29,4 +30,8 @@ export const LinkTextContainer = styled.span`
   &:visited {
     color: ${globalScheme.darkgreen};
   }
-`
+
+  &:hover {
+    color: ${globalScheme.darkgreen};
+  }
+`;

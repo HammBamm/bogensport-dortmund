@@ -22,6 +22,7 @@ export const ArticleGridContainer = styled.div`
 
     @media screen and (max-width: 800px) {
         flex-direction: column;
+        padding: 0;
     }
 `;
 
@@ -61,8 +62,11 @@ export const ArticleTextGridContainer = styled.div`
     gridSpaceIndex === 0 ? `${gridSpace1} ${gridSpace2}` :
     `${gridSpaceIndex} ${gridSpace1} ${gridSpace2}`
     )};
-    grid-gap: ${({ colGap }) => `${colGap}`};
-    row-gap: ${({ rowGap }) => `${rowGap}`};
+    grid-gap: ${({ gridGap }) => `${gridGap}`};
+
+    @media screen and (max-width: 800px) {
+    
+    }
 `;
 
   

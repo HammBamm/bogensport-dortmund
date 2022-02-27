@@ -12,19 +12,18 @@ import {
   DateContainer,
   DescriptionContainer } from './event-uebersicht.styles';
 
-const EventUebersicht = ({ today, dates }) => {
-  console.log(dates)
+const EventUebersicht = ({ dates, changeSelected }) => {
   return (
     <EventContainer>
       <EventContainerTitle>Bevorstehende Events</EventContainerTitle>
       <EventDetailsContainer>
       {
-        dates.map(({ id, date, description}) => (
+        dates.map(({ id, formattedDate, time, description}) => (
           <EventItemContainer key={id}>
             <EventTargetContainer>
               <TargetImg/> 
             </EventTargetContainer>
-            <DateContainer> {date.toDateString()} </DateContainer>
+            <DateContainer> {formattedDate} von {time} </DateContainer>
             <DescriptionContainer> {description} </DescriptionContainer>
           </EventItemContainer>
         ))

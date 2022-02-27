@@ -1,4 +1,5 @@
 import styled  from 'styled-components';
+import { globalScheme } from '../../global.styles';
 
 const theme = {
   background: "white",
@@ -8,7 +9,7 @@ const theme = {
 };
 
 export const EventContainer = styled.div`
-  width: 380px;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
 
@@ -25,24 +26,33 @@ export const EventContainerTitle = styled.h2`
 `;
 
 export const EventDetailsContainer = styled.div`
+  font-size: large;
   margin-top: 5px;
 `;
 
 export const EventItemContainer = styled.div` 
-  display: flex;
-  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: 0.2fr 2fr 2fr;
+  grid-gap: 14px;
+  cursor: pointer;
+
+  &:hover {
+    font-weight: bold;
+    border-radius: 0.75rem;
+    border-color: ${ globalScheme.darkgreen };
+  }
+  &:click {
+    text-decoration: underline;
+  }
 `;
 
 export const EventTargetContainer = styled.div`
   width: 25px;
-  padding-left: 10px;
 `
 
 export const DateContainer = styled.span`
-  padding-left: 10px;
 `
   
 export const DescriptionContainer = styled.span`
-  padding-left: 10px;
   color: ${theme.primary};
 `

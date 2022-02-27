@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { globalScheme } from '../../global.styles';
 
 const subColor = 'grey';
 const mainColor = 'black';
@@ -38,3 +39,11 @@ export const TextareaLabelContainer = styled.label`
     ${shrinkLabelStyles}
   }
 `;
+
+export const FallbackContainer = styled.span`
+  margin: auto auto;
+`
+
+export const EmailContainer = styled.span`
+  color: ${globalScheme.darkgreen};
+`

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const SportanlageContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   min-height: 78vh;
   margin: auto auto;
 
@@ -13,6 +12,7 @@ export const SportanlageContainer = styled.div`
 
 export const MapContainer = styled.div`
   display: flex;
+  margin: auto auto;
   padding: 10px;
 
   @media screen and (max-width: 800px) {

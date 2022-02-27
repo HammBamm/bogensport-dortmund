@@ -5,9 +5,10 @@ import { globalScheme } from "../../global.styles";
 export const BeiträgePageContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 50%;
   text-align: start;
   min-height: 78vh;
+  font-size: large;
 
   @media screen and (max-width: 800px) {
     width: 100%;

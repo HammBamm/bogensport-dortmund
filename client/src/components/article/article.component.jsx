@@ -36,10 +36,10 @@ export const ArticleEnumeration = ({title, textArr}) => (
     </ArticleContainer>
 )
 
-export const ArticleGridWrapper = ({ title, textArr, gridSpaceIndex, gridSpace1, gridSpace2, colGap, rowGap }) => (
+export const ArticleGridWrapper = ({ title, textArr, gridSpaceIndex, gridSpace1, gridSpace2, gridGap }) => (
     <ArticleGridContainer>
         <h2>{title}</h2>
-        <ArticleTextGridContainer gridSpaceIndex={gridSpaceIndex} gridSpace1={gridSpace1} gridSpace2={gridSpace2} colGap={colGap} rowGap={rowGap} >
+        <ArticleTextGridContainer gridSpaceIndex={gridSpaceIndex} gridSpace1={gridSpace1} gridSpace2={gridSpace2} gridGap={gridGap} >
             {
                 textArr.map(({ id, text }) => (
                     <div key={id}>{text}</div>

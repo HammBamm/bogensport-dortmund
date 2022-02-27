@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const KalenderContainer = styled.div`
-  width: 380px;
+  min-width: 380px;
   display: flex;
   flex-direction: column;
 

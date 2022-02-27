@@ -4,7 +4,7 @@ import MenuItem from '../menu-item/menu-item.component';
 import { DirectoryMenuContainer } from './directory.styles';    
 
 import vereinsheimImg from '../../assets/directory/IMG_0060.png';
-import platzImg from '../../assets/directory/IMG_0061.png';
+import platzImg from '../../assets/directory/Sportplatz.png';
 import phoneImg from '../../assets/directory/phone.jpg';
 import calendarImg from '../../assets/calendar/calendar.jpg';
 import archeryImg from '../../assets/directory/archery.jpg';
