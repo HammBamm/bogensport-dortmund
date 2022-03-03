@@ -57,3 +57,18 @@ export const CustomButtonContainer = styled.button`
 
     ${getButtonStyles};
 `
+
+export const CustomNoButtonContainer = styled.button`
+    height: 50px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
+
+    will-change: transform;
+    transition: transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+    
+    &:focus {
+        transform: scale(1.1);
+    }
+`

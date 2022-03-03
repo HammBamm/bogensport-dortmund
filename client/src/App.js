@@ -37,7 +37,7 @@ const alterOptions = {
 const App = () => (
   <div>
     <GlobalStyle />
-    <BrowserRouter basename="/">
+    <BrowserRouter >
       <Provider template={AlertTemplate} {...alterOptions}>
         <Header />
         {/* <NavLink
@@ -67,7 +67,6 @@ const App = () => (
               <Route exact path='/impressum' component={ImpressumPage}></Route>
               <Route exact path='/menü/bogenschießen/einstieg' component={EinstiegPage}></Route>
               <Route exact path='/404' component={MissingPage}></Route>
-              <Redirect to='/404'></Redirect>
             </Suspense>
           </ErrorBoundary>
         </Switch>

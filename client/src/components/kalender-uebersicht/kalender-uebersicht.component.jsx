@@ -4,25 +4,29 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { KalenderContainer, KalenderTitle } from './kalender-uebersicht.styles';
 
-const KalenderUebersicht = ({ dates }) => {
-  let nextTraining = dates[0].date.getDate() < dates[1].date.getDate() ? dates[0].date : dates[1].date;
-  const [value, onChange] = useState(nextTraining);
+const KalenderUebersicht = ({ dates, selection }) => {
 
-    return (
-      <KalenderContainer>
-        <KalenderTitle>
-          Bogensport Dortmund Kalender
-        </KalenderTitle>
-        <div className="calendar">
-          <main className="calendar-samp">
-            <Calendar
-              locale="de-DE"
-              onChange={onChange} value={value}
-            />
-          </main>
-        </div>
-      </KalenderContainer>
-    ); 
+  function selectDate() {
+    return typeof selection == 'undefined' ? dates[0].date.getDate() < dates[1].date.getDate() ? dates[0].date : dates[1].date : dates[selection].date;
+  }
+ 
+  const [value, setValue] = useState(selectDate);
+
+  return (
+    <KalenderContainer>
+      <KalenderTitle>
+        Bogensport Dortmund Kalender
+      </KalenderTitle>
+      <div className="calendar">
+        <main className="calendar-samp">
+          <Calendar
+            locale="de-DE"
+            onChange={setValue} value={value}
+          />
+        </main>
+      </div>
+    </KalenderContainer>
+  ); 
 }
 
 export default KalenderUebersicht;

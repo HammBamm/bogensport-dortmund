@@ -24,12 +24,12 @@ const Header = () => {
   <HeaderContainer>
     <LogoWrapper1>
       <LogoContainer1 to='/menü'>
-          <BSLogo />
+          <svg><BSLogo /></svg>
       </LogoContainer1>
     </LogoWrapper1>
     <LogoWrapper2>
       <LogoContainer2 to='/'>
-          <BogenSport />
+          <svg><BogenSport /></svg>
       </LogoContainer2>
     </LogoWrapper2>
     <OptionsContainer>

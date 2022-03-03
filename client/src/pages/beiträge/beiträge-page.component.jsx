@@ -59,7 +59,7 @@ const BeiträgePage = () => (
         gridSpaceIndex={gridLayout.indexSpace} gridSpace1={gridLayout.space1} gridSpace2={gridLayout.space2} gridGap={gridLayout.gap}
       />
       <BeiträgeLogoContainer to={{ pathname: "http://www.tusscharnhorst.de/index.php/mitglied-werden" }} target="_blank">
-        <TUSLogo/>
+        <svg><TUSLogo/></svg>
       </BeiträgeLogoContainer>
     </BeiträgePageImgContainer>
   </BeiträgePageContainer>

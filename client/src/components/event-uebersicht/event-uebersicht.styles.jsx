@@ -1,53 +1,55 @@
 import styled  from 'styled-components';
-import { globalScheme } from '../../global.styles';
-
 const theme = {
   background: "white",
   primary: "#008000",
   secondary: "#1effc3",
-  cardsize: "350px"
 };
 
 export const EventContainer = styled.div`
-  min-width: 500px;
+  min-width: 700px;
   display: flex;
   flex-direction: column;
 
   @media screen and (max-width: 800px) {
-    width: 350px;
+    width: unset;
+    min-width: unset;
   }
 `;
 
 export const EventContainerTitle = styled.h2`
   margin: 10px 0;
+
   @media screen and (max-width: 800px) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 `;
 
 export const EventDetailsContainer = styled.div`
   font-size: large;
+  font-weight: bolder;
   margin-top: 5px;
+
+  @media screen and (max-width: 800px) {
+    font-size: small;
+  }
 `;
 
 export const EventItemContainer = styled.div` 
-  display: grid;
-  grid-template-columns: 0.2fr 2fr 2fr;
-  grid-gap: 14px;
+  display: inline-grid;
+  justify-items: start;
+  grid-template-columns: 3% 36% 60%;
+  grid-gap: 10px;
   cursor: pointer;
 
-  &:hover {
-    font-weight: bold;
-    border-radius: 0.75rem;
-    border-color: ${ globalScheme.darkgreen };
-  }
-  &:click {
-    text-decoration: underline;
+  @media screen and (max-width: 800px) {
+    grid-gap: 5px;
+    grid-template-columns: 5% 35% 60%;
   }
 `;
 
 export const EventTargetContainer = styled.div`
-  width: 25px;
+  display: flex;
+  justify-content: center;
 `
 
 export const DateContainer = styled.span`

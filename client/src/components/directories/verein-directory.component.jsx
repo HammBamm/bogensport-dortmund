@@ -42,7 +42,7 @@ class VereinDirectory extends React.Component {
                 <DirectoryItemContainer>
                     <Headline text="Hauptverein" />
                     <ImageContainer to={{ pathname: "http://www.tusscharnhorst.de/" }} target="_blank">
-                        <TUSLogo />
+                        <svg><TUSLogo /></svg>
                     </ImageContainer>
                 </DirectoryItemContainer>
             </DirectoryMenuContainer>

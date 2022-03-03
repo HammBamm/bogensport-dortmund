@@ -10,7 +10,7 @@ const LandingPage = () => (
           <h2>Eine Abteilung des TuS Scharnhorst 1895/1926 e.V</h2>
         </LandingPageTextContainer>
         <LogoContainer>
-          <BogenSport />
+          <svg><BogenSport /></svg>
         </LogoContainer>
         <ButtonContainer to='/menü'>
           <CustomButtonLandingPageContainer >
