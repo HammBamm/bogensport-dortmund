@@ -7,6 +7,7 @@ export const EinstiegPageContainer = styled.div`
   width: 70%;
 
   @media screen and (max-width: 800px) {
-    width: 100%;
+    min-height: 80vh;
+    width: unset;
   }
 `;

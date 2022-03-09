@@ -48,8 +48,10 @@ export const EventItemContainer = styled.div`
 `;
 
 export const EventTargetContainer = styled.div`
+  width: 60px;
   display: flex;
   justify-content: center;
+  padding: 0 10px;
 `
 
 export const DateContainer = styled.span`

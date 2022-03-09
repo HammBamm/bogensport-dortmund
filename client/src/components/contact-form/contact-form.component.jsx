@@ -44,11 +44,12 @@ const ContactForm = () => {
     })
     .then(response => {
       console.log(response);
-      if(response.status===404){
-        alert.error("Kontaktinformationen konnten nicht gesendet werden. Bitte versuche es später erneut.");
+      if(response.status!==200){
+        alert.error("Kontaktinformationen konnten nicht gesendet werden.");
         setDisabled(false);
         setFallback(true);
       } else {
+        console.log(response.status)
         alert.success("Kontaktinformationen wurden erfolgreich gesendet.");
         setStatus("Gesendet");
       }
@@ -56,7 +57,7 @@ const ContactForm = () => {
     })
     .catch(error => {
       console.log(error);
-      alert.error("Kontaktinformationen konnten nicht gesendet werden. Bitte versuche es später erneut.");
+      alert.error("Kontaktinformationen konnten nicht gesendet werden.");
       setDisabled(false);
       setFallback(true);
     });

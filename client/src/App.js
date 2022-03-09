@@ -52,7 +52,6 @@ const App = () => (
         <Switch>
           <ErrorBoundary>
             <Suspense fallback={ <Spinner /> }>
-              <Route exact path='/' component={LandingPage}></Route>
               <Route exact path='/menü' component={HomePage}></Route>
               <Route exact path='/kontakt' component={ContactPage}></Route>
               <Route exact path='/menü/bogenschießen' component={BogenschiessenPage}></Route>
@@ -67,6 +66,8 @@ const App = () => (
               <Route exact path='/impressum' component={ImpressumPage}></Route>
               <Route exact path='/menü/bogenschießen/einstieg' component={EinstiegPage}></Route>
               <Route exact path='/404' component={MissingPage}></Route>
+              <Route exact path='/' component={LandingPage}></Route>
+              <Redirect to="/" />
             </Suspense>
           </ErrorBoundary>
         </Switch>

@@ -10,7 +10,8 @@ export const ImpressumPageContainer = styled.div`
   min-height: 78vh;
 
   @media screen and (max-width: 800px) {
-    width: 100%;
+    min-height: 80vh;
+    width: unset;
   }
 `;
 

@@ -4,10 +4,10 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { KalenderContainer, KalenderTitle } from './kalender-uebersicht.styles';
 
-const KalenderUebersicht = ({ dates, selection }) => {
+const KalenderUebersicht = ({ dates }) => {
 
   function selectDate() {
-    return typeof selection == 'undefined' ? dates[0].date.getDate() < dates[1].date.getDate() ? dates[0].date : dates[1].date : dates[selection].date;
+    return dates[0].date.getDate() < dates[1].date.getDate() ? dates[0].date : dates[1].date;
   }
  
   const [value, setValue] = useState(selectDate);

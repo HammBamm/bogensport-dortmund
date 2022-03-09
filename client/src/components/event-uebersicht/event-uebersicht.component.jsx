@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { ReactComponent as TargetImg } from '../../assets/calendar/target.svg';
 
@@ -7,35 +7,18 @@ import {
   EventContainer,
   EventContainerTitle,
   EventDetailsContainer,
-  EventTargetContainer,
-  EventItemContainer,
-  DateContainer,
-  DescriptionContainer } from './event-uebersicht.styles';
-import { CustomNoButtonContainer } from '../custom-button/custom-button.styles';
+  EventTargetContainer, } from './event-uebersicht.styles';
+import { EventVisitenKarte } from '../visitenkarte/visitenkarte.component';
 
-const EventUebersicht = ({ dates, selection, changeSelection }) => {
-
-  const [sel, setSelection] = useState(selection);
-
-  useEffect(() => {
-    if (sel !== selection) changeSelection(sel);
-  })
+const EventUebersicht = ({ dates }) => {
 
   return (
     <EventContainer>
       <EventContainerTitle>Bevorstehende Events</EventContainerTitle>
       <EventDetailsContainer>
       {
-        dates.map(({ id, formattedDate, time, description }) => (
-          <CustomNoButtonContainer key={id} onClick={() => setSelection(id)}>
-            <EventItemContainer >
-              <EventTargetContainer>
-                <TargetImg/> 
-              </EventTargetContainer>
-              <DateContainer> {formattedDate} von {time} </DateContainer>
-              <DescriptionContainer> {description} </DescriptionContainer>
-            </EventItemContainer>
-          </CustomNoButtonContainer>
+        dates.map(({ id, title, formattedDate, time, description }) => (
+          <EventVisitenKarte key={id} title={title} avatar={<EventTargetContainer><TargetImg /> </EventTargetContainer>} date={formattedDate} time={time} description={description} />
         ))
       }
       </EventDetailsContainer>

@@ -7,6 +7,6 @@ export const BogenPageContainer = styled.div`
   min-height: 78vh;
 
   @media screen and (max-width: 800px) {
-    height: 82vh;
+    min-height: 80vh;
   }
 `;

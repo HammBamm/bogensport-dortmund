@@ -6,7 +6,7 @@ export const SportanlageContainer = styled.div`
   margin: auto auto;
 
   @media screen and (max-width: 800px) {
-    height: unset;
+    min-height: 80vh;
   }
 `;
 

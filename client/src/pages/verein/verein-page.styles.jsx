@@ -7,6 +7,6 @@ export const VereinPageContainer = styled.div`
   align-items: center;
 
   @media screen and (max-width: 800px) {
-    height: unset;
+    min-height: 80vh;
   }
 `;

@@ -6,7 +6,7 @@ export const KalenderPageContainer = styled.div`
   display: flex;
 
   @media screen and (max-width: 800px) {
-    min-height: unset;
+    min-height: 80vh;
     flex-direction: column;
   }
 `;
