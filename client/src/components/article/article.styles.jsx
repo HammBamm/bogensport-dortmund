@@ -22,6 +22,7 @@ export const ArticleGridContainer = styled.div`
 
     @media screen and (max-width: 800px) {
         flex-direction: column;
+        padding: 0;
     }
 `;
 
@@ -57,8 +58,15 @@ export const ArticleTextContainer = styled.div`
 
 export const ArticleTextGridContainer = styled.div`
     display: grid;
-    grid-template-columns: 1.5fr 0.2fr;
-    grid-gap: 4px;
+    grid-template-columns: ${({ gridSpaceIndex, gridSpace1, gridSpace2 }) => (
+    gridSpaceIndex === 0 ? `${gridSpace1} ${gridSpace2}` :
+    `${gridSpaceIndex} ${gridSpace1} ${gridSpace2}`
+    )};
+    grid-gap: ${({ gridGap }) => `${gridGap}`};
+
+    @media screen and (max-width: 800px) {
+    
+    }
 `;
 
   

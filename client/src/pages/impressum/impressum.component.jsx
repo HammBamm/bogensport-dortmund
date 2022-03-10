@@ -18,7 +18,7 @@ const ImpressumPage = () => (
         ]}   
       />
       <ImpressumLogoContainer to={{ pathname: "http://www.tusscharnhorst.de/" }} target="_blank">
-        <TUSLogo/>
+        <svg><TUSLogo/></svg>
       </ImpressumLogoContainer>
     </ImpressumPageImgContainer>
     <ArticleEnumeration 

@@ -7,26 +7,18 @@ import {
   EventContainer,
   EventContainerTitle,
   EventDetailsContainer,
-  EventTargetContainer,
-  EventItemContainer,
-  DateContainer,
-  DescriptionContainer } from './event-uebersicht.styles';
+  EventTargetContainer, } from './event-uebersicht.styles';
+import { EventVisitenKarte } from '../visitenkarte/visitenkarte.component';
 
-const EventUebersicht = ({ today, dates }) => {
-  console.log(dates)
+const EventUebersicht = ({ dates }) => {
+
   return (
     <EventContainer>
       <EventContainerTitle>Bevorstehende Events</EventContainerTitle>
       <EventDetailsContainer>
       {
-        dates.map(({ id, date, description}) => (
-          <EventItemContainer key={id}>
-            <EventTargetContainer>
-              <TargetImg/> 
-            </EventTargetContainer>
-            <DateContainer> {date.toDateString()} </DateContainer>
-            <DescriptionContainer> {description} </DescriptionContainer>
-          </EventItemContainer>
+        dates.map(({ id, title, formattedDate, time, description }) => (
+          <EventVisitenKarte key={id} title={title} avatar={<EventTargetContainer><TargetImg /> </EventTargetContainer>} date={formattedDate} time={time} description={description} />
         ))
       }
       </EventDetailsContainer>

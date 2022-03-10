@@ -4,11 +4,12 @@ import { Headline } from "../article/article.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { FormInput } from "../form-input/form-input.component";
 import { FormTextarea } from "../form-input/form-input.styles";
-import { ContactFormContainer, FormWrapperContainer, TextareaLabelContainer } from "./contact-form.styles";
+import { ContactFormContainer, EmailContainer, FallbackContainer, FormWrapperContainer, TextareaLabelContainer } from "./contact-form.styles";
 
 const ContactForm = () => {
 
   const alert = useAlert();
+  const [fallback, setFallback] = useState(false);
   const [status, setStatus] = useState("Senden");
   const [formVals, setFormVals] = useState({
     name: '',
@@ -43,13 +44,22 @@ const ContactForm = () => {
     })
     .then(response => {
       console.log(response);
-      alert.success("Kontaktinformationen erfolgreich gesendet.");
-      setStatus("Gesendet");
+      if(response.status!==200){
+        alert.error("Kontaktinformationen konnten nicht gesendet werden.");
+        setDisabled(false);
+        setFallback(true);
+      } else {
+        console.log(response.status)
+        alert.success("Kontaktinformationen wurden erfolgreich gesendet.");
+        setStatus("Gesendet");
+      }
+      
     })
     .catch(error => {
       console.log(error);
-      alert.error("Kontaktinformationen konnten nicht gesendet werden, bitte später erneut versuchen");
+      alert.error("Kontaktinformationen konnten nicht gesendet werden.");
       setDisabled(false);
+      setFallback(true);
     });
     
   };
@@ -95,7 +105,17 @@ const ContactForm = () => {
           ></FormTextarea>
           <CustomButton id="submitButton" inverted type="submit" onClick={() => setDisabled(true) } disabled={disabled}>{status}</CustomButton>
         </form>
+        {
+        fallback ? <FallbackContainer><h2>&#128679;Aufgrund eines Fehlers auf dem Server konnte das Kontaktformular nicht gesendet werden.<br />
+        Alternativ kann auch eine Nachricht an folgende E-Mail versendet werden: <EmailContainer>kontakt@bogensport-dortmund.de</EmailContainer></h2>
+        </FallbackContainer>  : status==='Gesendet' ? 
+          <FallbackContainer><h2>&#128235; Danke für deine Nachricht. Wir melden uns bei Dir über deine angebene E-Mail: <br /><br />
+          <EmailContainer>{formVals.email}</EmailContainer></h2>
+          </FallbackContainer> :
+          <span></span>
+        }
       </FormWrapperContainer>
+      
     </ContactFormContainer>
   );
 };

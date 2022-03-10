@@ -21,7 +21,7 @@ export const CardContainer = styled.div`
 	margin: 0 7.5px 15px;
 	overflow: hidden;
 
-  grid-template-columns: 40% auto;
+  grid-template-columns: 30% auto;
   color: black;
   
   will-change: transform;

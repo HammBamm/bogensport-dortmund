@@ -1,12 +1,5 @@
 import React from 'react';
-
-import Dog from '../../assets/error/Dog_Ate-big.png';
-
-import { 
-  ErrorImageOverlay,
-  ErrorImageContainer,
-  ErrorImageText
- } from './error-boundary.styles';
+import MissingPage from './404.component';
 
 class ErrorBoundary extends React.Component {
   constructor() {
@@ -27,10 +20,7 @@ class ErrorBoundary extends React.Component {
   render() {
     if(this.state.hasErrored) {
       return (
-        <ErrorImageOverlay>
-          <ErrorImageContainer imageUrl={ Dog }></ErrorImageContainer>
-          <ErrorImageText>404: Entschuldigung, aber mein Hund hat wohl die Seite gefressen.</ErrorImageText>
-        </ErrorImageOverlay>
+        <MissingPage />
       );
     }
 

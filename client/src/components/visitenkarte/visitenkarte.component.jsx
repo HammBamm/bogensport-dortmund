@@ -12,7 +12,7 @@ import {
   ValueContainer, 
   } from "./visitenkarte.styles";
 
-const VisitenKarte = ({ season, avatar, nameOfPlace, street, city, duration, hovered }) => {
+export const KartenVisitenKarte = ({ season, avatar, nameOfPlace, street, city, duration, hovered }) => {
   return (
     <CardContainer hovered={hovered}>
       <CardAvatarContainer>
@@ -41,5 +41,28 @@ const VisitenKarte = ({ season, avatar, nameOfPlace, street, city, duration, hov
   )
 };
 
-export default VisitenKarte;
+export const EventVisitenKarte = ({ title, avatar, date, time, description, hovered }) => {
+  return (
+    <CardContainer hovered={hovered}>
+      <CardAvatarContainer>
+       {avatar}
+      </CardAvatarContainer>
+
+      <CardDetailsContainer>
+        <NameContainer>{title}</NameContainer>
+        <SeasonContainer>{date}</SeasonContainer>
+        <CardAboutContainer>
+          <CardAboutItemContainer>
+            <ValueContainer>{time}</ValueContainer>
+            <LabelContainer>Uhrzeit</LabelContainer>
+          </CardAboutItemContainer>
+          <CardAboutItemContainer>
+            <ValueContainer>{description}</ValueContainer>
+            <LabelContainer>Beschreibung</LabelContainer>
+          </CardAboutItemContainer>
+        </CardAboutContainer>
+      </CardDetailsContainer>
+    </CardContainer>
+  )
+};
 

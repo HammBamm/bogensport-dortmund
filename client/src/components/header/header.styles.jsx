@@ -4,7 +4,6 @@ import { globalScheme } from "../../global.styles";
 
 export const HeaderContainer = styled.div`
     height: 75px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 22px;
@@ -12,45 +11,71 @@ export const HeaderContainer = styled.div`
     border-bottom: 3px solid ${globalScheme.darkgreen};
 
     @media screen and (max-width: 800px) {
-        height: 50px;
+        height: 60px;
         margin-bottom: 10px;
     }
 `;
 
-export const LogoWrapper1 = styled.div`
-    width: 180px;
+export const WelcomeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-height: 75px;
+  text-align: center;
 
-    @media screen and (max-width: 800px) {
-        justify-content: flex-start;
-        margin: auto;
-    }
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`
+
+export const H1Container = styled.span`
+  font-size: xx-large;
 `;
 
-export const LogoWrapper2 = styled.div`
-    width: 250px;
-    margin-top: -25px;
+export const H2Container = styled.span`
+  font-size: large;
+`;
+
+export const LogoWrapper1 = styled.div`
+    display: flex;
+    max-height: 70px;
+    max-width: 200px;
 
     @media screen and (max-width: 800px) {
-        justify-content: flex-end;
-        margin: auto;
+        max-height: 55px;
+        max-width: 160px;
     }
 `;
 
 export const LogoContainer1 = styled(Link)`
     display: flex;
+    max-height: 70px;
+    max-width: 200px;
+    margin: auto;
 
     &:hover {
         fill: ${globalScheme.darkgreen};
     }
 
     @media screen and (max-width: 800px) {
-        width: 100px;
+        max-height: 55px;
+        max-width: 160px;
+        justify-content: flex-start;
     }
 `;
 
-export const LogoContainer2 = styled(Link)`
+export const LogoWrapper2 = styled.div`
     display: flex;
+    max-height: 80px;
+    max-width: 350px;
+    margin-top: -15px;
+`;
 
+export const LogoContainer2 = styled(Link)`
+    max-width: 350px;
+    max-height: 80px;   
+    display: flex;
+    
     &:hover {
         fill: ${globalScheme.darkgreen};
     }
@@ -77,7 +102,7 @@ export const OptionLink = styled(Link)`
     }
     @media screen and (max-width: 800px) {
         padding: 0;
-        width: 50px;
+        max-width: 50px;
         padding-right: 10px;
     }
 `;

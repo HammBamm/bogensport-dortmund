@@ -10,7 +10,7 @@ import {
 } from './sportanlage-page.styles';
 
 import { CityMap } from '../../components/city-map/city-map.component';
-import VisitenKarte from '../../components/visitenkarte/visitenkarte.component';
+import { KartenVisitenKarte } from '../../components/visitenkarte/visitenkarte.component';
 
 
 class SportanlagePage extends React.Component {
@@ -47,14 +47,14 @@ class SportanlagePage extends React.Component {
       <SportanlageContainer>
         <MapContainer>
           <LegendOptionContainer>
-            <CityMap/>
-          </LegendOptionContainer>
-          <LegendOptionContainer>
             {
               this.state.details.map(({ id, ...otherSectionProps }) => (
-                  <VisitenKarte key={id} { ...otherSectionProps } ></VisitenKarte>
+                  <KartenVisitenKarte key={id} { ...otherSectionProps } ></KartenVisitenKarte>
               ))
             }
+          </LegendOptionContainer>
+          <LegendOptionContainer>
+            <CityMap/>
           </LegendOptionContainer>
         </MapContainer>
       </SportanlageContainer>

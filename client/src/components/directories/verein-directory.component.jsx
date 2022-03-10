@@ -6,6 +6,7 @@ import { DirectoryItemContainer, DirectoryMenuContainer, ImageContainer } from '
 import feeImg from '../../assets/verein/fee.jpg';
 import wieseImg from '../../assets/verein/Wiese.jpg';
 import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst3.svg';
+import { ReactComponent as BSLogo } from '../../assets/header/BSLogo.svg';
 import { Headline } from '../article/article.component';
 
 class VereinDirectory extends React.Component {
@@ -42,7 +43,8 @@ class VereinDirectory extends React.Component {
                 <DirectoryItemContainer>
                     <Headline text="Hauptverein" />
                     <ImageContainer to={{ pathname: "http://www.tusscharnhorst.de/" }} target="_blank">
-                        <TUSLogo />
+                        <svg><TUSLogo /></svg>
+                        <svg><BSLogo /></svg>
                     </ImageContainer>
                 </DirectoryItemContainer>
             </DirectoryMenuContainer>

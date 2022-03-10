@@ -23,5 +23,12 @@ export const DirectoryItemContainer = styled.div`
 
 export const ImageContainer = styled(Link)`
   padding-top: 20px;
+  display: flex;
+  max-width: 300px;
+  max-height: 150px;
   margin: auto auto;
+
+  @media screen and (max-width: 800px) {
+    
+  }
 `;
