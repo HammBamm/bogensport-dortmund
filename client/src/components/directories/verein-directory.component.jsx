@@ -1,13 +1,11 @@
 import React from 'react';
 
 import MenuItem from '../menu-item/menu-item.component';
-import { DirectoryItemContainer, DirectoryMenuContainer, ImageContainer } from './directory.styles';    
+import { DirectoryMenuContainer } from './directory.styles';    
 
 import feeImg from '../../assets/verein/fee.jpg';
 import wieseImg from '../../assets/verein/Wiese.jpg';
-import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst3.svg';
-import { ReactComponent as BSLogo } from '../../assets/header/BSLogo.svg';
-import { Headline } from '../article/article.component';
+import tusImg from '../../assets/header/tus-scharnhorst3.jpg';
 
 class VereinDirectory extends React.Component {
     constructor() {
@@ -27,7 +25,16 @@ class VereinDirectory extends React.Component {
                     id: 2,
                     size: 'large',
                     linkUrl: '/verein/beiträge'
+                },
+                {
+                    title: 'Hauptverein',
+                    imageUrl: tusImg,
+                    id: 3,
+                    size: 'large',
+                    outUrl: "http://www.tusscharnhorst.de/",
+                    linkUrl: ""
                 }
+
             ]
         };
     }
@@ -40,13 +47,13 @@ class VereinDirectory extends React.Component {
                         <MenuItem key={id} {...otherSectionProps}></MenuItem>
                     ))
                 }
-                <DirectoryItemContainer>
+                {/* <MenuItem>
                     <Headline text="Hauptverein" />
                     <ImageContainer to={{ pathname: "http://www.tusscharnhorst.de/" }} target="_blank">
                         <svg><TUSLogo /></svg>
                         <svg><BSLogo /></svg>
                     </ImageContainer>
-                </DirectoryItemContainer>
+                </MenuItem> */}
             </DirectoryMenuContainer>
         )
     }
