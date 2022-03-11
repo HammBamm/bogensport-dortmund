@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useAlert } from "react-alert";
+import axios from 'axios';
 import { Headline } from "../article/article.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { FormInput } from "../form-input/form-input.component";
@@ -8,6 +9,7 @@ import { ContactFormContainer, EmailContainer, FallbackContainer, FormWrapperCon
 
 const ContactForm = () => {
 
+  const API_PATH = 'http://server.bogensport-dortmund.de';
   const alert = useAlert();
   const [fallback, setFallback] = useState(false);
   const [status, setStatus] = useState("Senden");
@@ -24,7 +26,7 @@ const ContactForm = () => {
 
   const { name, email, message } = formVals;
 
-  const handleSubmit = async event => {
+  const handleSubmit = event => {
     event.preventDefault();
     alert.info("Kontaktinformationen werden gesendet.")
     setStatus("Sende Nachricht...");
@@ -35,7 +37,7 @@ const ContactForm = () => {
       message: message.value,
     };
 
-    await fetch("http://localhost:5000/kontakt", {
+    /* await fetch("http://localhost:5000/kontakt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,8 +62,34 @@ const ContactForm = () => {
       alert.error("Kontaktinformationen konnten nicht gesendet werden.");
       setDisabled(false);
       setFallback(true);
-    });
+    }); */
     
+    axios({
+      method: 'post',
+      url: `${API_PATH}`,
+      headers: { 'content-type': 'application/json' },
+      data: details
+    })
+    .then(response => {
+      console.log(response);
+      if(response.status!==200){
+        alert.error("Kontaktinformationen konnten nicht gesendet werden.");
+        setDisabled(false);
+        setFallback(true);
+      } else {
+        console.log(response.status)
+        alert.success("Kontaktinformationen wurden erfolgreich gesendet.");
+        setStatus("Gesendet");
+      }
+      
+    })
+    .catch(error => {
+      console.log(error);
+      alert.error("Kontaktinformationen konnten nicht gesendet werden.");
+      setDisabled(false);
+      setFallback(true);
+    });
+
   };
 
   const handleChange = event => {

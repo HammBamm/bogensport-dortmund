@@ -9,10 +9,10 @@ import {
   ContentSubtitle
 } from './menu-item.styles';
 
-const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, outUrl , match }) => (
   <MenuItemContainer
     size={size}
-    onClick={() => history.push(`${linkUrl}`)}
+    onClick={() => linkUrl=="" ? window.open(outUrl, '_blank') : history.push(`${linkUrl}`)}
   >
     <BackgroundImageContainer
       className='background-image'

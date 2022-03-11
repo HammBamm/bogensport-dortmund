@@ -1,6 +1,6 @@
 import React, {lazy, Suspense} from 'react';
 import { Switch, Route } from 'react-router';
-import { BrowserRouter, Redirect } from 'react-router-dom';
+import { BrowserRouter, Redirect, useLocation } from 'react-router-dom';
 
 import { positions, Provider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
@@ -34,10 +34,14 @@ const alterOptions = {
   position: positions.BOTTOM_CENTER
 };
 
-const App = () => (
+const App = () => {
+  const path = useLocation().pathname;
+  const location = path.split("/")[1];
+  return (
   <div>
-    <GlobalStyle />
+    
     <BrowserRouter >
+    <GlobalStyle location={location}/>
       <Provider template={AlertTemplate} {...alterOptions}>
         <Header />
         {/* <NavLink
@@ -75,7 +79,8 @@ const App = () => (
       </Provider>
     </BrowserRouter>
   </div>
-)
+  )
+}
 
 
 export default App;

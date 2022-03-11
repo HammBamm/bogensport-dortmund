@@ -20,6 +20,7 @@ export const CardContainer = styled.div`
 	border: 1px solid black;
 	margin: 0 7.5px 15px;
 	overflow: hidden;
+  background: white;
 
   grid-template-columns: 30% auto;
   color: black;

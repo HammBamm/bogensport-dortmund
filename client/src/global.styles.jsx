@@ -32,7 +32,6 @@ export const GlobalStyle = createGlobalStyle`
       var(--blend-bottom, saturation),
       normal;
     
-    --image: url(${bgWiese});
     --image2: url(${bgWiese});
     
     --color-v: white;
