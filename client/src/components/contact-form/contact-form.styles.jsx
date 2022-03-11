@@ -44,6 +44,16 @@ export const FallbackContainer = styled.span`
   margin: auto auto;
 `
 
+export const ClipboardButtonContainer = styled.button`
+  cursor: pointer;
+`
+
+export const ClipboardContainer = styled.img`
+  display: flex;
+  max-width: 40px;
+  max-height: 40px;
+`
+
 export const EmailContainer = styled.span`
   color: ${globalScheme.darkgreen};
 `

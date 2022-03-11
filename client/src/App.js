@@ -30,7 +30,7 @@ const SportanlagePage = lazy(() => import('./pages/sportanlage/sportanlage-page.
 const BogenschiessenPage = lazy(() => import('./pages/bogenschiessen/bogenschiessen-page.component'));
 
 const alterOptions = {
-  timeout: 8000,
+  timeout: 5000,
   position: positions.BOTTOM_CENTER
 };
 

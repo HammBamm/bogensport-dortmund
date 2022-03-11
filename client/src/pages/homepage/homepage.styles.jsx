@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { globalScheme } from "../../global.styles";
 
 export const HomePageContainer = styled.div`
     display: flex;

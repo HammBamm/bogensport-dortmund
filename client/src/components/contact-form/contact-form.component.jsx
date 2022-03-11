@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { useAlert } from "react-alert";
 import axios from 'axios';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import { Headline } from "../article/article.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { FormInput } from "../form-input/form-input.component";
 import { FormTextarea } from "../form-input/form-input.styles";
-import { ContactFormContainer, EmailContainer, FallbackContainer, FormWrapperContainer, TextareaLabelContainer } from "./contact-form.styles";
+import { ClipboardButtonContainer, ClipboardContainer, ContactFormContainer, EmailContainer, FallbackContainer, FormWrapperContainer, TextareaLabelContainer } from "./contact-form.styles";
+
+import clipboardImg from '../../assets/contact/clipboard.png';
 
 const ContactForm = () => {
 
@@ -135,12 +138,17 @@ const ContactForm = () => {
         </form>
         {
         fallback ? <FallbackContainer><h2>&#128679;Aufgrund eines Fehlers auf dem Server konnte das Kontaktformular nicht gesendet werden.<br />
-        Alternativ kann auch eine Nachricht an folgende E-Mail versendet werden: <EmailContainer>kontakt@bogensport-dortmund.de</EmailContainer></h2>
+        Alternativ kann auch eine Nachricht an folgende E-Mail versendet werden: <EmailContainer id="email">kontakt@bogensport-dortmund.de</EmailContainer></h2>
+        <CopyToClipboard text="kontakt@bogensport-dortmund.de" onCopy={() => alert.success("E-Mail-Adresse kopiert.")}>
+          <ClipboardButtonContainer>
+            <ClipboardContainer src={clipboardImg} alt="Copy to clipboard" />
+          </ClipboardButtonContainer>
+        </CopyToClipboard>
         </FallbackContainer>  : status==='Gesendet' ? 
           <FallbackContainer><h2>&#128235; Danke für deine Nachricht. Wir melden uns bei Dir über deine angebene E-Mail: <br /><br />
           <EmailContainer>{formVals.email}</EmailContainer></h2>
-          </FallbackContainer> :
-          <span></span>
+        </FallbackContainer> :
+          <span />
         }
       </FormWrapperContainer>
       
