@@ -9,7 +9,7 @@ export const globalScheme = {
   maxgreen: "#4C9A2A",
   lightgreen: "#ACDF87",
   mantisgreen: "#68BB59",
-  background: "#eae7dc"
+  background: "#E8E8E8"
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100vw;
     overflow-x: hidden;
 
-    background: "#E8E8E8";
+    background: ${globalScheme.background};
     flex: 1; 
     
     @media screen and (max-width: 800px) {
@@ -59,7 +59,7 @@ export const GlobalStyleLanding = createGlobalStyle`
     
     --image2: url(${bgWiese});
     
-    --color-v: #E8E8E8;
+    --color-v: ${globalScheme.background};
     --color: transparent;
     
     flex: 1;
@@ -67,7 +67,7 @@ export const GlobalStyleLanding = createGlobalStyle`
     
     @media screen and (max-width: 800px) {
       padding: 10px 10px;
-      background: #E8E8E8;
+      background: ${globalScheme.background};
     }
   }
 

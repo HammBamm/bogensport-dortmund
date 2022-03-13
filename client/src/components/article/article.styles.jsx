@@ -32,8 +32,9 @@ export const ArticleImageContainerLeft = styled.img`
     width: 250px;
     object-fit: contain;
     align-self: flex-start;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    border: 3px dashed ${globalScheme.darkgreen};
+    /* border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: 3px solid ${globalScheme.darkgreen}; */
+    background: white;
 
     @media screen and (max-width: 800px) {
         width: 150px;
@@ -46,8 +47,8 @@ export const ArticleImageContainerRight = styled.img`
     width: 250px;
     object-fit: contain;
     align-self: flex-end;
-    border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
-    border: 3px dashed ${globalScheme.darkgreen};
+    /* border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+    border: 3px solid ${globalScheme.darkgreen}; */
 
     @media screen and (max-width: 800px) {
         align-self: center;
