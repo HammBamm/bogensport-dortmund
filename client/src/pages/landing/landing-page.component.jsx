@@ -1,13 +1,17 @@
 import React from 'react';
+
 import { LandingPageContainer, LogoContainer, ButtonContainer, CustomButtonLandingPageContainer, LandingPageTextContainer, TargetContainer, WelcomeContainer } from './landing-page.styles';
 import { ReactComponent as BogenSport } from '../../assets/header/BogensportDortmund.svg';
 import { ReactComponent as Target } from '../../assets/landing-page/target.svg';
 import useMediaQuery from '../../components/media-query/media-query.component';
+import { GlobalStyleLanding } from '../../global.styles';
 
 const LandingPage = () => {
   const isMobile = useMediaQuery('(max-width: 800px)');
     if(!isMobile) {
       return (
+        <div>
+        <GlobalStyleLanding />
         <LandingPageContainer>
           <WelcomeContainer>
           </WelcomeContainer>
@@ -22,6 +26,7 @@ const LandingPage = () => {
             </CustomButtonLandingPageContainer>
           </ButtonContainer>
         </LandingPageContainer>
+        </div>
     )
   } else {
     return (

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { globalScheme } from '../../global.styles';
 
 export const HeadlineContainer = styled.h1`
     font-size: 40px;
@@ -31,6 +32,8 @@ export const ArticleImageContainerLeft = styled.img`
     width: 250px;
     object-fit: contain;
     align-self: flex-start;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: 3px dashed ${globalScheme.darkgreen};
 
     @media screen and (max-width: 800px) {
         width: 150px;
@@ -43,6 +46,8 @@ export const ArticleImageContainerRight = styled.img`
     width: 250px;
     object-fit: contain;
     align-self: flex-end;
+    border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+    border: 3px dashed ${globalScheme.darkgreen};
 
     @media screen and (max-width: 800px) {
         align-self: center;

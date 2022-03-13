@@ -18,7 +18,32 @@ export const GlobalStyle = createGlobalStyle`
     padding: 20px 40px;
     min-height: 100vh;
     max-width: 100vw;
-    opacity: 0.95;
+    overflow-x: hidden;
+
+    background: "#E8E8E8";
+    flex: 1; 
+    
+    @media screen and (max-width: 800px) {
+      padding: 10px 10px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+`;
+
+export const GlobalStyleLanding = createGlobalStyle`
+  body {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 40px;
+    min-height: 100vh;
+    max-width: 100vw;
     overflow-x: hidden;
 
     background: radial-gradient(circle, transparent 60%, var(--color-v) 80%),
@@ -34,7 +59,7 @@ export const GlobalStyle = createGlobalStyle`
     
     --image2: url(${bgWiese});
     
-    --color-v: white;
+    --color-v: #E8E8E8;
     --color: transparent;
     
     flex: 1;
@@ -42,7 +67,6 @@ export const GlobalStyle = createGlobalStyle`
     
     @media screen and (max-width: 800px) {
       padding: 10px 10px;
-
       background: #E8E8E8;
     }
   }

@@ -3,7 +3,7 @@ import React from 'react';
 import MenuItem from '../menu-item/menu-item.component';
 import { DirectoryMenuContainer } from './directory.styles';    
 
-import vereinsheimImg from '../../assets/directory/IMG_0060.png';
+import SchützenImg from '../../assets/directory/Schützen.jpg';
 import platzImg from '../../assets/directory/Sportplatz.png';
 import phoneImg from '../../assets/directory/phone.jpg';
 import calendarImg from '../../assets/calendar/calendar.jpg';
@@ -16,7 +16,7 @@ class HomepageDirectory extends React.Component {
             sections: [
                 {
                     title: 'Unser Verein',
-                    imageUrl: vereinsheimImg,
+                    imageUrl: SchützenImg,
                     id: 1,
                     linkUrl: 'menü/verein'
                 },

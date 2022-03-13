@@ -8,7 +8,7 @@ export const MenuItemContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 3px solid ${globalScheme.darkgreen};
+	border: 3px dashed ${globalScheme.darkgreen};
 	margin: 0 7.5px 15px;
 
 	&:hover {
@@ -43,7 +43,7 @@ export const SmallMenuItemContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 3px solid ${globalScheme.darkgreen};
+	border: 3px dashed ${globalScheme.darkgreen};
 	margin: 0 7.5px 15px;
 
 	&:hover {

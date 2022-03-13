@@ -76,14 +76,15 @@ contactEmail.verify((error, success) => {
 });
 
 app.post("/kontakt", (req, res) => {
-  const name = req.body.name;
+  const firstname = req.body.firstname;
+  const lastname = req.body.lastname;
   const email = req.body.email;
   const message = req.body.message; 
   const mail = {
-    from: name,
+    from: email,
     to: process.env.EMAIL,
-    subject: `[Bogensport Dortmund] Anwärter: ${name}`,
-    html: `<p>Name: ${name}</p>
+    subject: `[Bogensport Dortmund] Anwärter: ${firstname} ${lastname}`,
+    html: `<p>Name: ${firstname} ${lastname}</p>
            <p>Email: ${email}</p>
            <p>Message: ${message}</p>`,
   };

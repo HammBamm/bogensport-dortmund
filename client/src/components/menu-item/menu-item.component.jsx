@@ -20,7 +20,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, outUrl , match }) =
     />
     <ContentContainer className='content'>
       <ContentTitle>{title.toUpperCase()}</ContentTitle>
-      <ContentSubtitle>KLICK MICH</ContentSubtitle>
+      <ContentSubtitle>HIER KLICKEN</ContentSubtitle>
     </ContentContainer>
   </MenuItemContainer>
 );
