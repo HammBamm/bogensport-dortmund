@@ -70,6 +70,7 @@ export const DivWrapper = styled.div`
     padding: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 3px;
+    overflow: hidden;
 
     & > div {
       display: flex;
@@ -79,7 +80,7 @@ export const DivWrapper = styled.div`
       & > label {
         color: #333;
         max-width: 110px;
-        min-width: 100px;
+        min-width: 80px;
         font-size: 1em;
         line-height: 32px;
       }
