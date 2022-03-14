@@ -4,8 +4,9 @@ import axios from 'axios';
 import { Form, Field } from 'react-final-form'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import CustomButton from "../custom-button/custom-button.component";
-import { ClipboardButtonContainer, ClipboardContainer, DivWrapper, EmailContainer, FallbackContainer } from "./contact-form.styles";
+import { BackContainer, BackTextContainer, BSLogoContainer, ClipboardButtonContainer, ClipboardContainer, DivWrapper, EmailContainer, FallbackContainer, LinkContainer } from "./contact-form.styles";
 
+import { ReactComponent as BSLogo } from '../../assets/header/BSLogo.svg';
 import clipboardImg from '../../assets/contact/clipboard.png';
 
 const ContactForm = () => {
@@ -13,7 +14,7 @@ const ContactForm = () => {
   // const API_PATH = 'http://server.bogensport-dortmund.de';
   const API_PATH = 'http://localhost:5000/kontakt';
   const alert = useAlert();
-  const [fallback, setFallback] = useState(false);
+  const [fallback, setFallback] = useState(true);
   const [status, setStatus] = useState("Senden");
   const [formVals, setFormVals] = useState({
     firstname: '',
@@ -31,7 +32,6 @@ const ContactForm = () => {
     alert.info("Kontaktinformationen werden gesendet.")
     setStatus("Sende Nachricht...");
     setFormVals(values);
-    console.log(values);
     axios({
       method: 'post',
       url: `${API_PATH}`,
@@ -39,13 +39,12 @@ const ContactForm = () => {
       data: values
     })
     .then(response => {
-      console.log(response);
       if(response.status!==200){
         alert.error("Kontaktinformationen konnten nicht gesendet werden.");
         setDisabled(false);
         setFallback(true);
+        setStatus("Server Fehler");
       } else {
-        console.log(response.status)
         alert.success("Kontaktinformationen wurden erfolgreich gesendet.");
         setStatus("Gesendet");
       }
@@ -56,12 +55,13 @@ const ContactForm = () => {
       alert.error("Kontaktinformationen konnten nicht gesendet werden.");
       setDisabled(false);
       setFallback(true);
+      setStatus("Server Fehler");
     });
 
   };
 
   return (
-    <DivWrapper>
+    <DivWrapper isFallbacked={fallback}>
       <h1>Kontaktformular</h1>
       <Form onSubmit={onSubmit}>
       {({ handleSubmit, values }) => (
@@ -109,17 +109,62 @@ const ContactForm = () => {
         )}
       </Form>
       {
-      fallback ? <FallbackContainer><h2>&#128679; Aufgrund eines Fehlers auf dem Server konnte das Kontaktformular nicht gesendet werden.<br />
-      Alternativ kann auch eine Nachricht an folgende E-Mail versendet werden: <EmailContainer id="email">kontakt@bogensport-dortmund.de</EmailContainer></h2>
-      <CopyToClipboard text="kontakt@bogensport-dortmund.de" onCopy={() => alert.success("E-Mail-Adresse kopiert.")}>
-        <ClipboardButtonContainer>
-          <ClipboardContainer src={clipboardImg} alt="Copy to clipboard" />
-        </ClipboardButtonContainer>
-      </CopyToClipboard>
-      </FallbackContainer>  : status==='Gesendet' ? 
-        <FallbackContainer><h2>&#128235; Danke für deine Nachricht. Wir melden uns bei Dir über deine angebene E-Mail: <br /><br />
-        <EmailContainer>{formVals.email}</EmailContainer></h2>
-      </FallbackContainer> :
+      fallback && disabled ? 
+        <FallbackContainer>
+          <h2>&#128679; Aufgrund eines Fehlers auf dem Server konnte das Kontaktformular nicht gesendet werden.<br /><br />
+            Alternativ kann auch eine E-Mail an folgende Adresse versendet werden: <br /> 
+            <EmailContainer id="email">
+            <span>kontakt@bogensport-dortmund.de</span>
+              <CopyToClipboard text="kontakt@bogensport-dortmund.de" onCopy={() => alert.success("E-Mail-Adresse kopiert.")}>
+                <ClipboardButtonContainer>
+                  <ClipboardContainer src={clipboardImg} alt="Copy to clipboard" />
+                </ClipboardButtonContainer>
+              </CopyToClipboard>
+            </EmailContainer>
+          </h2>
+        </FallbackContainer>  : 
+      fallback && disabled === false ? 
+        <FallbackContainer>
+          <h2>&#128679; Zur Zeit ist das Formular leider nicht benutzbar.<br /><br />
+            Alternativ kann auch eine E-Mail an folgende Adresse versendet werden: <br /> <br /> 
+            <EmailContainer id="email">
+              <span>kontakt@bogensport-dortmund.de</span>
+              <CopyToClipboard text="kontakt@bogensport-dortmund.de" onCopy={() => alert.success("E-Mail-Adresse kopiert.")}>
+                <ClipboardButtonContainer>
+                  <ClipboardContainer src={clipboardImg} alt="Copy to clipboard" />
+                </ClipboardButtonContainer>
+             </CopyToClipboard>
+            </EmailContainer>
+            <LinkContainer to='/menü'>
+                <BackContainer>
+                  <BSLogoContainer>
+                    <BSLogo />
+                  </BSLogoContainer> 
+                  <BackTextContainer>
+                    <h3>Zurück zum <br />
+                    Hauptmenü</h3>
+                  </BackTextContainer>
+                </BackContainer>
+              </LinkContainer>
+          </h2>
+        </FallbackContainer>  :
+      status==='Gesendet' ? 
+          <FallbackContainer>
+            <h2>&#128235; Danke für deine Nachricht. Wir melden uns bei Dir über deine angebene E-Mail: <br /><br />
+              <EmailContainer>{formVals.email}</EmailContainer>
+              <LinkContainer to='/menü'>
+                <BackContainer>
+                  <BSLogoContainer>
+                    <BSLogo />
+                  </BSLogoContainer> 
+                  <BackTextContainer>
+                    <h3>Zurück zum <br />
+                    Hauptmenü</h3>
+                  </BackTextContainer>
+                </BackContainer>
+              </LinkContainer>
+            </h2>
+          </FallbackContainer> :
         <span />
       }
     </DivWrapper>

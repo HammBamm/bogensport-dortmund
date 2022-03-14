@@ -1,14 +1,6 @@
-import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { globalScheme } from '../../global.styles';
-
-const subColor = 'grey';
-const mainColor = 'black';
-
-const shrinkLabelStyles = css`
-  top: -25px;
-  font-size: 16px;
-  color: ${mainColor};
-`;
 
 export const ContactFormContainer = styled.div`
   margin: auto auto;
@@ -25,39 +17,38 @@ export const ContactFormContainer = styled.div`
   }
 `;
 
-export const TextareaLabelContainer = styled.label`
-  color: ${subColor};
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  font-weight: normal;
-  pointer-events: none;
-  transition: 300ms ease all;
-  &.shrink {
-    ${shrinkLabelStyles}
-  }
-`;
-
 export const FallbackContainer = styled.span`
-display: flex;
-max-width: 600px;
+  display: flex;
+  max-width: 650px;
   margin: auto auto;
+
+  @media screen and (max-width: 800px) {
+    font-size: small;
+  }
 `
 
 export const ClipboardButtonContainer = styled.button`
+  pointer-events: auto;
+  max-width: 70px;
+  max-height: 70px;
   cursor: pointer;
 `
 
 export const ClipboardContainer = styled.img`
   display: flex;
-  max-width: 40px;
-  max-height: 40px;
+  max-width: 50px;
+  max-height: 50px;
 `
 
-export const EmailContainer = styled.span`
+export const EmailContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: ${globalScheme.darkgreen};
 `
 
 export const DivWrapper = styled.div`
+  pointer-events: ${({ isFallbacked }) => (isFallbacked === true ? 'none' : '')};
 
   h1 {
     text-align: center;
@@ -65,12 +56,10 @@ export const DivWrapper = styled.div`
   }
 
   & > div {
-    text-align: center;
   }
 
   a {
     display: block;
-    text-align: center;
     color: #222;
   }
 
@@ -89,7 +78,8 @@ export const DivWrapper = styled.div`
       margin: 5px;
       & > label {
         color: #333;
-        width: 110px;
+        max-width: 110px;
+        min-width: 100px;
         font-size: 1em;
         line-height: 32px;
       }
@@ -129,4 +119,30 @@ export const DivWrapper = styled.div`
       padding: 20px;
     }
   }
+`
+
+export const BSLogoContainer = styled.div`
+  display: flex;
+  max-width: 160px;
+  max-height: 80px;
+`
+
+export const LinkContainer = styled(Link)`
+  pointer-events: auto;
+`;
+
+export const BackContainer = styled.button`
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto;
+  cursor: pointer;
+
+  &:hover {
+    fill: ${globalScheme.darkgreen};
+    color: ${globalScheme.darkgreen};
+  }
+`
+
+export const BackTextContainer = styled.span`
+  padding-left: 20px;
 `
