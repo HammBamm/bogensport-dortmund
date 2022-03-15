@@ -138,7 +138,7 @@ const ContactForm = () => {
             <LinkContainer to='/menü'>
                 <BackContainer>
                   <BSLogoContainer>
-                    <BSLogo />
+                  <svg><BSLogo /></svg>
                   </BSLogoContainer> 
                   <BackTextContainer>
                     <h3>Zurück zum <br />
@@ -155,7 +155,7 @@ const ContactForm = () => {
               <LinkContainer to='/menü'>
                 <BackContainer>
                   <BSLogoContainer>
-                    <BSLogo />
+                    <svg><BSLogo /></svg>
                   </BSLogoContainer> 
                   <BackTextContainer>
                     <h3>Zurück zum <br />
@@ -165,7 +165,17 @@ const ContactForm = () => {
               </LinkContainer>
             </h2>
           </FallbackContainer> :
-        <span />
+      <LinkContainer to='/menü'>
+        <BackContainer>
+          <BSLogoContainer>
+            <svg><BSLogo /></svg>
+          </BSLogoContainer> 
+          <BackTextContainer>
+            <h3>Zurück zum <br />
+            Hauptmenü</h3>
+          </BackTextContainer>
+        </BackContainer>
+      </LinkContainer>
       }
     </DivWrapper>
   );

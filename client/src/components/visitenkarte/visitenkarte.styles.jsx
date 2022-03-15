@@ -8,10 +8,9 @@ const theme = {
 };
 
 export const CardContainer = styled.div`
-  width: 100%;
   border-radius: 0.75rem;
   border-color: ${ theme.primary };
-  width: ${ theme.cardsize };
+  max-width: ${ theme.cardsize };
 	overflow: hidden;
 	flex: 1 1 auto;
 	display: flex;
@@ -30,6 +29,10 @@ export const CardContainer = styled.div`
   
   &:hover {
      transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 800px) {
+    max-width: 300px;
   }
 `;
 
@@ -78,5 +81,6 @@ export const LabelContainer = styled.span`
 
 export const SVGContainer = styled.div`
   fill: white;
-  width: 65%;
+  display: flex;
+  max-width: 65%;
 `;

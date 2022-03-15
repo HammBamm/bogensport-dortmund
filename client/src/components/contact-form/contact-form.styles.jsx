@@ -145,5 +145,6 @@ export const BackContainer = styled.button`
 `
 
 export const BackTextContainer = styled.span`
+  margin: auto;
   padding-left: 20px;
 `

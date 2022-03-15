@@ -12,16 +12,28 @@ const KalenderUebersicht = ({ dates }) => {
  
   const [value, setValue] = useState(selectDate);
 
+  const setClass = (date) => {
+    let dateobj =
+      dates.find((x) => {
+        return (
+          date.getDay() === new Date(x.date).getDay() &&
+          date.getMonth() === new Date(x.date).getMonth() &&
+          date.getDate() === new Date(x.date).getDate()
+        );
+      });
+    return dateobj ? "highlightTraining" : "";
+  }
+
   return (
     <KalenderContainer>
       <KalenderTitle>
-        Bogensport Dortmund Kalender
+        Bogensport-Dortmund Kalender
       </KalenderTitle>
       <div className="calendar">
         <main className="calendar-samp">
           <Calendar
             locale="de-DE"
-            onChange={setValue} value={value}
+            tileClassName={({ activeStartDate, date, view }) => setClass(date)}
           />
         </main>
       </div>

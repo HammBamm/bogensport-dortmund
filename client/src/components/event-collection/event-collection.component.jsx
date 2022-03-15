@@ -1,4 +1,5 @@
 import React from 'react';
+import { globalScheme } from '../../global.styles';
 
 import EventUebersicht from '../event-uebersicht/event-uebersicht.component';
 import KalenderUebersicht from '../kalender-uebersicht/kalender-uebersicht.component';
@@ -25,7 +26,8 @@ class EventCollection extends React.Component {
           date: nextDay(2,0),
           formattedDate: formatDate(nextDay(2,0)),
           time: '18:00 - 20:00 Uhr',
-          description: "Training am Dienstag"
+          description: "Training am Dienstag",
+          color: globalScheme.darkgreen
         },
         {
           id: 1,
@@ -33,7 +35,8 @@ class EventCollection extends React.Component {
           date: nextDay(4,0),
           formattedDate: formatDate(nextDay(4,0)),
           time: '18:00 - 20:00 Uhr',
-          description: "Training am Donnerstag"
+          description: "Training am Donnerstag",
+          color: globalScheme.darkgreen
         },
         {
           id: 2,
@@ -41,7 +44,8 @@ class EventCollection extends React.Component {
           date: nextDay(2,7),
           formattedDate: formatDate(nextDay(2,7)),
           time: '18:00 - 20:00 Uhr',
-          description: "Training am Dienstag"
+          description: "Training am Dienstag",
+          color: globalScheme.darkgreen
         },
         {
           id: 3,
@@ -49,7 +53,8 @@ class EventCollection extends React.Component {
           date: nextDay(4,7),
           formattedDate: formatDate(nextDay(4,7)),
           time: '18:00 - 20:00 Uhr',
-          description: "Training am Donnerstag"
+          description: "Training am Donnerstag",
+          color: globalScheme.darkgreen
         },
         {
           id: 4,
@@ -57,7 +62,8 @@ class EventCollection extends React.Component {
           date: nextDay(2,14),
           formattedDate: formatDate(nextDay(2,14)),
           time: '18:00 - 20:00 Uhr',
-          description: "Training am Dienstag"
+          description: "Training am Dienstag",
+          color: globalScheme.darkgreen
         },
         {
           id: 5,
@@ -65,7 +71,8 @@ class EventCollection extends React.Component {
           date: nextDay(4,14),
           formattedDate: formatDate(nextDay(4,14)),
           time: '18:00 - 20:00 Uhr',
-          description: "Training am Donnerstag"
+          description: "Training am Donnerstag",
+          color: globalScheme.darkgreen
         }
       ],
     };

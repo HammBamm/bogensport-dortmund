@@ -18,7 +18,8 @@ const EventUebersicht = ({ dates }) => {
       <EventDetailsContainer>
       {
         dates.map(({ id, title, formattedDate, time, description }) => (
-          <EventVisitenKarte key={id} title={title} avatar={<EventTargetContainer><TargetImg /> </EventTargetContainer>} date={formattedDate} time={time} description={description} />
+          <EventVisitenKarte key={id} title={title} avatar={<EventTargetContainer><svg><TargetImg /></svg></EventTargetContainer>}
+           date={formattedDate} time={time} description={description} />
         ))
       }
       </EventDetailsContainer>
