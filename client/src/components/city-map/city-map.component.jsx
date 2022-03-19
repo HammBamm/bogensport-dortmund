@@ -5,7 +5,7 @@ import { CityMapsContainer } from "./city-map.styles";
 import CustomButton from "../custom-button/custom-button.component";
 import useMediaQuery from "../media-query/media-query.component";
 
-export const CityMap = (props) => {
+export const CityMap = () => {
   const isMobile = useMediaQuery('(max-width: 800px)');
   const summerColor = `rgb(253,130,26)`;
   const winterColor = `rgb(123, 165, 248)`;
@@ -18,21 +18,21 @@ export const CityMap = (props) => {
     <CityMapsContainer>
         <Map      
           height={isMobile ? 600 : 700} 
-          width={isMobile ? 320 : 975} 
+          width={isMobile ? "90vw" : 975} 
           center={center} 
           zoom={zoom} 
           minZoom={10}
           onBoundsChanged={({ center, zoom }) => { 
             setCenter(center) 
             setZoom(zoom) 
-        }}>
+          }}>
           <Marker 
             width={markerWidth}
             anchor={[51.53999, 7.52707]}
             color={summerColor} 
             onClick={() => {
-              setCenter([51.53999, 7.52707]);
-              setZoom(17);
+                setCenter([51.53999, 7.52707]);
+                setZoom(17);
               }
             }
           />

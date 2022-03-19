@@ -6,8 +6,8 @@ export const MenuItemContainer = styled.div`
 	min-width: 30%;
 	flex: 1 1 auto;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-end;
+	justify-content: flex-end;
 	border: 3px solid ${globalScheme.darkgreen};
 	margin: 0 7.5px 15px;
 
@@ -41,8 +41,8 @@ export const SmallMenuItemContainer = styled.div`
 	min-width: 45%;
 	flex: 1 1 auto;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-end;
+	justify-content: flex-end;
 	border: 3px solid ${globalScheme.darkgreen};
 	margin: 0 7.5px 15px;
 
@@ -80,15 +80,13 @@ export const BackgroundImageContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  height: 90px;
-  padding: 0 25px;
+  padding: 5px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid black;
   background-color: white;
-  opacity: 0.7;
   position: absolute;
 
   @media screen and (max-width: 800px) {
@@ -98,9 +96,7 @@ export const ContentContainer = styled.div`
 
 export const ContentTitle = styled.span`
   font-weight: bold;
-  margin-bottom: 6px;
   font-size: 22px;
-  color: #4a4a4a;
 
   @media screen and (max-width: 800px) {
     font-size: 16px;

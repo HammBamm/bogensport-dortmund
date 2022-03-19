@@ -6,7 +6,7 @@ import { ReactComponent as FAQ } from '../../assets/header/faqs2.svg';
 import { ReactComponent as InstaLogo } from '../../assets/header/icons8-instagram.svg';
 import { ReactComponent as BSLogo } from '../../assets/header/BSLogo.svg';
 import { ReactComponent as BackSymbol } from '../../assets/header/backSymbol.svg';
-import { ReactComponent as Bogensport } from '../../assets/header/BogensportDortmund.svg';
+import { ReactComponent as Bogensport } from '../../assets/header/BogensportDortmund_ohneSchrift.svg';
 
 import { 
   HeaderContainer,
@@ -62,17 +62,14 @@ const Header = () => {
         </LogoWrapper1>
         <WelcomeContainer>
           <H1Container>Willkommen auf Bogensport-Dortmund.de</H1Container>
-          <H2Container>Eine Abteilung des TuS Scharnhorst 1895/1926 e.V</H2Container>
+          <H2Container>Bogensportabteilung des TuS Scharnhorst 1895/1926 e.V</H2Container>
         </WelcomeContainer>
         <OptionsContainer>
-          <BackButtonContainer>
-            <BackSymbol onClick={() => history.goBack()} />
+          <BackButtonContainer style={{cursor: "unset"}}>
           </BackButtonContainer>
-          <OptionLink to='/faq'>
-            <FAQ></FAQ>
+          <OptionLink to="" style={{cursor: "unset"}}>
           </OptionLink>
-          <OptionLink to={{ pathname: "https://de-de.facebook.com/Bogensport-Dortmund-314466415291746/" }} target="_blank">
-            <InstaLogo />
+          <OptionLink to="" style={{cursor: "unset"}}>
           </OptionLink>
         </OptionsContainer>
       </HeaderContainer>

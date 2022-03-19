@@ -24,7 +24,7 @@ const ImpressumPage = () => (
     <ArticleEnumeration 
       title="Vereinsregister"
       textArr={[
-        {id:1,text:"Registergericht: Amtsgericht"},
+        {id:1,text:"Registergericht: Amtsgericht Dortmund"},
         {id:2,text:"Registernummer: VR 2108"}
       ]}
     />

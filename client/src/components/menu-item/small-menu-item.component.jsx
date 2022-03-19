@@ -5,7 +5,6 @@ import {
   BackgroundImageContainer,
   ContentContainer,
   ContentTitle,
-  ContentSubtitle,
   SmallMenuItemContainer
 } from './menu-item.styles';
 
@@ -20,7 +19,6 @@ const SmallMenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
     />
     <ContentContainer className='content'>
       <ContentTitle>{title.toUpperCase()}</ContentTitle>
-      <ContentSubtitle>HIER KLICKEN</ContentSubtitle>
     </ContentContainer>
   </SmallMenuItemContainer>
 );

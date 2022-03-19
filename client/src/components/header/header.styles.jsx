@@ -66,14 +66,14 @@ export const LogoContainer1 = styled(Link)`
 
 export const LogoWrapper2 = styled.div`
     display: flex;
-    max-height: 80px;
-    max-width: 350px;
-    margin-top: -15px;
+    max-height: 100px;
+    max-width: 450px;
+    margin-top: -20px;
 `;
 
 export const LogoContainer2 = styled(Link)`
-    max-width: 350px;
-    max-height: 80px;   
+    max-width: 450px;
+    max-height: 85px;   
     display: flex;
     
     &:hover {

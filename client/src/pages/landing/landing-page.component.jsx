@@ -33,7 +33,7 @@ const LandingPage = () => {
       <LandingPageContainer>
         <WelcomeContainer>
           <h1>Willkommen auf Bogensport-Dortmund.de</h1>
-          <h3>Eine Abteilung des TuS Scharnhorst 1895/1926 e.V</h3>
+          <h3>Bogensportabteilung des TuS Scharnhorst 1895/1926 e.V</h3>
           <LogoContainer>
             <svg><BogenSport /></svg>
           </LogoContainer>

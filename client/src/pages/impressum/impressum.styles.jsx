@@ -5,28 +5,31 @@ import { globalScheme } from "../../global.styles";
 export const ImpressumPageContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  max-width: 60%;
   text-align: start;
   min-height: 78vh;
 
   @media screen and (max-width: 800px) {
     min-height: 80vh;
-    width: unset;
+    max-width: unset;
+    align-items: center;
   }
 `;
 
 export const ImpressumPageImgContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media screen and (max-width: 800px) {
-    display: block;
+    justify-content: unset;
+    flex-direction: column;   
   }
 `;
 
 export const ImpressumLogoContainer = styled(Link)`
     padding: 20px 40px 0;
-    width: 22%;
+    max-width: 25%;
     display: flex;
     justify-content: flex-end;
     &:hover {
@@ -34,8 +37,8 @@ export const ImpressumLogoContainer = styled(Link)`
     }
     
     @media screen and (max-width: 800px) {
-      display: block;
-      width: 100%;
+      max-width: 50%;
+      justify-content: center;
       margin: auto 0;
     }
 `;

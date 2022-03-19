@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Calendar from 'react-calendar';
 
 import 'react-calendar/dist/Calendar.css';
 import { KalenderContainer, KalenderTitle } from './kalender-uebersicht.styles';
 
 const KalenderUebersicht = ({ dates }) => {
-
-  function selectDate() {
-    return dates[0].date.getDate() < dates[1].date.getDate() ? dates[0].date : dates[1].date;
-  }
- 
-  const [value, setValue] = useState(selectDate);
 
   const setClass = (date) => {
     let dateobj =
