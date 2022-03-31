@@ -24,10 +24,10 @@ const FAQPage = () => {
             {id:9,text:<span>Preislich gibt es bei der Ausrüstung nach oben kaum Grenzen, allerdings gibt es sehr preisgünstige Alternativen für Anfänger. Mehr dazu hier: <Link to="/menü/bogenschießen/einstieg"><LinkTextContainer>Kosten für Ausrüstung</LinkTextContainer></Link> und <Link to="/verein/beiträge"><LinkTextContainer>Beiträge</LinkTextContainer></Link></span>},
             {id:10,text:"4)"},
             {id:11,text:"Wann wird trainiert?"},
-            {id:12,text:<span>Es gibt zwei feste Trainingstage. Immer Dienstags und Donnerstag von 18 - 20 Uhr. Im Kalender findest Du weitere Termine: <Link to="/kalender"><LinkTextContainer>Kalender</LinkTextContainer></Link></span>},
+            {id:12,text:<span>Es gibt zwei feste Trainingstage. Immer Dienstags und Donnerstag von 18 - 20 Uhr schießen wir je nach Saison im Freuen oder in der Halle. Im Kalender findest Du weitere Termine: <Link to="/kalender"><LinkTextContainer>Kalender</LinkTextContainer></Link></span>},
             {id:13,text:"5)"},
             {id:14,text:"Auf welche Entfernungen wird geschossen?"},
-            {id:15,text:<span> <Link to="/kalender"><LinkTextContainer>Kalender</LinkTextContainer></Link></span>}
+            {id:15,text:<span> Die Entfernungen bei Turnieren und Wettkämpfen egal welcher Disziplin liegen in der Regel zwischen 18 und 70 Metern. Je nach dem welchen Bogentyp​, welche Stilart und in welcher Altersgruppe man schießt sind die Entfernungen und Scheibengrößen unterschiedlich geregelt. Ein Bogen schießt aber viel weiter als 70 Meter! Visuell werden die Distanzen unter folgendem Link dargestellt: <Link to="/menü/verein/sportanlage"><LinkTextContainer>Sportanlage</LinkTextContainer></Link></span>}
           ]}    
           gridSpaceIndex="0.1fr" gridSpace1="1.0fr" gridSpace2="2.5fr" gridGap="12px"
         />

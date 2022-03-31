@@ -1,33 +1,81 @@
 import React from 'react';
-import { ArticleEnumeration, ArticleTextOnly, Headline } from '../../components/article/article.component';
-import { ImpressumLogoContainer, ImpressumPageContainer, ImpressumPageImgContainer } from './impressum.styles';
+import { ArticleEnumeration, ArticleGridWrapper, ArticleTextOnly, Headline } from '../../components/article/article.component';
+import { ImpressumLogoContainer, ImpressumPageContainer, ImpressumPageImgContainer, ImpressumWrapper } from './impressum.styles';
 import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst3.svg';
+
+const gridLayout = {
+  gap: "8px",
+  space1: "max-content",
+  space2: "auto",
+  indexSpace: 0
+}
 
 const ImpressumPage = () => (
   <ImpressumPageContainer>
     <Headline text="Impressum"/>
-    <ImpressumPageImgContainer>
+    <ImpressumWrapper>
+      <ImpressumPageImgContainer>
+        <ArticleGridWrapper
+          title="Angaben gemäß § 5 TMG"
+          textArr={[
+            {id:1,text:"TuS Scharnhorst 1895/1926 e.V."},
+            {id:2,text:""},
+            {id:3,text:"Gleiwitzstraße 281"},
+            {id:4,text:""},
+            {id:5,text:"44328 Dortmund"},
+          ]}
+          gridSpaceIndex={gridLayout.indexSpace} gridSpace1={gridLayout.space1} gridSpace2={gridLayout.space2} gridGap={gridLayout.gap}
+        />
+        <ImpressumLogoContainer to={{ pathname: "http://www.tusscharnhorst.de/" }} target="_blank">
+          <svg><TUSLogo/></svg>
+        </ImpressumLogoContainer>
+      </ImpressumPageImgContainer>
       <ArticleEnumeration
-        title="Anbieter"
+        title="Vertreten durch:"
         textArr={[
-          {id:1,text:"TuS Scharnhorst 1895/1926 e.V."},
-          {id:2,text:"Bogensportabteilung"},
-          {id:3,text:"Uwe Niehaus"},
-          {id:4,text:"Unnaerstraße 34"},
-          {id:5,text:"59439 Holzwickede"}
+          {id:1,text:"1. Vorsitzender Wolfgang Mazanke"},
         ]}   
       />
-      <ImpressumLogoContainer to={{ pathname: "http://www.tusscharnhorst.de/" }} target="_blank">
-        <svg><TUSLogo/></svg>
-      </ImpressumLogoContainer>
-    </ImpressumPageImgContainer>
-    <ArticleEnumeration 
-      title="Vereinsregister"
-      textArr={[
-        {id:1,text:"Registergericht: Amtsgericht Dortmund"},
-        {id:2,text:"Registernummer: VR 2108"}
-      ]}
-    />
+      <ArticleGridWrapper
+        title="Kontakt"
+        textArr={[
+          {id:1,text:"Telefon:"},
+          {id:2,text:"0231/5899143"},
+          {id:3,text:"Fax:"},
+          {id:4,text:"0231/22278480"},
+          {id:5,text:"E-Mail:"},
+          {id:6,text:"tusscharnhorst@dokom.net"},
+        ]}
+        gridSpaceIndex={gridLayout.indexSpace} gridSpace1={gridLayout.space1} gridSpace2={gridLayout.space2} gridGap={gridLayout.gap}
+      />
+      <ArticleGridWrapper
+        title="Vereinsregister"
+        textArr={[
+          {id:1,text:"Registergericht:"},
+          {id:2,text:"Amtsgericht Dortmund"},
+          {id:3,text:"Registernummer:"},
+          {id:4,text:"VR 2108"},
+        ]}
+        gridSpaceIndex={gridLayout.indexSpace} gridSpace1={gridLayout.space1} gridSpace2={gridLayout.space2} gridGap={gridLayout.gap}
+      />
+      <ArticleGridWrapper
+        title="Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:"
+        textArr={[
+          {id:1,text:"Bogensportabteilung"},
+          {id:2,text:""},
+          {id:3,text:"Uwe Niehaus"},
+          {id:4,text:""},
+          {id:5,text:"Unnaerstraße 34"},
+          {id:6,text:""},
+          {id:7,text:"59439 Holzwickede"},
+          {id:8,text:""},
+          {id:9,text:"E-Mail: bogenportdortmund@gmail.com"},
+          {id:10,text:""},
+        ]}
+        gridSpaceIndex={gridLayout.indexSpace} gridSpace1={gridLayout.space1} gridSpace2={gridLayout.space2} gridGap={gridLayout.gap}
+      />
+    </ImpressumWrapper>
+    
     <ArticleTextOnly 
       title="Haftung für Inhalte"
       text="Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen."    

@@ -21,6 +21,7 @@ export const CityMap = () => {
           width={isMobile ? "90vw" : 975} 
           center={center} 
           zoom={zoom} 
+          twoFingerDrag={true}
           minZoom={10}
           onBoundsChanged={({ center, zoom }) => { 
             setCenter(center) 

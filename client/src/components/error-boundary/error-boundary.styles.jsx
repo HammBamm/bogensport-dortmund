@@ -11,6 +11,8 @@ export const ErrorImageOverlay = styled.div`
 
   @media screen and (max-width: 800px) {
     height: unset;
+    min-height: 80vh;
+    width: unset;
   }
 `;
 
@@ -21,6 +23,11 @@ export const ErrorImageContainer = styled.div`
   background-position: center;
   width: 40vh;
   height: 40vh;
+
+  @media screen and (max-width: 800px) {
+    width: 60vh;
+    height: 60vh;
+  }
 `;
 
 export const ErrorImageText = styled.h2`

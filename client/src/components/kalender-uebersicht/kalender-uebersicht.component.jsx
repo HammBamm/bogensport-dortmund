@@ -1,5 +1,6 @@
 import React from 'react';
 import Calendar from 'react-calendar';
+import axios from 'axios';
 
 import 'react-calendar/dist/Calendar.css';
 import { KalenderContainer, KalenderTitle } from './kalender-uebersicht.styles';
@@ -17,6 +18,25 @@ const KalenderUebersicht = ({ dates }) => {
       });
     return dateobj ? "highlightTraining" : "";
   }
+
+  const getCalendarData = () => {
+    axios({
+      method: 'post',
+      url: "localhost/",
+      headers: { 'content-type': 'application/json' },
+      data: "values"
+    })
+    .then(response => {
+      if(response.status!==200){
+      } else {
+        console.log(response)
+      }
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  }
+  
 
   return (
     <KalenderContainer>

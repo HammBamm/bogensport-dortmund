@@ -45,7 +45,7 @@ const BeiträgePage = () => (
           {id:4,text:"54,00€"},
           {id:5,text:"Passive Mitglieder"},
           {id:6,text:"60,00€"},
-          {id:7,text:"Familienrabatt (ab 2 Personen)"},
+          {id:7,text:"Familienrabatt (ab 3 Personen)"},
           {id:8,text:"20%"},
         ]}
         gridSpaceIndex={gridLayout.indexSpace} gridSpace1={gridLayout.space1} gridSpace2={gridLayout.space2} gridGap={gridLayout.gap}

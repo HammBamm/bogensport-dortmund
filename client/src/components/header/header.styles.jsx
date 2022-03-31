@@ -17,10 +17,13 @@ export const HeaderContainer = styled.div`
 `;
 
 export const WelcomeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   margin: auto;
   max-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 4vw;
   text-align: center;
 
   @media screen and (max-width: 800px) {
@@ -29,7 +32,12 @@ export const WelcomeContainer = styled.div`
 `
 
 export const H1Container = styled.span`
-  font-size: xx-large;
+  color: black
+`;
+
+export const H1Container2 = styled.span`
+    padding-left: 10px;
+    color: ${globalScheme.darkgreen}
 `;
 
 export const H2Container = styled.span`

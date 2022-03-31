@@ -20,6 +20,7 @@ import {
   WelcomeContainer,
   H1Container,
   H2Container,
+  H1Container2,
 } from './header.styles';
 
 const Header = () => {
@@ -61,8 +62,8 @@ const Header = () => {
           </LogoContainer1>
         </LogoWrapper1>
         <WelcomeContainer>
-          <H1Container>Willkommen auf Bogensport-Dortmund.de</H1Container>
-          <H2Container>Bogensportabteilung des TuS Scharnhorst 1895/1926 e.V</H2Container>
+          <H1Container>BOGENSPORT</H1Container>
+          <H1Container2>DORTMUND</H1Container2>
         </WelcomeContainer>
         <OptionsContainer>
           <BackButtonContainer style={{cursor: "unset"}}>
