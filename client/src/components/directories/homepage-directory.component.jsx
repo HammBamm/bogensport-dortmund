@@ -24,13 +24,13 @@ class HomepageDirectory extends React.Component {
                     title: 'Kontakt',
                     imageUrl: phoneImg,
                     id: 2,
-                    linkUrl: 'kontakt'
+                    linkUrl: 'menü/kontakt'
                 },
                 {
                     title: 'Kalender',
                     imageUrl: calendarImg,
                     id: 3,
-                    linkUrl: '/kalender'
+                    linkUrl: 'menü/kalender'
                 },
                 {
                     title: 'Sportanlage',

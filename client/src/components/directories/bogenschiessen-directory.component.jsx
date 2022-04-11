@@ -1,10 +1,11 @@
 import React from 'react';
 
-import SmallMenuItem from '../menu-item/small-menu-item.component';
+import MenuItem from '../menu-item/menu-item.component';
 import { DirectoryMenuContainer } from './directory.styles';    
 
 import bögenImg from '../../assets/directory/Bogenreihe.jpeg';
 import birdGif from '../../assets/directory/bird2.gif';
+import medaillenImg from '../../assets/verein/medaillen.jpeg';
 
 class BogenschiessenDirectory extends React.Component {
     constructor() {
@@ -16,14 +17,21 @@ class BogenschiessenDirectory extends React.Component {
                     imageUrl: bögenImg,
                     id: 1,
                     size: 'large',
-                    linkUrl: '/ausrüstung'
+                    linkUrl: 'bogenschießen/ausrüstung'
                 },
                 {
                     title: 'Der Einstieg',
                     imageUrl: birdGif,
                     id: 2,
                     size: 'large',
-                    linkUrl: '/einstieg'
+                    linkUrl: 'bogenschießen/einstieg'
+                },
+                {
+                    title: 'Turniere und Wettkämpfe',
+                    imageUrl: medaillenImg,
+                    id: 3,
+                    size: 'large',
+                    linkUrl: 'bogenschießen/turniere'
                 }
             ]
         };
@@ -34,7 +42,7 @@ class BogenschiessenDirectory extends React.Component {
             <DirectoryMenuContainer>
                 {
                     this.state.sections.map(({ id, ...otherSectionProps }) => (
-                        <SmallMenuItem key={id} {...otherSectionProps}></SmallMenuItem>
+                        <MenuItem key={id} {...otherSectionProps}></MenuItem>
                     ))
                 }
             </DirectoryMenuContainer>

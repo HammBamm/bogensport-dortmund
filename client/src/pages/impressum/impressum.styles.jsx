@@ -9,10 +9,16 @@ export const ImpressumPageContainer = styled.div`
   text-align: start;
   min-height: 78vh;
   font-size: large;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding: 10px;
 
   @media screen and (max-width: 800px) {
     min-height: 80vh;
     max-width: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    padding: unset;
   }
 `;
 

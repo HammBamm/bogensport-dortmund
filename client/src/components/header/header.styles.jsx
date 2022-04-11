@@ -16,14 +16,26 @@ export const HeaderContainer = styled.div`
     }
 `;
 
+export const HeaderLandingPageContainer = styled.div`
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+
+    @media screen and (max-width: 800px) {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+`;
+
 export const WelcomeContainer = styled.div`
   margin: auto;
-  max-height: 75px;
+  max-height: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 4vw;
+  font-size: 3.5vw;
   text-align: center;
 
   @media screen and (max-width: 800px) {
@@ -32,12 +44,12 @@ export const WelcomeContainer = styled.div`
 `
 
 export const H1Container = styled.span`
-  color: black
+    color: black;
 `;
 
 export const H1Container2 = styled.span`
-    padding-left: 10px;
-    color: ${globalScheme.darkgreen}
+    padding-left: 20px;
+    color: ${globalScheme.darkgreen};
 `;
 
 export const H2Container = styled.span`

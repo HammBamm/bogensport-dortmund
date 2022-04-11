@@ -5,31 +5,54 @@ import { globalScheme } from '../../global.styles';
 export const FallbackContainer = styled.span`
   display: flex;
   max-width: 650px;
-  margin: auto auto;
 
-  @media screen and (max-width: 800px) {
-    font-size: small;
+  span {
+    color: ${globalScheme.darkgreen};
+    font-size: 2.5vh;
   }
+
 `
 
 export const ClipboardButtonContainer = styled.button`
   pointer-events: auto;
+  display: flex;
   max-width: 70px;
   max-height: 70px;
   cursor: pointer;
+
+  @media screen and (max-width: 800px) {
+    max-height: 90px;
+  }
 `
 
 export const ClipboardContainer = styled.img`
   display: flex;
   max-width: 50px;
   max-height: 50px;
+
+  @media screen and (max-width: 800px) {
+    justify-content: space-around;
+  }
 `
+
+export const ClipboardWrapper = styled.div`
+  display: flex;
+  min-width: 180px;
+  max-width: 180px;
+  justify-content: space-around;
+`;
 
 export const EmailContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${globalScheme.darkgreen};
+  max-width: 100%;
+
+  @media screen and (max-width: 800px) {
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 `
 
 export const DivWrapper = styled.div`
@@ -62,6 +85,11 @@ export const BackContainer = styled.button`
   max-height: 100px;
   margin: 40px auto;
   cursor: pointer;
+  
+
+  h3 {
+    font-size: 1.5vh;
+  }
 
   &:hover {
     fill: ${globalScheme.darkgreen};

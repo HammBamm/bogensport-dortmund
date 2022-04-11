@@ -1,23 +1,57 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const LandingPageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 78vh;
+export const LandingPageContainer = styled(Link)`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
 
   @media screen and (max-width: 800px) {
+    height: unset;
+    width: unset;
+    display: flex;
     min-height: 80vh;
   }
 `;
 
+export const DivContainer = styled.div`
+  cursor: pointer;
+`
+
 export const WelcomeContainer = styled.div`
+  cursor: pointer;
+  position: absolute;
+  bottom: 14%;
+  left: -5%;
   display: flex;
-  max-width: 60%;
-  margin: auto;
-  flex-direction: column;
-  text-align: center;
+  padding: 1% 8%;
+  max-width: 110%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  border: white 1px;
+
+&:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  background: inherit;
+  background-attachment: fixed;
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
+  transform: scale(2) translateY(20px);
+}
+h2 {
+  color: white;
+  z-index: 1;
+  text-shadow: 0 1px 0 black;
+  hyphens: auto; 
+	text-align: justify;
+  border-top:    1px solid white;
+  border-bottom: 1px solid white;
+}
 
   @media screen and (max-width: 800px) {
     max-width: unset;
@@ -70,7 +104,6 @@ export const CustomButtonLandingPageContainer = styled.button`
     &:hover {
         background-color: black;
         color: #FFD700;
-        border: none;
     }
 `;
 
@@ -95,3 +128,47 @@ export const TargetContainer = styled.div`
     max-height: 70px;
   }
 `;
+
+export const BoxContainer = styled.div`
+
+  height: 300px;
+  width: 600px;
+  margin: 50px auto;
+  background-color: #DDD;
+  position: relative;
+  overflow: hidden;
+
+&:after{
+  content: '';
+  display: block;
+  border-width: 0px 75px 75px 0px;
+  border-style: solid;
+  border-color: #d7d7d7 transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+&:after{
+  content: '';
+  display: block;
+  border-width: 0px 75px 75px 0px;
+  border-style: solid;
+  border-color: #d7d7d7 #FFF;
+  box-shadow: -5px 6px 10px rgb(129, 127, 127);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+h1{
+  margin: 30px 210px;
+  font-family: cursive;
+}
+
+p{
+  padding: 0px 30px;
+  font-size: 20px;
+  font-family: cursive;
+  color: #555;
+}
+`

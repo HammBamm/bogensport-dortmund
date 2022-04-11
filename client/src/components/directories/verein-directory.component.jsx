@@ -17,14 +17,14 @@ class VereinDirectory extends React.Component {
                     imageUrl: wieseImg,
                     size: 'large',
                     id: 1,
-                    linkUrl: '/verein/mentalität'
+                    linkUrl: 'verein/mentalität'
                 },
                 {
                     title: 'Beiträge',
                     imageUrl: feeImg,
                     id: 2,
                     size: 'large',
-                    linkUrl: '/verein/beiträge'
+                    linkUrl: 'verein/beiträge'
                 },
                 {
                     title: 'Hauptverein',

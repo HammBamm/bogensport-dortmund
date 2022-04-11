@@ -19,7 +19,8 @@ export const ArticleLeft = ({img, title, text, text2, text3}) => (
         <ArticleTextContainer>
             <h2>{title}</h2>
             <span>{text}<br/></span>
-            <span>{text2}</span>
+            <span>{text2}<br/></span>
+            <span>{text3}</span>
         </ArticleTextContainer>
     </ArticleContainer>
 );
@@ -69,7 +70,8 @@ export const ArticleTextOnly = ({title, text, text2, text3}) => (
         <ArticleTextContainer>
             <h2>{title}</h2>
             <span>{text}<br/></span>
-            <span>{text2}</span>
+            <span>{text2}<br/></span>
+            <span>{text3}</span>
         </ArticleTextContainer>
     </ArticleContainer>
 );
@@ -79,7 +81,8 @@ export const ArticleRight = ({img, title, text, text2, text3}) => (
         <ArticleTextContainer>
             <h2>{title}</h2>
             <span>{text}<br/></span>
-            <span>{text2}</span>
+            <span>{text2}<br/></span>
+            <span>{text3}</span>
         </ArticleTextContainer>
         <ArticleImageContainerRight src={img} />
     </ArticleContainer>

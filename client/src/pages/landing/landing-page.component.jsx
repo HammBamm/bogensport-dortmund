@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LandingPageContainer, LogoContainer, ButtonContainer, CustomButtonLandingPageContainer, LandingPageTextContainer, TargetContainer, WelcomeContainer } from './landing-page.styles';
+import { LandingPageContainer, LogoContainer, ButtonContainer, CustomButtonLandingPageContainer, LandingPageTextContainer, TargetContainer, WelcomeContainer, DivContainer } from './landing-page.styles';
 import { ReactComponent as BogenSport } from '../../assets/header/BogensportDortmund.svg';
 import { ReactComponent as Target } from '../../assets/landing-page/target.svg';
 import useMediaQuery from '../../components/media-query/media-query.component';
@@ -10,23 +10,18 @@ const LandingPage = () => {
   const isMobile = useMediaQuery('(max-width: 800px)');
     if(!isMobile) {
       return (
-        <div>
+        <DivContainer>
         <GlobalStyleLanding />
-        <LandingPageContainer>
+        <LandingPageContainer to='/menü'>
           <WelcomeContainer>
+            <h2>
+              In jenem Moment, in dem der Schütze noch ein letztes Mal einatmet, seinen Bogen locker in die Hand legt und die Sehne mit gespanntem Arm unter seinem Kinn verankert, befindet er sich in totaler Konzentration. Die kleinsten Abweichungen, ein noch so minimaler Abstand der Sehne zur Nasenspitze kann den aufliegenden federleichten Pfeil schnell ins Aus beschleunigen. Und je länger der Schütze zögert, umso schwieriger wird es für ihn, den Pfeil treffsicher in die Mitte zu befördern...<br/><br/>
+              ... willkommen bei der Bogensportabteilung des TuS Scharnhorst
+            </h2>
+          
           </WelcomeContainer>
-          <ButtonContainer to='/menü'>
-            <CustomButtonLandingPageContainer >
-              <TargetContainer>
-                <svg><Target /></svg>
-              </TargetContainer>
-              <LandingPageTextContainer>
-                Alle ins Gold!
-              </LandingPageTextContainer>
-            </CustomButtonLandingPageContainer>
-          </ButtonContainer>
         </LandingPageContainer>
-        </div>
+        </DivContainer>
     )
   } else {
     return (

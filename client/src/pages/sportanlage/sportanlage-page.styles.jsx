@@ -5,30 +5,46 @@ export const SportanlageContainer = styled.div`
   flex-direction: column;
   min-height: 78vh;
   margin: auto auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding: 10px;
 
   @media screen and (max-width: 800px) {
     min-height: 80vh;
+    box-shadow: unset;
+    border-radius: unset;
+    padding: unset;
   }
 `;
 
 export const MapContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   @media screen and (max-width: 800px) {
     padding-top: 10px;
     flex-direction: column;
-    max-width: 90vw;
     align-items: center;
-    > *:first-child {
+    &:first-child {
       margin-bottom: 25px;
     }
   }
 `;
 
+export const ImageContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+
+  @media screen and (max-width: 800px) {
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
 export const CarouselImageContainer = styled.img`
   max-width: 45vw;
-  max-height: 550px;
+  max-height: 475px;;
 
   @media screen and (max-width: 800px) {
     max-width: 90vw;
@@ -36,7 +52,16 @@ export const CarouselImageContainer = styled.img`
   }
 `;
 
+export const CardContainer = styled.div`
+
+  @media screen and (max-width: 800px) {
+    max-width: 90vw;
+  }
+`;
+
 export const LegendOptionContainer = styled.div`
+  align-self: flex-end;
+
   @media screen and (max-width: 800px) {
     max-width: 90vw;
   }
@@ -44,10 +69,6 @@ export const LegendOptionContainer = styled.div`
 
 export const ToggleContainer = styled.div`
   padding-top: 10px;
-
-  @media screen and (max-width: 800px) {
-    padding-top: 20px;
-  }
 `;
 
 export const ToggleLableContainer = styled.label`

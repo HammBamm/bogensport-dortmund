@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 import bgWiese from './assets/bg/bg-wiese2.jpg';
+import target from './assets/bg/archery-target.svg';
 
 export const globalScheme = {
   darkgreen: "#1E5631",
@@ -44,13 +45,12 @@ export const GlobalStyleLanding = createGlobalStyle`
     padding: 20px 40px;
     min-height: 100%;
     min-width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 
-    background: var(--image2);
-    background-position: bottom center;
+    background-attachment: fixed;
+    background: ${globalScheme.background};
+    background-position: top center;
     background-size: cover;
-    
-    --image2: url(${bgWiese});
     
     --color-v: ${globalScheme.background};
     
@@ -66,6 +66,7 @@ export const GlobalStyleLanding = createGlobalStyle`
   }
 
   * {
+    cursor: pointer;
     box-sizing: border-box;
   }
 `;

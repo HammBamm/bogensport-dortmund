@@ -18,6 +18,21 @@ export const FooterContainer = styled.div`
   }
 `;
 
+export const FooterLandingPageContainer = styled.div`
+  width: 100%;
+  height: 0px;
+  display: flex;
+  font-weight: 500;
+  margin-top: 22px;
+
+  @media screen and (max-width: 800px) {
+      position: relative;
+      height: 30px;
+      margin-top: 10px;
+      font-size: 11px;
+  }
+`;
+
 export const FooterOptionContainer = styled.div` 
   width: 50%;
   height: 100%;

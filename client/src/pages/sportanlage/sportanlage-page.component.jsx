@@ -14,7 +14,9 @@ import {
   MapContainer,
   CarouselImageContainer,
   ToggleContainer,
-  ToggleLableContainer
+  ToggleLableContainer,
+  ImageContainer,
+  CardContainer
 } from './sportanlage-page.styles';
 import './toggle.css';
 
@@ -55,41 +57,48 @@ class SportanlagePage extends React.Component {
     return (
       <SportanlageContainer>
         <MapContainer>
-          <LegendOptionContainer>
+          <CardContainer>
             {
               this.state.details.map(({ id, ...otherSectionProps }) => (
                   <KartenVisitenKarte key={id} { ...otherSectionProps }  />
               ))
             }
-          </LegendOptionContainer>
-          <LegendOptionContainer> 
+          </CardContainer>
+          <CardContainer> 
             <CityMap />
-          </LegendOptionContainer>
+          </CardContainer>
         </MapContainer>
-        <ToggleContainer>
-          <Toggle
-            id='distance-status'
-            defaultChecked={this.state.showDistances}
-            onChange={() => this.setState({showDistances: !this.state.showDistances})} />
-          <ToggleLableContainer htmlFor='distance-status'>Schussdistanzen anzeigen</ToggleLableContainer>
-        </ToggleContainer>
         { this.state.showDistances === false ?
-        <MapContainer>
+        <ImageContainer>
           <LegendOptionContainer> 
+            <ToggleContainer>
+              <Toggle
+                id='distance-status'
+                defaultChecked={this.state.showDistances}
+                onChange={() => this.setState({showDistances: !this.state.showDistances})} />
+              <ToggleLableContainer htmlFor='distance-status'>Schussdistanzen anzeigen</ToggleLableContainer>
+            </ToggleContainer>
             <CarouselImageContainer src={wieseImg} />
           </LegendOptionContainer>
           <LegendOptionContainer> 
             <CarouselImageContainer src={halleImg} />
           </LegendOptionContainer> 
-        </MapContainer> : 
-        <MapContainer>
+        </ImageContainer> : 
+        <ImageContainer>
         <LegendOptionContainer> 
+          <ToggleContainer>
+            <Toggle
+              id='distance-status'
+              defaultChecked={this.state.showDistances}
+              onChange={() => this.setState({showDistances: !this.state.showDistances})} />
+            <ToggleLableContainer htmlFor='distance-status'>Schussdistanzen anzeigen</ToggleLableContainer>
+          </ToggleContainer>
           <CarouselImageContainer src={wieseDistImg} />
         </LegendOptionContainer>
         <LegendOptionContainer> 
           <CarouselImageContainer src={halleDistImg} />
         </LegendOptionContainer> 
-      </MapContainer>
+      </ImageContainer>
         } 
       </SportanlageContainer>
     );

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MentalitätPageContainer = styled.div`
+export const TurnierePageContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 50%;

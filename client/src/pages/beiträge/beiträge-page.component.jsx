@@ -4,9 +4,9 @@ import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst3.
 import { BeiträgeLogoContainer, BeiträgePageContainer, BeiträgePageImgContainer } from './beiträge-page.styles';
 
 const gridLayout = {
-  gap: "4px",
-  space1: "1.5fr",
-  space2: "0.2fr",
+  gap: "24px",
+  space1: "1.3fr",
+  space2: "0.3fr",
   indexSpace: 0
 }
 
