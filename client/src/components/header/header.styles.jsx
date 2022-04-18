@@ -115,7 +115,8 @@ export const OptionsContainer = styled.div`
 
 export const OptionLink = styled(Link)`
     padding: 10px 10px;
-    width: 60px;
+    max-width: 70px;
+    display: flex;
     cursor: pointer;
     &:hover {
         fill: ${globalScheme.darkgreen};
@@ -129,14 +130,18 @@ export const OptionLink = styled(Link)`
 
 export const BackButtonContainer = styled.div`
     padding: 10px 10px;
-    width: 70px;
+    display: flex;
+    max-width: 70px;
     cursor: pointer;
     &:hover {
         fill: ${globalScheme.darkgreen};
     }
 
     @media screen and (max-width: 800px) {
-        width: 50px;
+        width: unset;
+        display: flex;
+        align-self: center;
+        max-width: 50px;
         padding: 0;
         padding-right: 10px;
     }

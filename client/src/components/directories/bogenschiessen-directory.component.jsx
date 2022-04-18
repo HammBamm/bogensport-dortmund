@@ -4,8 +4,8 @@ import MenuItem from '../menu-item/menu-item.component';
 import { DirectoryMenuContainer } from './directory.styles';    
 
 import bögenImg from '../../assets/directory/Bogenreihe.jpeg';
-import birdGif from '../../assets/directory/bird2.gif';
 import medaillenImg from '../../assets/verein/medaillen.jpeg';
+import figurImg from '../../assets/bogenschiessen/Figur.JPEG';
 
 class BogenschiessenDirectory extends React.Component {
     constructor() {
@@ -21,7 +21,7 @@ class BogenschiessenDirectory extends React.Component {
                 },
                 {
                     title: 'Der Einstieg',
-                    imageUrl: birdGif,
+                    imageUrl: figurImg,
                     id: 2,
                     size: 'large',
                     linkUrl: 'bogenschießen/einstieg'

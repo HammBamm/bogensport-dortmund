@@ -7,7 +7,8 @@ import {
     ArticleImageContainerRight,
     HeadlineContainer,
     ArticleTextGridContainer,
-    ArticleGridContainer } from './article.styles';
+    ArticleGridContainer, 
+    GridAreaContainer} from './article.styles';
 
 export const Headline = ({text}) => (
     <HeadlineContainer>{text}</HeadlineContainer>
@@ -44,7 +45,7 @@ export const ArticleGridWrapper = ({ title, textArr, gridSpaceIndex, gridSpace1,
         <ArticleTextGridContainer gridSpaceIndex={gridSpaceIndex} gridSpace1={gridSpace1} gridSpace2={gridSpace2} gridGap={gridGap} >
             {
                 textArr.map(({ id, text }) => (
-                    <div key={id}><p>{text}<br /></p></div>
+                    <GridAreaContainer gridSpaceIndex={gridSpaceIndex} textId={id} key={id} ><p>{text}<br /></p></GridAreaContainer>
                 ))
             }
         </ArticleTextGridContainer>

@@ -8,7 +8,7 @@ import {
   ContentTitle,
 } from './menu-item.styles';
 
-const MenuItem = ({ title, imageUrl, size, history, linkUrl, outUrl , match }) => (
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, outUrl , unicode }) => (
   <MenuItemContainer
     size={size}
     onClick={() => linkUrl==="" ? window.open(outUrl, '_blank') : history.push(`${linkUrl}`)}
@@ -18,7 +18,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, outUrl , match }) =
       imageUrl={imageUrl}
     />
     <ContentContainer className='content'>
-      <ContentTitle>{title.toUpperCase()}</ContentTitle>
+      <ContentTitle>{unicode}{title.toUpperCase()}</ContentTitle>
     </ContentContainer>
   </MenuItemContainer>
 );

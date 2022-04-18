@@ -42,10 +42,14 @@ const Header = () => {
         </WelcomeContainer>
         <OptionsContainer>
           <BackButtonContainer>
-            <BackSymbol onClick={() => history.goBack()} />
+            <svg>
+              <BackSymbol onClick={() => history.goBack()} />
+            </svg>
           </BackButtonContainer>
           <OptionLink to='/faq'>
-            <FAQ></FAQ>
+            <svg>
+              <FAQ />
+            </svg>
           </OptionLink>
           {/* <OptionLink to={{ pathname: "https://de-de.facebook.com/Bogensport-Dortmund-314466415291746/" }} target="_blank">
             <InstaLogo />

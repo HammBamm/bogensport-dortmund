@@ -8,30 +8,37 @@ export const FallbackContainer = styled.span`
 
   span {
     color: ${globalScheme.darkgreen};
-    font-size: 2.5vh;
+    margin:auto; 
+    display:table;
+    
   }
 
+  @media screen and (max-width: 800px) {
+
+    span {
+      margin: 0 auto;
+      font-size: 2.5vh;
+    }
+
+    @media screen and (orientation: landscape) {
+      flex-direction: row;
+      span {
+        font-size: 2.5vw;
+      }
+    }
+  }
 `
 
 export const ClipboardButtonContainer = styled.button`
   pointer-events: auto;
   display: flex;
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 75px;
+  max-height: 75px;
   cursor: pointer;
 
   @media screen and (max-width: 800px) {
     max-height: 90px;
-  }
-`
-
-export const ClipboardContainer = styled.img`
-  display: flex;
-  max-width: 50px;
-  max-height: 50px;
-
-  @media screen and (max-width: 800px) {
-    justify-content: space-around;
+    max-width: 90px;
   }
 `
 

@@ -3,11 +3,14 @@ import styled from "styled-components";
 export const MentalitätPageContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 50%;
   min-height: 78vh;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  padding: 10px;
+  padding: 30px;
 
   @media screen and (max-width: 800px) {
     min-height: 80vh;
@@ -15,5 +18,19 @@ export const MentalitätPageContainer = styled.div`
     box-shadow: unset;
     border-radius: unset;
     padding: unset;
+    max-width: unset;
   }
+`;
+
+export const ImageContainer = styled.img`
+  display: flex;
+  margin: 40px auto;
+  max-width: 70%;
+  object-fit: contain;
+  
+  @media screen and (max-width: 800px) {
+    max-width: unset;
+    display: unset;
+  }
+
 `;

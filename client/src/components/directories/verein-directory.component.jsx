@@ -27,7 +27,8 @@ class VereinDirectory extends React.Component {
                     linkUrl: 'verein/beiträge'
                 },
                 {
-                    title: 'Hauptverein',
+                    title: 'Zum Hauptverein',
+                    unicode: <span>&#128279; </span>,
                     imageUrl: tusImg,
                     id: 3,
                     size: 'large',
@@ -47,13 +48,6 @@ class VereinDirectory extends React.Component {
                         <MenuItem key={id} {...otherSectionProps}></MenuItem>
                     ))
                 }
-                {/* <MenuItem>
-                    <Headline text="Hauptverein" />
-                    <ImageContainer to={{ pathname: "http://www.tusscharnhorst.de/" }} target="_blank">
-                        <svg><TUSLogo /></svg>
-                        <svg><BSLogo /></svg>
-                    </ImageContainer>
-                </MenuItem> */}
             </DirectoryMenuContainer>
         )
     }

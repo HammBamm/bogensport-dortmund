@@ -12,8 +12,8 @@ const FAQPage = () => {
           title="Häufig gestellte Fragen"
           textArr={[
             {id:1,text:"1)"},
-            {id:2,text:"Wie kann ich Kontakt aufnehmen, um z.B. ein Probetraining zu absolvieren?"},
-            {id:3,text:<span>Um Kontakt mit uns aufzunehmen, nutze bitte die Informationen unter dem folgenden Link: <Link to="/kontakt"><LinkTextContainer>Kontakt</LinkTextContainer>
+            {id:2,text:"Wie kann ich Kontakt aufnehmen?"},
+            {id:3,text:<span>Um Kontakt für z.B. ein Probetraining mit uns aufzunehmen, nutze bitte die Informationen unter dem folgenden Link: <Link to="/kontakt"><LinkTextContainer>Kontakt</LinkTextContainer>
             </Link>
               </span>},
             {id:4,text:"2)"},
@@ -24,15 +24,15 @@ const FAQPage = () => {
             {id:9,text:<span>Preislich gibt es bei der Ausrüstung nach oben kaum Grenzen, allerdings gibt es sehr preisgünstige Alternativen für Anfänger. Der Hauptverein nimmt standardmäßig eine Jahresgebühr für die Mitgliedschaft und eine einmalige Aufnahmegebühr. Mehr dazu hier: <Link to="/menü/bogenschießen/einstieg"><LinkTextContainer>Kosten für Ausrüstung</LinkTextContainer></Link> und <Link to="/verein/beiträge"><LinkTextContainer>Beiträge</LinkTextContainer></Link></span>},
             {id:10,text:"4)"},
             {id:11,text:"Wann wird trainiert?"},
-            {id:12,text:<span>Es gibt zwei feste Trainingstage. Immer Dienstags und Donnerstag von 18 - 20 Uhr schießen wir je nach Saison im Freien oder in der Halle. Im Kalender findest Du weitere Termine: <Link to="/kalender"><LinkTextContainer>Kalender</LinkTextContainer></Link></span>},
+            {id:12,text:<span>Es gibt zwei feste Trainingstage. Immer Dienstags und Donnerstag von 18 - 20 Uhr schießen wir je nach Saison im Freien oder in der Halle. Im Kalender findest Du weitere Termine: <Link to="/menü/kalender"><LinkTextContainer>Kalender</LinkTextContainer></Link></span>},
             {id:13,text:"5)"},
-            {id:14,text:"Auf welchen Distanzen wird geschossen?"},
+            {id:14,text:"Auf welche Distanzen wird geschossen?"},
             {id:15,text:<span> Die Entfernungen bei Turnieren und Wettkämpfen egal welcher Disziplin liegen in der Regel zwischen 18 und 70 Metern. Je nach Bogentyp​, Stilart und in welcher Altersgruppe man schießt sind die Entfernungen und Scheibengrößen unterschiedlich geregelt. Ein Bogen schießt aber viel weiter als 70 Meter! Einen ersten Eindruck der Distanzen kannst Du unter folgendem Link erhalten: <Link to="/menü/verein/sportanlage"><LinkTextContainer>Sportanlage</LinkTextContainer></Link></span>},
             {id:16,text:"6)"},
             {id:17,text:"Welche Bogenarten gibt es?"},
             {id:18,text:<span> Es gibt drei grundlegende Bogentypen. Den Lang-, Recurve- und Compoundbogen. Der Langbogen ist der ursprünglichste der drei und hat entsprechend die einfachste Form. Deutlich moderner sind Recurve- und Compoundbogen, wobei ersterer z.B. bei Olympia zu sehen ist. Mehr dazu unter folgendem Link: <Link to="/menü/bogenschießen/ausrüstung"><LinkTextContainer>Ausrüstung</LinkTextContainer></Link></span>}
           ]}    
-          gridSpaceIndex="0.01fr" gridSpace1="2.4fr" gridSpace2="2.5fr" gridGap="20px"
+          gridSpaceIndex="0.1fr" gridSpace1="1.5fr" gridSpace2="2.5fr" gridGap="10px"
         />
       </FAQPageImgContainer>
     </FAQPageContainer>

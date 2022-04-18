@@ -25,8 +25,8 @@ export const ErrorImageContainer = styled.div`
   height: 40vh;
 
   @media screen and (max-width: 800px) {
-    width: 60vh;
-    height: 60vh;
+    width: 40vh;
+    height: 40vh;
   }
 `;
 

@@ -26,11 +26,7 @@ const EinstiegPage = () =>
                         title="Bogenschießen ist Leistungssport"
                         text='Ohne Frage ist der Bogensport in Europa kein populärer Volkssport, auch wenn er durch das größer gewordene Interesse derzeit einen Aufschwung erlebt. Aus Unwissen wird oft resultiert, gegenwärtiges Bogenschießen sei lediglich ein Zeitvertreib, welchem man sich entweder jeden Sommer im Freien oder auch zu besonderen Gelegenheiten annimmt.'
                         text2='Tatsächlich gehört Bogenschießen auch zu den Leistungssportarten und wird u.a. in Korea bereits im Schulalter professionell trainiert und finanziell unterstützt. Durch die frühzeitige Einweisung in Konzentration, Geduld und Automation hat hierdurch die koreanische Nationalmannschaft auch in sämtlichen olympischen Spielen ununterbrochen großartige Leistungen vollbracht.' 
-                    />
-                    <ArticleRight
-                        img={mouseArcherImg}
-                        title="Die Kosten"
-                        text='Wenn ein Schütze sich entschlossen hat, für einen hohen Preis eine komplette Ausrüstung zu kaufen, nimmt er ein ganzjähriges Training in Kauf und übt sich ständig in Geduld und Technik. Schützen, die sich im Winter zurückziehen, bemerken bereits im kommenden Sommer, dass sich durch das fehlende Training die wichtige Haltung verschlechtert und so die Schüsse unter dem üblichen Standard liegen. Auch wird eine Passé im Turnier unterschätzt, in dem eine bestimmte Anzahl von Pfeilen innerhalb einer bestimmten Zeitspanne geschossen werden müssen. Die Teilnahme an solchen Turnieren erfordern Kondition und Konzentration.' 
+                        text3='Wenn ein Schütze sich entschlossen hat, für einen hohen Preis eine komplette Ausrüstung zu kaufen, nimmt er ein ganzjähriges Training in Kauf und übt sich ständig in Geduld und Technik. Schützen, die sich im Winter zurückziehen, bemerken bereits im kommenden Sommer, dass sich durch das fehlende Training die wichtige Haltung verschlechtert und so die Schüsse unter dem üblichen Standard liegen. Auch wird eine Passé im Turnier unterschätzt, in dem eine bestimmte Anzahl von Pfeilen innerhalb einer bestimmten Zeitspanne geschossen werden müssen. Die Teilnahme an solchen Turnieren erfordern Kondition und Konzentration.'
                     />
                 </EinstiegPageContainer>
             )
@@ -49,11 +45,7 @@ const EinstiegPage = () =>
                         title="Bogenschießen ist Leistungssport"
                         text='Ohne Frage ist der Bogensport in Europa kein populärer Volkssport, auch wenn er durch das größer gewordene Interesse derzeit einen Aufschwung erlebt. Aus Unwissen wird oft resultiert, gegenwärtiges Bogenschießen sei lediglich ein Zeitvertreib, welchem man sich entweder jeden Sommer im Freien oder auch zu besonderen Gelegenheiten annimmt.'
                         text2='Tatsächlich gehört Bogenschießen auch zu den Leistungssportarten und wird u.a. in Korea bereits im Schulalter professionell trainiert und finanziell unterstützt. Durch die frühzeitige Einweisung in Konzentration, Geduld und Automation hat hierdurch die koreanische Nationalmannschaft auch in sämtlichen olympischen Spielen ununterbrochen großartige Leistungen vollbracht.'
-                    />
-                    <ArticleRight
-                        img={mouseArcherImg}
-                        title="Die Kosten"
-                        text='Wenn ein Schütze sich entschlossen hat, für einen hohen Preis eine komplette Ausrüstung zu kaufen, nimmt er ein ganzjähriges Training in Kauf und übt sich ständig in Geduld und Technik. Schützen, die sich im Winter zurückziehen, bemerken bereits im kommenden Sommer, dass sich durch das fehlende Training die wichtige Haltung verschlechtert und so die Schüsse unter dem üblichen Standard liegen. Auch wird eine Passé im Turnier unterschätzt, in dem eine bestimmte Anzahl von Pfeilen innerhalb einer bestimmten Zeitspanne geschossen werden müssen. Die Teilnahme an solchen Turnieren erfordern Kondition und Konzentration.' 
+                        text3='Wenn ein Schütze sich entschlossen hat, für einen hohen Preis eine komplette Ausrüstung zu kaufen, nimmt er ein ganzjähriges Training in Kauf und übt sich ständig in Geduld und Technik. Schützen, die sich im Winter zurückziehen, bemerken bereits im kommenden Sommer, dass sich durch das fehlende Training die wichtige Haltung verschlechtert und so die Schüsse unter dem üblichen Standard liegen. Auch wird eine Passé im Turnier unterschätzt, in dem eine bestimmte Anzahl von Pfeilen innerhalb einer bestimmten Zeitspanne geschossen werden müssen. Die Teilnahme an solchen Turnieren erfordern Kondition und Konzentration.' 
                     />
                 </EinstiegPageContainer>
             )

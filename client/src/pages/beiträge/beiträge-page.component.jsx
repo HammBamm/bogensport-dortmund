@@ -2,6 +2,7 @@ import React from 'react';
 import { ArticleGridWrapper, Headline } from '../../components/article/article.component';
 import { ReactComponent as TUSLogo } from '../../assets/header/tus-scharnhorst3.svg';
 import { BeiträgeLogoContainer, BeiträgePageContainer, BeiträgePageImgContainer } from './beiträge-page.styles';
+import ReactTooltip from 'react-tooltip';
 
 const gridLayout = {
   gap: "24px",
@@ -58,7 +59,8 @@ const BeiträgePage = () => (
         ]}  
         gridSpaceIndex={gridLayout.indexSpace} gridSpace1={gridLayout.space1} gridSpace2={gridLayout.space2} gridGap={gridLayout.gap}
       />
-      <BeiträgeLogoContainer to={{ pathname: "http://www.tusscharnhorst.de/index.php/mitglied-werden" }} target="_blank">
+      <BeiträgeLogoContainer to={{ pathname: "http://www.tusscharnhorst.de/index.php/mitglied-werden" }} target="_blank" data-tip="Neuen Tab zur Homepage des Hauptvereins öffnen">
+        <ReactTooltip />
         <svg><TUSLogo/></svg>
       </BeiträgeLogoContainer>
     </BeiträgePageImgContainer>

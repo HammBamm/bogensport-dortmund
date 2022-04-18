@@ -85,19 +85,19 @@ class SportanlagePage extends React.Component {
           </LegendOptionContainer> 
         </ImageContainer> : 
         <ImageContainer>
-        <LegendOptionContainer> 
-          <ToggleContainer>
-            <Toggle
-              id='distance-status'
-              defaultChecked={this.state.showDistances}
-              onChange={() => this.setState({showDistances: !this.state.showDistances})} />
-            <ToggleLableContainer htmlFor='distance-status'>Schussdistanzen anzeigen</ToggleLableContainer>
-          </ToggleContainer>
-          <CarouselImageContainer src={wieseDistImg} />
-        </LegendOptionContainer>
-        <LegendOptionContainer> 
-          <CarouselImageContainer src={halleDistImg} />
-        </LegendOptionContainer> 
+          <LegendOptionContainer> 
+            <ToggleContainer>
+              <Toggle
+                id='distance-status'
+                defaultChecked={this.state.showDistances}
+                onChange={() => this.setState({showDistances: !this.state.showDistances})} />
+              <ToggleLableContainer htmlFor='distance-status'>Schussdistanzen anzeigen</ToggleLableContainer>
+            </ToggleContainer>
+            <CarouselImageContainer src={wieseDistImg} />
+          </LegendOptionContainer>
+          <LegendOptionContainer> 
+            <CarouselImageContainer src={halleDistImg} />
+          </LegendOptionContainer> 
       </ImageContainer>
         } 
       </SportanlageContainer>

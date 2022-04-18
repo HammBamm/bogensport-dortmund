@@ -15,7 +15,7 @@ import {
     <ErrorImageOverlay>
       <ErrorImageContainer imageUrl={ Dog }></ErrorImageContainer>
       <ErrorImageText>
-        404: Entschuldigung, aber mein Hund hat wohl die Seite gefressen. Zurück zur <Link to="/"><LinkTextContainer>Startseite.</LinkTextContainer></Link>
+        404: Entschuldigung, aber mein Hund hat wohl die Seite gefressen. Zurück zur <Link to="/"><LinkTextContainer>Startseite</LinkTextContainer></Link>.
       </ErrorImageText>
     </ErrorImageOverlay>
   );

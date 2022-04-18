@@ -11,7 +11,7 @@ export const ImpressumPageContainer = styled.div`
   font-size: large;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  padding: 10px;
+  padding: 30px;
 
   @media screen and (max-width: 800px) {
     min-height: 80vh;
