@@ -59,7 +59,7 @@ const ContactForm = () => {
                       <svg>
                         <text textAnchor="middle" x="50%" dominantBaseline="hanging" textLength="50" lengthAdjust="spacing">E-Mail</text>
                         <CopyLogo width="50px" x="15%"/>
-                        <text textAnchor="middle" x="50%" y="100%" dominantBaseline="text-after-edge" textLength="55" lengthAdjust="spacing">kopieren</text>
+                        <text textAnchor="middle" x="50%" y="90%" dominantBaseline="text-after-edge" textLength="60" lengthAdjust="spacing">kopieren</text>
                       </svg>
                     </ClipboardButtonContainer>
                   </CopyToClipboard>
@@ -68,7 +68,7 @@ const ContactForm = () => {
                     <svg>
                       <text textAnchor="middle" x="50%" dominantBaseline="hanging" textLength="50" lengthAdjust="spacing">E-Mail</text>
                       <EMailLogo width="50px" x="15%"/>
-                      <text textAnchor="middle" x="50%" y="100%" dominantBaseline="text-after-edge" textLength="55" lengthAdjust="spacing">schreiben</text>
+                      <text textAnchor="middle" x="50%" y="90%" dominantBaseline="text-after-edge" textLength="60" lengthAdjust="spacing">verfassen</text>
                     </svg>
                   </ClipboardButtonContainer>
                 </EmailContainer>

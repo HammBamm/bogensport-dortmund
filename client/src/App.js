@@ -42,23 +42,23 @@ const App = () => {
         <Switch>
           <ErrorBoundary>
             <Suspense fallback={ <Spinner /> }>
-              <Route exact path='/menü' component={HomePage}></Route>
-              <Route exact path='/menü/kontakt' component={ContactPage}></Route>
-              <Route exact path='/menü/bogenschießen' component={BogenschiessenPage}></Route>
-              <Route exact path='/menü/verein' render={() => <VereinPage />}></Route>
-              <Route exact path='/menü/verein/beiträge' component={BeiträgePage}></Route>
-              <Route exact path='/menü/verein/mentalität' component={MentalitätPage}></Route>
+              <Route exact path='/start' component={HomePage}></Route>
+              <Route exact path='/start/kontakt' component={ContactPage}></Route>
+              <Route exact path='/start/bogenschiessen' component={BogenschiessenPage}></Route>
+              <Route exact path='/start/verein' render={() => <VereinPage />}></Route>
+              <Route exact path='/start/verein/beitraege' component={BeiträgePage}></Route>
+              <Route exact path='/start/verein/mentalitaet' component={MentalitätPage}></Route>
               <Route exact path='/faq' component={FAQPage}></Route>
-              <Route exact path='/menü/verein/sportanlage' component={SportanlagePage}></Route>
+              <Route exact path='/start/verein/sportanlage' component={SportanlagePage}></Route>
               {/* { <Route exact path='/anmelden' component={AnmeldungRegistrierungPage}></Route>} */}
-              <Route exact path='/menü/kalender' component={KalenderPage}></Route>
-              <Route exact path='/menü/bogenschießen/ausrüstung' component={AusrüstungPage}></Route>
+              <Route exact path='/start/kalender' component={KalenderPage}></Route>
+              <Route exact path='/start/bogenschiessen/ausruestung' component={AusrüstungPage}></Route>
               <Route exact path='/impressum' component={ImpressumPage}></Route>
-              <Route exact path='/menü/bogenschießen/einstieg' component={EinstiegPage}></Route>
-              <Route exact path='/menü/bogenschießen/turniere' component={TurnierePage}></Route>
+              <Route exact path='/start/bogenschiessen/einstieg' component={EinstiegPage}></Route>
+              <Route exact path='/start/bogenschiessen/turniere' component={TurnierePage}></Route>
               <Route exact path='/404' component={MissingPage}></Route>
               <Route exact path='/'></Route>
-              <Redirect to="/menü" />
+              <Redirect to="/start" />
             </Suspense>
           </ErrorBoundary>
         </Switch>

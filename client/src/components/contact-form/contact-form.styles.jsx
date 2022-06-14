@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { globalScheme } from '../../global.styles';
 
@@ -30,17 +29,22 @@ export const FallbackContainer = styled.span`
 `
 
 export const ClipboardButtonContainer = styled.button`
-  pointer-events: auto;
+  overflow: hidden;
   display: flex;
-  max-width: 75px;
-  max-height: 75px;
+  max-width: 70px;
+  max-height: 70px;
   cursor: pointer;
 
   @media screen and (max-width: 800px) {
     max-height: 90px;
     max-width: 90px;
+    svg {
+      overflow: hidden;
+      height: 85px;
+      width: 85px;
+    }
   }
-`
+`;
 
 export const ClipboardWrapper = styled.div`
   display: flex;
@@ -80,39 +84,4 @@ export const DivWrapper = styled.div`
     color: #222;
   }
 
-`
-
-export const LinkContainer = styled(Link)`
-  pointer-events: auto;
-`;
-
-export const BackContainer = styled.button`
-  display: flex;
-  max-width: 300px;
-  max-height: 100px;
-  margin: 40px auto;
-  cursor: pointer;
-  
-
-  h3 {
-    font-size: 1.5vh;
-  }
-
-  &:hover {
-    fill: ${globalScheme.darkgreen};
-    color: ${globalScheme.darkgreen};
-  }
-`
-
-export const BSLogoContainer = styled.div`
-  display: flex;
-  margin: auto;
-  padding: 20px;
-  max-width: 250px;
-  max-height: 90px;
-`
-
-export const BackTextContainer = styled.span`
-  margin: auto;
-  padding-left: 20px;
 `

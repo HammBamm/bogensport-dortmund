@@ -27,7 +27,7 @@ const Header = () => {
     return (
       <HeaderContainer>
         <LogoWrapper1>
-          <LogoContainer1 to='/menü'>
+          <LogoContainer1 to='/start'>
               <svg><BSLogo /></svg>
           </LogoContainer1>
         </LogoWrapper1>
@@ -61,7 +61,7 @@ const Header = () => {
     return (
       <HeaderLandingPageContainer>
         {/* <LogoWrapper1>
-          <LogoContainer1 to='/menü'>
+          <LogoContainer1 to='/start'>
               <svg><BSLogo /></svg>
           </LogoContainer1>
         </LogoWrapper1>*/}

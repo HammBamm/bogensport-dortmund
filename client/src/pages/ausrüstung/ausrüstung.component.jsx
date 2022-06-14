@@ -2,8 +2,8 @@ import React from 'react';
 import {ArticleLeft, ArticleRight, Headline} from '../../components/article/article.component';
 
 import longbowImg from '../../assets/bogenschiessen/Langbogen.jpg';
-import compoundbowImg from '../../assets/bogenschiessen/Compound_Bow_full.png';
-import recurvebowImg from '../../assets/bogenschiessen/Bogenreihe.jpeg';
+import compoundbowImg from '../../assets/bogenschiessen/Compound.JPEG';
+import recurvebowImg from '../../assets/bogenschiessen/Recurve.JPEG';
 import arrowImg from '../../assets/bogenschiessen/arrows.jpg';
 import armSchutzImg from '../../assets/bogenschiessen/Armschutz.jpeg';
 

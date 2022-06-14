@@ -1,8 +1,8 @@
 import React from 'react';
 import {ArticleLeft, ArticleRight, Headline} from '../../components/article/article.component';
 
-import mouseArcherImg from '../../assets/einstieg/mouseArcher.jpg';
-import recurvebowImg from '../../assets/directory/Bogenreihe.jpeg';
+import einsteigerBogenImg from '../../assets/einstieg/EinstiegBogen.JPEG';
+import recurvebowImg from '../../assets/einstieg/recurve.gif';
 
 import { EinstiegPageContainer } from './einstieg.styles';
 import useMediaQuery from "../../components/media-query/media-query.component";
@@ -16,7 +16,7 @@ const EinstiegPage = () =>
                 <EinstiegPageContainer>
                     <Headline text="Der Einstieg"/>
                     <ArticleRight
-                        img={mouseArcherImg}
+                        img={einsteigerBogenImg}
                         title="Körperliche Voraussetzungen"
                         text='Interessenten müssen keine körperlichen Voraussetzungen mitbringen, um dem Kreis der Bogenschützen beizutreten. Der Bogensport ist eine der wenigen Sportarten, bei dem sowohl behinderte als auch körperlich gesunde Schützen sich aneinander messen können. Wichtige Voraussetzungen sind jedoch ein gesundes Maß an Konzentration, innerer Ruhe und Geduld. Die richtige Technik und Zielgenauigkeit sind – in der Regel auch abhängig vom Talent des Schützen – binnen weniger Monate erreichbar. Besonders aufgrund des sich ständig wiederholenden Verlaufs von Haltung und Abschuss ist weniger die körperliche als geistige Fitness gefragt.'
                         test2='Im Bogensport wird kein Mindestalter empfohlen, in dem ein Interessent anfangen sollte – wie beispielsweise in der Leichtathletik. Sowohl als Leistungs- als Freizeitsport ist Bogenschießen bis ins hohe Alter möglich. Ein Einstieg von unter 10 Jahren ist jedoch nicht unbedingt geeignet, da in diesem Alter noch ohnehin die nötige Konzentration und Geduld fehlt. Zahlreiche Schützen haben in weniger als vier Jahren weltbeste Leistungen erzielt; einem späten Einstieg als zukünftiger Leistungssportler steht daher nichts entgegen.'
@@ -35,7 +35,7 @@ const EinstiegPage = () =>
                 <EinstiegPageContainer>
                     <Headline text="Die Ausrüstung"/>
                     <ArticleRight
-                        img={mouseArcherImg}
+                        img={einsteigerBogenImg}
                         title="Körperliche Voraussetzungen"
                         text='Interessenten müssen keine körperlichen Voraussetzungen mitbringen, um dem Kreis der Bogenschützen beizutreten. Der Bogensport ist eine der wenigen Sportarten, bei dem sowohl behinderte als auch körperlich gesunde Schützen sich aneinander messen können. Wichtige Voraussetzungen sind jedoch ein gesundes Maß an Konzentration, innerer Ruhe und Geduld. Die richtige Technik und Zielgenauigkeit sind – in der Regel auch abhängig vom Talent des Schützen – binnen weniger Monate erreichbar. Besonders aufgrund des sich ständig wiederholenden Verlaufs von Haltung und Abschuss ist weniger die körperliche als geistige Fitness gefragt.'
                         test2='Im Bogensport wird kein Mindestalter empfohlen, in dem ein Interessent anfangen sollte – wie beispielsweise in der Leichtathletik. Sowohl als Leistungs- als Freizeitsport ist Bogenschießen bis ins hohe Alter möglich. Ein Einstieg von unter 10 Jahren ist jedoch nicht unbedingt geeignet, da in diesem Alter noch ohnehin die nötige Konzentration und Geduld fehlt. Zahlreiche Schützen haben in weniger als vier Jahren weltbeste Leistungen erzielt; einem späten Einstieg als zukünftiger Leistungssportler steht daher nichts entgegen.'

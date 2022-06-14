@@ -17,21 +17,21 @@ class BogenschiessenDirectory extends React.Component {
                     imageUrl: bögenImg,
                     id: 1,
                     size: 'large',
-                    linkUrl: 'bogenschießen/ausrüstung'
+                    linkUrl: 'bogenschiessen/ausruestung'
                 },
                 {
                     title: 'Der Einstieg',
                     imageUrl: figurImg,
                     id: 2,
                     size: 'large',
-                    linkUrl: 'bogenschießen/einstieg'
+                    linkUrl: 'bogenschiessen/einstieg'
                 },
                 {
                     title: 'Turniere und Wettkämpfe',
                     imageUrl: medaillenImg,
                     id: 3,
                     size: 'large',
-                    linkUrl: 'bogenschießen/turniere'
+                    linkUrl: 'bogenschiessen/turniere'
                 }
             ]
         };

@@ -12,7 +12,7 @@ const LandingPage = () => {
       return (
         <DivContainer>
         <GlobalStyleLanding />
-        <LandingPageContainer to='/menü'>
+        <LandingPageContainer to='/start'>
           <WelcomeContainer>
             <h2>
               In jenem Moment, in dem der Schütze noch ein letztes Mal einatmet, seinen Bogen locker in die Hand legt und die Sehne mit gespanntem Arm unter seinem Kinn verankert, befindet er sich in totaler Konzentration. Die kleinsten Abweichungen, ein noch so minimaler Abstand der Sehne zur Nasenspitze kann den aufliegenden federleichten Pfeil schnell ins Aus beschleunigen. Und je länger der Schütze zögert, umso schwieriger wird es für ihn, den Pfeil treffsicher in die Mitte zu befördern...<br/><br/>
@@ -33,7 +33,7 @@ const LandingPage = () => {
             <svg><BogenSport /></svg>
           </LogoContainer>
         </WelcomeContainer>
-        <ButtonContainer to='/menü'>
+        <ButtonContainer to='/start'>
           <CustomButtonLandingPageContainer >
             <TargetContainer>
               <svg><Target /></svg>

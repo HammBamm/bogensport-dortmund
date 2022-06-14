@@ -18,33 +18,33 @@ class HomepageDirectory extends React.Component {
                     title: 'Unser Verein',
                     imageUrl: SchützenImg,
                     id: 1,
-                    linkUrl: 'menü/verein'
+                    linkUrl: 'start/verein'
                 },
                 {
                     title: 'Kontakt',
                     imageUrl: phoneImg,
                     id: 2,
-                    linkUrl: 'menü/kontakt'
+                    linkUrl: 'start/kontakt'
                 },
                 {
                     title: 'Kalender',
                     imageUrl: calendarImg,
                     id: 3,
-                    linkUrl: 'menü/kalender'
+                    linkUrl: 'start/kalender'
                 },
                 {
                     title: 'Sportanlage',
                     imageUrl: platzImg,
                     size: 'large',
                     id: 4,
-                    linkUrl: 'menü/verein/sportanlage'
+                    linkUrl: 'start/verein/sportanlage'
                 },
                 {
                     title: 'Bogenschießen',
                     imageUrl: archeryImg,
                     size: 'large',
                     id: 5,
-                    linkUrl: 'menü/bogenschießen'
+                    linkUrl: 'start/bogenschiessen'
                 }
             ]
         };
